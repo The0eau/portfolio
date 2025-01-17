@@ -3,4 +3,191 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    max-width: 100ch; /* Limit the content width */
+    margin-inline: auto; /* Center the content horizontally */
+    padding: 1rem;          /* Add spacing inside the body */
   }
+
+:root {
+    --color-accent: oklch(65% 50% 0); /* Define the main accent color */
+  }
+
+html {
+  accent-color: var(--color-accent); /* Use the accent color available to the entire document */
+}
+
+nav ul, nav li {
+  display: contents;
+}
+
+nav {
+  display: flex;         /* Enable Flexbox layout */
+  align-items: center;   /* Align items vertically */
+  padding: 0.5em;        /* Add some spacing inside the navbar */
+  margin-bottom: 1em;    /* Separate the navbar from content */
+  border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
+  background-color: #f9f9f9; /* Optional: Light background color */
+}
+
+nav a {
+  flex: 1;               /* Make all links take equal space */
+  text-decoration: none; /* Remove underlines */
+  color: inherit;        /* Use the parent element's text color */
+  text-align: center;    /* Center the text within each link */
+  padding: 0.5em;        /* Add spacing inside each link */
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(90% 3% 200); /* Highlight the current page link */
+  padding-bottom: 0.1em; /* Reduce padding to counteract border height */
+}
+
+
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent); /* Accent color for the bottom border */
+}
+
+input, textarea, button, select {
+  font: inherit; /* Inherit all font-related properties (family, size, weight, etc.) */
+}
+
+
+/* Apply consistent box-sizing */
+form * {
+  box-sizing: border-box;
+  display: grid; /* Enable grid layout */
+  grid-template-columns: auto 1fr; /* Two columns: labels (auto width), inputs (remaining space) */
+  gap: 1em; /* Spacing between grid items */
+  align-items: center; /* Align items vertically within their grid cells */
+  max-width: 600px; /* Optional: Limit form width for better readability */
+  margin: 0 auto; /* Center the form horizontally in the viewport */
+  gap: 1em; /* Spacing between grid items */
+}
+
+/* Layout for labels */
+form label {
+  display: grid;
+  grid-template-columns: subgrid; /* Inherits columns from the parent grid */
+  grid-column: 1 / -1; /* Makes labels span the entire row */
+}
+
+/* Layout for form controls */
+form input, form textarea, form select, form button, form label {
+  display: block; /* Ensure controls take up their own line */
+  width: 100%; /* Make controls span the full width of the container */
+  box-sizing: border-box; /* Make their width of 100% include their padding and border */
+  padding: 0.5em; /* Add internal spacing for better readability */
+  margin-block: 0.5em; /* Add spacing above and below */
+  /*border: 1px solid #ccc; /* Optional: Add a subtle border */
+  /*border-radius: 0.3em; /* Optional: Smooth corners for aesthetics */
+  /*font: inherit; /* Ensure form controls inherit the page font */
+}
+
+/* Spanning the button */
+form button {
+  grid-column: 1 / -1; /* Make the submit button span the full form width*/
+  justify-self: center; /* Center the button horizontally */
+}
+
+.projects {
+  display: grid; /* Enable Grid Layout */
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive columns */
+}
+
+.projects article {
+  display: grid; /* Make each article a grid container */
+  grid-template-rows: subgrid; /* Make article contents align with the parent grid */
+  grid-row: span 3; /* Span each article across 3 rows */
+  border: 1px solid #ccc; /* Optional: Add a border around articles */
+  gap: 1em; /* Internal spacing */
+}
+
+.projects img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  margin-bottom: 0.5em; /* Space below the image */
+}
+
+.projects h2 {
+  margin: 0; /* Remove excessive margin */
+}
+
+.project h1 {
+  font-size: 400%; /* 4 times the base text size */
+}
+
+.project h1, .project h2, .project h3, .project h4, .project h5, .project h6 {
+  line-height: 1.1; /* Smaller line height for headings */
+  text-wrap: balance; /* Prevents uneven line breaks */
+}
+
+.cv {
+  display: grid; /* Use grid layout for the entire CV */
+}
+
+.cv header h1 {
+  text-align: center; /* Center the text */
+  color: #1b756271; /* Set the header color */
+}
+
+.cv h2 {
+  text-decoration: underline; /* Add an underline to the heading */
+}
+
+.cv p {
+  background-color: #2a92c271; /* Light blue with transparency */
+  border: 2px solid #1e6f9f; /* Darker border color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Add padding for better text structure */
+}
+
+.cv ul {
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Padding for better structure */
+}
+
+.cv li {
+  margin-left: 2em; /* Indent list items */
+}
+
+/* Contacts */
+.cv .contacts ul {
+  background-color: #f4a261; /* Light orange */
+  border: 2px solid #e76f51; /* Darker orange border */
+}
+
+/* Education */
+.cv .education ul {
+  background-color: #a8dadc; /* Light blue */
+  border: 2px solid #457b9d; /* Dark blue border */
+}
+
+/* Skills */
+.cv .skills ul {
+  background-color: #f4d35e; /* Light yellow */
+  border: 2px solid #ee964b; /* Dark yellow border */
+}
+
+/* Projects */
+.cv .projects {
+  display: block; /* Ensure the projects section is displayed as a block */
+}
+
+.cv .projects header {
+  display: block; /* Ensure the project header is displayed as a block */
+}
+
+.cv .projects ul {
+  display: block; /* Display the list as a block */
+  background-color: #bde0fe; /* Pastel blue */
+  border: 2px solid #0077b6; /* Deep blue border */
+}
+
+/* Professional Experience */
+.cv .pro ul {
+  background-color: #caffbf; /* Pastel green */
+  border: 2px solid #6a994e; /* Dark green border */
+}
+
+
