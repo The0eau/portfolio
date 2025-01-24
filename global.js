@@ -41,7 +41,11 @@ for (let p of pages) {
   }
 
 
-  
+// Function to set the color scheme
+function setColorScheme(scheme) {
+  document.documentElement.style.setProperty('color-scheme', scheme);
+  localStorage.setItem('colorScheme', scheme);
+}  
 
 document.body.insertAdjacentHTML(
     'afterbegin',

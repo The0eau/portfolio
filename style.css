@@ -12,7 +12,7 @@ body {
 
 :root {
     --color-accent: oklch(65% 50% 0); /* Define the main accent color */
-    color-scheme: light dark;
+    color-scheme: dark;
   }
 
 html {
@@ -199,6 +199,22 @@ form button {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+/* Adjust styles for dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  nav {
+    background-color: color-mix(in oklch, var(--color-accent), canvas 20%);
+  }
+
+  nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+  }
 }
 
 
