@@ -72,19 +72,19 @@ select.addEventListener('input', function (event) {
 const form = document.querySelector("form");
 
 form?.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevents the default form submission behavior
-  console.log("Form submitted!");
+    event.preventDefault(); // Prevent default form submission
 
-  const data = new FormData(form);
-  const urlParam = new URLSearchParams();
+    const data = new FormData(form); // Create FormData object
 
-  for (let [name, value] of data) {
-    // TODO build URL parameters here
-    console.log(name, value);
-    urlParam.append(name, value);
-  }
+    const params = new URLSearchParams(); // Initialize URL parameters
 
-  console.log(urlParam.toString()); // Affiche les paramètres de l'URL
+    for (let [name, value] of data) {
+        console.log(name, value); // Log form field names and values
+        params.append(name, value); // Append to URL parameters
+    }
+
+    // Example: Logging the final query string
+    console.log(params.toString());
 });
 
 
