@@ -82,9 +82,9 @@ form?.addEventListener("submit", (event) => {
         console.log(name, encodeURIComponent(value)); // Log form field names and values
         params.append(name, encodeURIComponent(value)); // Append to URL parameters
     }
-
-    // Example: Logging the final query string
-    console.log(params.toString());
+    const mailtoUrl = `${form.action}?${params.toString()}`;
+    console.log(mailtoUrl);
+    location.href = mailtoUrl;
 });
 
 
