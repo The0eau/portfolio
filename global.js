@@ -41,7 +41,10 @@ for (let p of pages) {
   }
 
 
-  
+function setColorScheme(colorScheme) {
+  document.documentElement.style.setProperty('color-scheme', colorScheme);
+  localStorage.setItem('colorScheme', colorScheme);
+}
 
 document.body.insertAdjacentHTML(
     'afterbegin',
@@ -60,14 +63,13 @@ const select = document.querySelector('.color-scheme select');
 
 const savedScheme = localStorage.getItem('colorScheme');
 if (savedScheme) {
-    document.documentElement.style.setProperty('color-scheme',savedScheme);
+    setColorScheme(savedScheme);
   }
 
 
 select.addEventListener('input', function (event) {
   console.log('color scheme changed to', event.target.value);
-  document.documentElement.style.setProperty('color-scheme', event.target.value);
-  localStorage.colorScheme = event.target.value
+  setColorScheme(event.target.value);
 });
 
 
