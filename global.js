@@ -70,7 +70,7 @@ select.addEventListener('input', function (event) {
 });
 
 const form = document.querySelector(".form")
-form?.addEventListenerContact('input', function (event) {
+form?.addEventListenerContact('submit', (event) {
   event.preventDefault(); // Prevents the default form submission behavior
   console.log("Form submitted!");
   const data = new FormData(form);
