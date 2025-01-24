@@ -72,3 +72,12 @@ select.addEventListener('input', function (event) {
 console.log('color scheme changed to', event.target.value);
 });
 
+const savedScheme = localStorage.getItem('colorScheme');
+if (savedScheme) {
+    setColorScheme(savedScheme);
+} else {
+    // Détection du mode sombre du système
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setColorScheme("dark");
+    }
+}
