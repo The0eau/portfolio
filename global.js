@@ -69,7 +69,7 @@ select.addEventListener('input', function (event) {
   setColorScheme(event.target.value);
 });
 
-const form = document.querySelector(".form");
+const form = document.querySelector("form");
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault(); // Prevents the default form submission behavior
