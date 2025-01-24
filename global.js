@@ -60,8 +60,7 @@ const select = document.querySelector('.color-scheme select');
 
 const savedScheme = localStorage.getItem('colorScheme');
 if (savedScheme) {
-    setColorScheme(savedScheme);
-    select.value = savedScheme;
+    document.documentElement.style.setProperty('color-scheme',savedScheme);
   }
 
 
