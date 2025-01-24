@@ -24,7 +24,6 @@ nav ul, nav li {
 }
 
 nav {
-  padding-top: 0.5 em;
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;         /* Enable Flexbox layout */
   align-items: center;   /* Align items vertically */
