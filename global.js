@@ -71,7 +71,15 @@ select.addEventListener('input', function (event) {
 
 const form = document.querySelector("form")
 form?.addEventListenerContact('input', function (event) {
+  event.preventDefault(); // Prevents the default form submission behavior
   console.log("Form submitted!");
 });
+
+let data = FormData;
+
+for (let [name, value] of data) {
+  // TODO build URL parameters here
+  console.log(name, value);
+}
 
 
