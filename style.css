@@ -12,12 +12,12 @@ body {
 
 :root {
     --color-accent: oklch(65% 50% 0); /* Define the main accent color */
-    
+    color-scheme: light dark;
   }
 
 html {
   accent-color: var(--color-accent); /* Use the accent color available to the entire document */
-  color-scheme: light dark;
+  
 }
 
 nav ul, nav li {
