@@ -7,12 +7,6 @@ function $$(selector, context = document) {
 const navLinks = $$("nav a"); // Get all navigation links
 console.log(navLinks); // Check if links are correctly selected
 
-let currentLink = navLinks.find(
-    (a) => a.host === location.host && a.pathname === location.pathname
-  );
-console.log(currentLink);
-currentLink?.classList.add('current');
-
 let pages = [
     { url: 'https://the0eau.github.io/portfolio/index.html', title: 'Me' },
     { url: 'https://the0eau.github.io/portfolio/project/index.html', title: 'Projects' },
@@ -22,6 +16,7 @@ let pages = [
     // add the rest of your pages here
   ];
 
+const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
@@ -29,27 +24,29 @@ document.body.prepend(nav);
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    // TODO create link and add it to nav
+
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+
+    let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
+
+    a.classList.toggle(
+      'current',
+      a.host === location.host && a.pathname === location.pathname
+    );
+
+    a.toggleAttribute('target', a.host !== location.host);
+    nav.append(a);
   }
 
-// Create link and add it to nav
-nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 
-const ARE_WE_HOME = document.documentElement.classList.contains('home');
-url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
-nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
-let a = document.createElement('a');
-a.href = url;
-a.textContent = title;
-nav.append(a);
-if (a.host === location.host && a.pathname === location.pathname) {
-    a.classList.add('current');
-  }
 
-a.classList.toggle(
-'current',
-a.host === location.host && a.pathname === location.pathname
-);
+
+
+
+
+
 
 
 document.body.insertAdjacentHTML(
