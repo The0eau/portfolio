@@ -29,6 +29,7 @@ nav {
   margin-bottom: 1em;    /* Separate the navbar from content */
   border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
   background-color: #f9f9f9; /* Optional: Light background color */
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 nav a {
