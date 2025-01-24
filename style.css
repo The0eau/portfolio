@@ -6,8 +6,6 @@
 
 /* Global body settings */
 body {
-  background-color: Canvas; /* Default background color */
-  color: CanvasText; /* Default text color */
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: auto;
