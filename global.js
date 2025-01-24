@@ -79,8 +79,8 @@ form?.addEventListener("submit", (event) => {
     const params = new URLSearchParams(); // Initialize URL parameters
 
     for (let [name, value] of data) {
-        console.log(name, value); // Log form field names and values
-        params.append(name, value); // Append to URL parameters
+        console.log(name, encodeURIComponent(value)); // Log form field names and values
+        params.append(name, encodeURIComponent(value)); // Append to URL parameters
     }
 
     // Example: Logging the final query string
