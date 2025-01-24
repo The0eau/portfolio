@@ -69,4 +69,9 @@ select.addEventListener('input', function (event) {
   setColorScheme(event.target.value);
 });
 
+const form = document.querySelector("form")
+form?.addEventListenerContact('input', function (event) {
+  console.log("Form submitted!");
+});
+
 
