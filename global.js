@@ -44,37 +44,3 @@ for (let p of pages) {
 
 
 
-
-
-
-
-
-document.body.insertAdjacentHTML(
-    'afterbegin',
-    `
-      <label class="color-scheme">
-          Theme:
-          <select>
-                <option value="light dark">Automatic</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-          </select>
-      </label>`
-  );
-
-const select = document.querySelector('.color-scheme select');
-
-
-select.addEventListener('input', function (event) {
-console.log('color scheme changed to', event.target.value);
-});
-
-const savedScheme = localStorage.getItem('colorScheme');
-if (savedScheme) {
-    setColorScheme(savedScheme);
-} else {
-    // Détection du mode sombre du système
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        setColorScheme("dark");
-    }
-}
