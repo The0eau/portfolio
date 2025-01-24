@@ -69,17 +69,22 @@ select.addEventListener('input', function (event) {
   setColorScheme(event.target.value);
 });
 
-const form = document.querySelector(".form")
-form?.addEventListenerContact('submit', (event) {
+const form = document.querySelector(".form");
+
+form?.addEventListener("submit", (event) => {
   event.preventDefault(); // Prevents the default form submission behavior
   console.log("Form submitted!");
+
   const data = new FormData(form);
-  const urlParam = new URLSearchParams()
+  const urlParam = new URLSearchParams();
+
   for (let [name, value] of data) {
     // TODO build URL parameters here
     console.log(name, value);
-    urlParam.append(name,value)
+    urlParam.append(name, value);
   }
+
+  console.log(urlParam.toString()); // Affiche les paramètres de l'URL
 });
 
 
