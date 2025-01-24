@@ -2,6 +2,8 @@ body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
+    background-color: Canvas;
+    color: CanvasText;
     font: 100%/1.5 system-ui;
     max-width: 100ch; /* Limit the content width */
     margin-inline: auto; /* Center the content horizontally */
