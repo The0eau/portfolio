@@ -8,7 +8,7 @@ const navLinks = $$("nav a"); // Get all navigation links
 console.log(navLinks); // Check if links are correctly selected
 
 let pages = [
-    { url: 'https://the0eau.github.io/portfolio/index.html', title: 'Me' },
+    { url: 'https://the0eau.github.io/portfolio/', title: 'Me' },
     { url: 'https://the0eau.github.io/portfolio/project/index.html', title: 'Projects' },
     { url: 'https://the0eau.github.io/portfolio/contact/index.html', title: 'Contact' },
     { url: 'https://the0eau.github.io/portfolio/cv/index.html', title: 'Resume' },
