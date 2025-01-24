@@ -22,8 +22,6 @@ let pages = [
     // add the rest of your pages here
   ];
 
-let nav = document.createElement('nav');
-document.body.prepend(nav);
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
@@ -47,7 +45,7 @@ nav.append(a);
 if (a.host === location.host && a.pathname === location.pathname) {
     a.classList.add('current');
   }
-  
+
 a.classList.toggle(
 'current',
 a.host === location.host && a.pathname === location.pathname
