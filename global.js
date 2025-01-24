@@ -41,11 +41,7 @@ for (let p of pages) {
   }
 
 
-// Function to set the color scheme
-function setColorScheme(scheme) {
-  document.documentElement.style.setProperty('color-scheme', scheme);
-  localStorage.setItem('colorScheme', scheme);
-}  
+  
 
 document.body.insertAdjacentHTML(
     'afterbegin',
@@ -64,7 +60,8 @@ const select = document.querySelector('.color-scheme select');
 
 
 select.addEventListener('input', function (event) {
-console.log('color scheme changed to', event.target.value);
+  console.log('color scheme changed to', event.target.value);
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
 });
 
 const savedScheme = localStorage.getItem('colorScheme');
