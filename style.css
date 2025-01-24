@@ -1,20 +1,22 @@
-/* Root (html) settings */
-:root {
-  --color-accent: oklch(65% 50% 0); /* Define the main accent color */
-  color-scheme: light dark; /* Indicate support for both light and dark modes */
-}
-
-/* Global body settings */
 body {
-  font: 100%/1.5 system-ui;
-  max-width: 100ch;
-  margin-inline: auto;
-  padding: 1rem;
-}
+    /* Set line height to 1.5 times the font size
+         and use the OS’s UI font as the website font
+       */
+    background-color: Canvas;
+    color: CanvasText;
+    font: 100%/1.5 system-ui;
+    max-width: 100ch; /* Limit the content width */
+    margin-inline: auto; /* Center the content horizontally */
+    padding: 1rem;          /* Add spacing inside the body */
+  }
+
+:root {
+    --color-accent: oklch(65% 50% 0); /* Define the main accent color */
+    color-scheme: light dark;
+  }
 
 html {
   accent-color: var(--color-accent); /* Use the accent color available to the entire document */
-  
 }
 
 nav ul, nav li {
