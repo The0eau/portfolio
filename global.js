@@ -89,4 +89,53 @@ form?.addEventListener("submit", (event) => {
 
 
 
+export async function fetchJSON(url) {
+  try {
+      // Fetch the JSON file from the given URL
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+         
+      }
+      console.log(response)
+      const data = await response.json();
+      return data;
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
 
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+  // Your code will go here
+  containerElement.innerHTML = '';
+  project.forEach(article => {
+    const article = document.createElement('article');
+    article.innerHTML = `
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+});
+  
+
+}
+
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+const githubData = await fetchGitHubData('The0eau');
+const profileStats = document.querySelector('#profile-stats');
+if (profileStats) {
+  profileStats.innerHTML = `
+        <dl>
+          <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
+          <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
+          <dt>Followers:</dt><dd>${githubData.followers}</dd>
+          <dt>Following:</dt><dd>${githubData.following}</dd>
+        </dl>
+    `;
+}
