@@ -129,6 +129,7 @@ export async function fetchGitHubData(username) {
 
 const githubData = await fetchGitHubData('The0eau');
 const profileStats = document.querySelector('#profile-stats');
+console.log("bojour")
 if (profileStats) {
   profileStats.innerHTML = `
         <dl>
