@@ -1,5 +1,5 @@
-import { fetchJSON, renderProjects } from 'https://raw.githubusercontent.com/The0eau/portfolio/refs/heads/main/global.js';
-const projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/refs/heads/main/lib/projects.json');
+import { fetchJSON, renderProjects } from 'https://the0eau.github.io/portfolio/global.js';
+const projects = await fetchJSON('https://the0eau.github.io/portfolio/lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 
