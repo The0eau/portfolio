@@ -109,7 +109,7 @@ export async function fetchJSON(url) {
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
   // Your code will go here
   containerElement.innerHTML = '';
-  project.forEach(article => {
+  project.forEach(Element => {
     const article = document.createElement('article');
     article.innerHTML = `
     <h3>${project.title}</h3>
