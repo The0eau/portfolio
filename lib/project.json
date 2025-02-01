@@ -1,16 +1,16 @@
 [
 
         {
-  "title": "Portfolio",
-  "year": "2025",
-  "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-  "description": "DSC 106 Labs"
+        "title": "Portfolio",
+        "year": "2025",
+        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+        "description": "DSC 106 Labs"
     },
     {
-        "title": "Quo aut laboriosam neque.",
-        "year": "2025",
+        "title": "Chat Bot.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Chat bot for Q&A"
     },
     {
         "title": "Aliquam quis quae architecto!",
