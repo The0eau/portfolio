@@ -218,4 +218,36 @@ form button {
 }
 
 
+#profile-stats {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+#profile-stats h3 {
+  margin: 0;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+#profile-stats dt {
+  font-weight: bold;
+  grid-row: 1;
+}
+
+#profile-stats dd {
+  margin: 0;
+  grid-row: 2;
+}
+
 
