@@ -6,4 +6,4 @@ renderProjects(projects, projectsContainer, 'h2');
 
 const projectCount = document.querySelectorAll(".projects article").length;
 
-document.querySelector(".projects-title").textContent = `Projects (${projectCount})`;
+document.querySelector(".projects-title").textContent = `${projectCount} projects`;
