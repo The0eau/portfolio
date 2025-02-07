@@ -279,6 +279,7 @@ form button {
 
 /* Pie chart */
 svg {
+  display: flex;
   max-width: 10em;
   overflow: visible;
 }
