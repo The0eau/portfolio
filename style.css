@@ -278,7 +278,7 @@ form button {
 }
 
 /* Reduced the size of the pie chart by half */
-#projects-pie-plot {
+#projects-plot {
   max-width: 2em; /* Reduce size to 10em instead of 20em */
   height: 2em; /* Maintain aspect ratio */
   overflow: visible;
