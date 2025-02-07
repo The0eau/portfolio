@@ -251,13 +251,6 @@ form button {
 }
 
 
-#projects-pie-plot {
-  max-width: 20em;
-  margin-block: 2em;
-
-  overflow: visible;
-}
-
 /* General Styles */
 #projects-body {
   font-family: Arial, sans-serif;
@@ -278,15 +271,15 @@ form button {
 /* Container holding the pie chart and legend */
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align the items to the top */
   justify-content: center;
-  gap: 2em;
-  margin-top: 1.5em;
+  gap: 3em; /* Increased the gap between pie chart and legend */
+  margin-top: 2em;
 }
 
 /* Reduced the size of the pie chart by half */
-svg {
-  width: 10em; /* Reduced from 20em to 10em */
+#projects-pie-plot {
+  max-width: 10em; /* Reduce size to 10em instead of 20em */
   height: 10em; /* Maintain aspect ratio */
   overflow: visible;
 }
@@ -298,9 +291,13 @@ svg {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+
+  /* Use flexbox for legend layout */
+  display: flex;
+  flex-direction: column; /* Align the items vertically */
   gap: 1em;
+  justify-content: space-around; /* Space the legend items out evenly */
+  max-width: 15em; /* Set a max-width to the legend */
 }
 
 /* Individual legend items */
@@ -335,12 +332,13 @@ svg {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column; /* Stack the pie chart and legend vertically on smaller screens */
+    align-items: center;
   }
 
   .legend {
-      width: 100%;
+    width: 100%;
+    max-width: none;
   }
 }
 
