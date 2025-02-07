@@ -53,17 +53,17 @@ function renderPieChart(projectsGiven) {
             .append('path')
             .attr('d', arc)
             .attr('fill', colors(i))
-            .on("click", () => filterByYear(data[idx].label));
+            .on("click", () => filterByYear(newData[i].label, projectsGiven));
     });
     
     // Clear existing legend and render legend
     d3.select('.legend').selectAll('li').remove();
-    renderLegend(data, colors);
+    renderLegend(newData, colors, projectsGiven);
 }
 
 // Function to render the legend
 
-function renderLegend(data, colors) {
+function renderLegend(data, colors, projects) {
   let legend = d3.select(".legend");
   legend.selectAll("li").remove(); // Nettoyer la légende avant de la redessiner
 
@@ -71,16 +71,14 @@ function renderLegend(data, colors) {
       legend.append("li")
             .attr("style", `--color:${colors(idx)}`)
             .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
-            .on("click", () => filterByYear(d.label));
+            .on("click", () => filterByYear(d.label, projects));
   });
 }
 
 // Function to filter the projects by year
-function filterByYear(year) {
-  d3.json("data.json").then(projects => {
-      let filteredProjects = projects.filter(project => project.year == year);
-      renderPieChart(filteredProjects);
-  });
+function filterByYear(year, allProjects) {
+  let filteredProjects = allProjects.filter(project => project.year == year);
+  renderPieChart(filteredProjects);
 }
 
 
