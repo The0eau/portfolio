@@ -270,7 +270,6 @@ form button {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  font-size: 14px;
 }
 
 .legend-item .swatch {
@@ -282,3 +281,20 @@ form button {
   border-radius: 50%; 
 }
 
+path {
+  transition: 300ms;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
