@@ -279,7 +279,6 @@ form button {
 
 /* Pie chart */
 svg {
-  display: flex;
   max-width: 10em;
   overflow: visible;
 }
@@ -292,13 +291,12 @@ svg {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-  
+  flex: 1; /* Allow legend to take available space */
   /* Make the legend a vertical column */
   display: flex;
   flex-direction: column;  /* Stack legend items vertically */
   gap: 1em;  /* Space between items */
   max-width: 15em; /* Limit the width of the legend */
-  flex: 1; /* Allow legend to take available space */
 }
 
 /* Individual legend items */

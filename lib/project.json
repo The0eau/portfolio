@@ -1,75 +1,128 @@
 [
-
-        {
-        "title": "Portfolio",
-        "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "DSC 106 Labs"
-    },
     {
-        "title": "Chat Bot.",
+        "title": "Chat Bot",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Chat bot for Q&A"
+        "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs)."
     },
     {
-        "title": "supervised AI",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Regression and classification"
-    },
-    {
-        "title": "Unsupervised AI",
+        "title": "Netflix Data Study with AI",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Clustering"
+        "description": "Customer segmentation and trend forecasting using clustering models."
     },
     {
-        "title": "Robot",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "RFID and embedded system"
-    },
-    {
-        "title": "Cs project",
+        "title": "Phishing Link Detection with AI",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Data Base"
+        "description": "Developed AI-based phishing detection model with Deep Learning and NLP techniques."
     },
     {
-        "title": "Nisi hic veritatis adipisci.",
-        "year": "2025",
+        "title": "Predictive Analysis of Agricultural Land (AI)",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Identifying promising agricultural land in response to climate change using predictive modeling."
     },
     {
-        "title": "Id mollitia modi deleniti?",
-        "year": "2025",
+        "title": "Finance Database",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Developed an SQL-based financial tracking system for expense management and reporting."
     },
     {
-        "title": "Mollitia nulla repudiandae officiis!",
-        "year": "2025",
+        "title": "AI-Powered QA Graphs",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Developed AI-driven knowledge graphs using LangChain, MLflow, and GCP Vertex AI."
     },
     {
-        "title": "Nisi odio vel a.",
-        "year": "2025",
+        "title": "DECART Erasmus+",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Strategic analysis on future industrial skills needs via surveys and data-driven insights."
     },
     {
-        "title": "Maxime eveniet tempore quibusdam.",
-        "year": "2025",
+        "title": "Pick Pick App",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Designed a ride-sharing mobile application with market insights and BI reporting."
     },
     {
-        "title": "Quae vitae dicta soluta.",
-        "year": "2025",
+        "title": "Sustainable Health Project",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "\n          \n        "
+        "description": "Coaching program for student well-being, focusing on stress management and fitness."
+    },
+    {
+        "title": "Asynchronous System (SAR)",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Designed and validated an asynchronous processor using VHDL."
+    },
+    {
+        "title": "Logistics Network Optimization (SER)",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Optimized logistics networks using MILP and ILS algorithms."
+    },
+    {
+        "title": "Decision Support Website for Schools",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed a web-based tool for French schools to optimize resource allocation using data analytics."
+    },
+    {
+        "title": "AI Chess Bot",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed an AI-powered chess bot using game theory and object-oriented programming."
+    },
+    {
+        "title": "Expense Management System",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Created a database to track and manage shared expenses among friends."
+    },
+    {
+        "title": "Stock Market Predictor AI",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed a predictive model for stock prices using machine learning and deep learning."
+    },
+    {
+        "title": "Autonomous Robot with RFID",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Designed an autonomous robot capable of RFID-based navigation for a competition."
+    },
+    {
+        "title": "Amazon Web Scraping",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Automated data extraction from Amazon to analyze trends in pricing and reviews."
+    },
+    {
+        "title": "Sociological Study on Bartending",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Conducted a qualitative study on the bartending profession, focusing on career paths and social dynamics."
+    },
+    {
+        "title": "Game Theory AI (Pyrat Project)",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed game-theory-based AI algorithms in Python to simulate competitive gaming strategies."
+    },
+    {
+        "title": "AI Image Generator",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Built an AI-powered image generator using OpenAI's generative AI models."
+    },
+    {
+        "title": "Eco-Responsible Menus Project",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Designed sustainable and eco-friendly meal plans with a focus on reducing environmental impact."
     }
 ]
