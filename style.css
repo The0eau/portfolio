@@ -291,13 +291,12 @@ form button {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-
-  /* Use flexbox for legend layout */
+  
+  /* Make the legend a vertical column */
   display: flex;
-  flex-direction: column; /* Align the items vertically */
-  gap: 1em;
-  justify-content: space-around; /* Space the legend items out evenly */
-  max-width: 15em; /* Set a max-width to the legend */
+  flex-direction: column; /* Stack legend items in a column */
+  gap: 1em; /* Space between items */
+  max-width: 15em; /* Limit the width of the legend */
 }
 
 /* Individual legend items */
