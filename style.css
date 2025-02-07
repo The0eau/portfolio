@@ -323,7 +323,7 @@ form button {
   height: 1em;
   aspect-ratio: 1 / 1;
   background-color: var(--color);
-  display: inline-block;
+  display: table-column;
   border-radius: 50%;
   border: 1px solid #ccc;
 }
