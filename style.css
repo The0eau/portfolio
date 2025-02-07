@@ -259,14 +259,14 @@ form button {
 }
 
 /* General Styles */
-body {
+#projects-body {
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
 /* Search Bar */
 .searchBar {
-  display: block;
+  display: grid;
   margin: 0 auto;
   padding: 0.5em;
   width: 50%;
@@ -298,7 +298,6 @@ svg {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
