@@ -12,17 +12,18 @@ document.querySelector(".projects-title").textContent = `${projectCount} project
 
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
-
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
-let data = [
-    { value: 1, label: 'apples' },
-    { value: 2, label: 'oranges' },
-    { value: 3, label: 'mangos' },
-    { value: 4, label: 'pears' },
-    { value: 5, label: 'limes' },
-    { value: 5, label: 'cherries' },
-];
+let rolledData = d3.rollups(
+    projects,
+    (v) => v.length,
+    (d) => d.year,
+  );
+  
+let data = rolledData.map(([year, count]) => {
+    return { value: count, label: year };
+});
+
 let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
@@ -39,8 +40,11 @@ let legend = d3.select('.legend');
 data.forEach((d, idx) => {
     legend.append('li')
           .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-          .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
-           .attr("class", "legend-item")
-    .attr(`--color:${colors(idx)}`)
+          .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`) // set the inner html of <li>
+          .attr("class", "legend-item")
+          .attr(`--color:${colors(idx)}`)
 })
+
+
+
 
