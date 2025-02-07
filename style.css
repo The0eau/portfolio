@@ -277,12 +277,12 @@ form button {
   margin-top: 2em;
 }
 
-/* Reduced the size of the pie chart by half */
-#projects-plot {
-  max-width: 2em; /* Reduce size to 10em instead of 20em */
-  height: 2em; /* Maintain aspect ratio */
+/* Pie chart */
+svg {
+  max-width: 10em;
   overflow: visible;
 }
+
 
 /* Legend styling */
 .legend {
