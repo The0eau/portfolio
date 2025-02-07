@@ -96,7 +96,7 @@ document.querySelector(".searchBar").addEventListener("input", (event) => {
     });
 });
 
-// Charger les données et afficher le diagramme initial
-loadData();
+// Render Pie Chart
+renderPieChart(projects);
 
 
