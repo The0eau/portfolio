@@ -1,21 +1,22 @@
 import { fetchJSON, renderProjects } from 'https://the0eau.github.io/portfolio/global.js';
-const projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json');
-const projectsContainer = document.querySelector('.projects');
-renderProjects(projects, projectsContainer, 'h2');
-
-
-const projectCount = document.querySelectorAll(".projects article").length;
-
-document.querySelector(".projects-title").textContent = `${projectCount} projects`;
-
-
-
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
+// Async function to load and render data
+async function loadData() {
+    // Fetch projects data
+    const projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json');
 
+    // Select project container and render projects
+    const projectsContainer = document.querySelector('.projects');
+    renderProjects(projects, projectsContainer, 'h2');
 
+    // Count projects and update the title
+    const projectCount = document.querySelectorAll(".projects article").length;
+    document.querySelector(".projects-title").textContent = `${projectCount} projects`;
 
-
+    // Render Pie Chart
+    renderPieChart(projects);
+}
 
 // Function to render pie chart
 function renderPieChart(projectsGiven) {
@@ -23,17 +24,16 @@ function renderPieChart(projectsGiven) {
     let newRolledData = d3.rollups(
         projectsGiven,
         (v) => v.length,
-        (d) => d.year,
+        (d) => d.year
     );
     
     // Recalculate data
     let newData = newRolledData.map(([year, count]) => ({
-       value: count,
+        value: count,
         label: year 
-      }));
-    
+    }));
 
-    // Chose colors  
+    // Choose colors  
     let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
     // Calculate slice generator and arc data
@@ -48,53 +48,51 @@ function renderPieChart(projectsGiven) {
     d3.select('svg').selectAll('path').remove();
 
     // Append new arcs to SVG
+    let svg = d3.select("svg");
     newArcs.forEach((arc, i) => {
-        d3.select('svg')
-            .append('path')
-            .attr('d', arc)
-            .attr('fill', colors(i))
-            .on("click", () => filterByYear(newData[i].label, projectsGiven));
+        svg.append("path")
+           .attr("d", arc)
+           .attr("fill", colors(i))
+           .on("click", () => filterByYear(newData[i].label, projectsGiven));
     });
-    
+
     // Clear existing legend and render legend
     d3.select('.legend').selectAll('li').remove();
     renderLegend(newData, colors, projectsGiven);
 }
 
 // Function to render the legend
-
 function renderLegend(data, colors, projects) {
-  let legend = d3.select(".legend");
-  legend.selectAll("li").remove(); // Nettoyer la légende avant de la redessiner
+    let legend = d3.select(".legend");
+    legend.selectAll("li").remove(); // Clean legend
 
-  data.forEach((d, idx) => {
-      legend.append("li")
-            .attr("style", `--color:${colors(idx)}`)
-            .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
-            .on("click", () => filterByYear(d.label, projects));
-  });
+    data.forEach((d, idx) => {
+        legend.append("li")
+              .attr("style", `--color:${colors(idx)}`)
+              .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+              .on("click", () => filterByYear(d.label, projects));
+    });
 }
 
 // Function to filter the projects by year
 function filterByYear(year, allProjects) {
-  let filteredProjects = allProjects.filter(project => project.year == year);
-  renderPieChart(filteredProjects);
+    let filteredProjects = allProjects.filter(project => project.year == year);
+    renderPieChart(filteredProjects);
 }
 
-
+// Search functionality (Uses existing data instead of refetching)
 document.querySelector(".searchBar").addEventListener("input", (event) => {
-  let query = event.target.value.toLowerCase();
+    let query = event.target.value.toLowerCase();
 
-  d3.json("data.json").then(projects => {
-      let filteredProjects = projects.filter(project => {
-          let values = Object.values(project).join('\n').toLowerCase();
-          return values.includes(query);
-      });
-      renderPieChart(filteredProjects);
+    fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json').then(projects => {
+        let filteredProjects = projects.filter(project => {
+            let values = Object.values(project).join('\n').toLowerCase();
+            return values.includes(query);
+        });
+
+        renderPieChart(filteredProjects);
     });
 });
 
-// Render Pie Chart
-renderPieChart(projects);
-
-
+// Load data initially
+loadData();
