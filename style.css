@@ -53,6 +53,12 @@ nav a:hover {
   border-bottom: 0.4em solid var(--color-accent); /* Accent color for the bottom border */
 }
 
+
+#profile {
+  display: flex;
+}
+
+
 input, textarea, button, select {
   font: inherit; /* Inherit all font-related properties (family, size, weight, etc.) */
 }
