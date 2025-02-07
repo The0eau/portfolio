@@ -111,27 +111,38 @@ form button {
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive columns */
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em; /* Espace entre les articles */
+}
+
 .projects article {
-  display: grid; /* Make each article a grid container */
-  grid-template-rows: subgrid; /* Make article contents align with the parent grid */
-  grid-row: span 3; /* Span each article across 3 rows */
-  border: 1px solid #ccc; /* Optional: Add a border around articles */
-  gap: 1em; /* Internal spacing */
+  display: flex;
+  flex-direction: column; /* Alignement vertical */
+  border: 1px solid #ccc;
+  padding: 1em;
+  background: #fff;
+  text-align: center;
 }
 
 .projects img {
-  max-width: 100%; /* Make images responsive */
+  max-width: 100%;
   height: auto;
-  margin-bottom: 0.5em; /* Space below the image */
+  margin-bottom: 0.5em;
+  object-fit: cover; /* Ajuste bien l’image */
 }
 
 .projects h2 {
-  margin: 0; /* Remove excessive margin */
+  font-size: 1.2em;
+  margin: 0.5em 0;
 }
 
-.project h1 {
-  font-size: 400%; /* 4 times the base text size */
+.projects p {
+  font-size: 1em;
+  margin: 0;
 }
+
 
 .project h1, .project h2, .project h3, .project h4, .project h5, .project h6 {
   line-height: 1.1; /* Smaller line height for headings */
