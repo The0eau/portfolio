@@ -258,43 +258,70 @@ form button {
   overflow: visible;
 }
 
+/* Container holding the pie chart and legend */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+/* Pie chart */
+svg {
+  max-width: 20em;
+  overflow: visible;
+}
+
+/* Legend styling */
 .legend {
+  list-style: none;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
-  list-style: none;
-  padding: 0;
 }
 
-.legend-item {
+/* Individual legend items */
+.legend li {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  padding: 0.5em;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.legend-item .swatch {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+/* Hover effect for legend items */
+.legend li:hover {
+  background-color: #ececec;
+}
+
+/* Swatch styling */
+.swatch {
+  width: 1em;
+  height: 1em;
   aspect-ratio: 1 / 1;
   background-color: var(--color);
-  border-radius: 50%; 
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #ccc;
 }
 
-path {
-  transition: 300ms;
-}
-
-&:has(path:hover) {
-  path:not(:hover) {
-    opacity: 0.5;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
-}
 
-.selected {
-  --color: oklch(60% 45% 0) !important;
-
-  &:is(path) {
-    fill: var(--color);
+  .legend {
+      width: 100%;
   }
 }
