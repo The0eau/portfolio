@@ -1,7 +1,7 @@
 [
     {
         "title": "Chat Bot",
-        "year": "2024",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs)."
     },
@@ -73,55 +73,55 @@
     },
     {
         "title": "AI Chess Bot",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed an AI-powered chess bot using game theory and object-oriented programming."
     },
     {
         "title": "Expense Management System",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Created a database to track and manage shared expenses among friends."
     },
     {
         "title": "Stock Market Predictor AI",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed a predictive model for stock prices using machine learning and deep learning."
     },
     {
         "title": "Autonomous Robot with RFID",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Designed an autonomous robot capable of RFID-based navigation for a competition."
     },
     {
         "title": "Amazon Web Scraping",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Automated data extraction from Amazon to analyze trends in pricing and reviews."
     },
     {
         "title": "Sociological Study on Bartending",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Conducted a qualitative study on the bartending profession, focusing on career paths and social dynamics."
     },
     {
         "title": "Game Theory AI (Pyrat Project)",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed game-theory-based AI algorithms in Python to simulate competitive gaming strategies."
     },
     {
         "title": "AI Image Generator",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Built an AI-powered image generator using OpenAI's generative AI models."
     },
     {
         "title": "Eco-Responsible Menus Project",
-        "year": "2024",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Designed sustainable and eco-friendly meal plans with a focus on reducing environmental impact."
     }
