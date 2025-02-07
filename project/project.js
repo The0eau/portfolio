@@ -1,22 +1,30 @@
 import { fetchJSON, renderProjects } from 'https://the0eau.github.io/portfolio/global.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
+let projects = []; // Global variable to store project data
+
 // Async function to load and render data
 async function loadData() {
     // Fetch projects data
-    const projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json');
+    projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json');
 
-    // Select project container and render projects
-    const projectsContainer = document.querySelector('.projects');
-    renderProjects(projects, projectsContainer, 'h2');
-
-    // Count projects and update the title
-    const projectCount = document.querySelectorAll(".projects article").length;
-    document.querySelector(".projects-title").textContent = `${projectCount} projects`;
+    renderProjects_(projects);
 
     // Render Pie Chart
     renderPieChart(projects);
 }
+
+// Function render projects, count projects and update title
+function renderProjects_(projects){
+  // Select project container and render projects
+  const projectsContainer = document.querySelector('.projects');
+  renderProjects(projects, projectsContainer, 'h2');
+
+  // Count projects and update the title
+  const projectCount = document.querySelectorAll(".projects article").length;
+  document.querySelector(".projects-title").textContent = `${projectCount} projects`;
+}
+
 
 // Function to render pie chart
 function renderPieChart(projectsGiven) {
@@ -82,16 +90,15 @@ function filterByYear(year, allProjects) {
 
 // Search functionality (Uses existing data instead of refetching)
 document.querySelector(".searchBar").addEventListener("input", (event) => {
-    let query = event.target.value.toLowerCase();
+  let query = event.target.value.toLowerCase();
 
-    fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json').then(projects => {
-        let filteredProjects = projects.filter(project => {
-            let values = Object.values(project).join('\n').toLowerCase();
-            return values.includes(query);
-        });
+  let filteredProjects = projects.filter(project => {
+      let values = Object.values(project).join('\n').toLowerCase();
+      return values.includes(query);
+  });
 
-        renderPieChart(filteredProjects);
-    });
+  renderProjects_(filteredProjects);
+  renderPieChart(filteredProjects);
 });
 
 // Load data initially
