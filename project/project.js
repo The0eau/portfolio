@@ -40,5 +40,7 @@ data.forEach((d, idx) => {
     legend.append('li')
           .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
           .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
+           .attr("class", "legend-item")
+    .attr(`--color:${colors(idx)}`)
 })
 
