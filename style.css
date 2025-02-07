@@ -54,9 +54,13 @@ nav a:hover {
 }
 
 
-#profile {
+.profile {
   display: flex;
   gap: 2em;
+  align-items: flex-start; /* Align the items to the top */
+  justify-content: center;
+  gap: 3em; /* Increased the gap between pie chart and legend */
+  margin-top: 2em;
 }
 
 
