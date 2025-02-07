@@ -258,13 +258,30 @@ form button {
   overflow: visible;
 }
 
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Search Bar */
+.searchBar {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
 /* Container holding the pie chart and legend */
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2em;
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 /* Reduced the size of the pie chart by half */
@@ -327,4 +344,5 @@ svg {
       width: 100%;
   }
 }
+
 
