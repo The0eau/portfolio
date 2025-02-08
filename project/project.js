@@ -83,20 +83,24 @@ function renderLegend(data, colors, projects) {
     });
 }
 
-// Function to filter the projects by year
 function filterByYear(year) {
-    let searchQuery = document.querySelector(".searchBar").value.toLowerCase();
-    
+    let query = document.querySelector(".searchBar").value.toLowerCase();
+
     // Apply search filter first
     let searchedProjects = projects.filter(project => 
-        Object.values(project).join('\n').toLowerCase().includes(searchQuery)
+        Object.values(project).join('\n').toLowerCase().includes(query)
     );
 
     // Now apply the year filter on the search results
     let filteredProjects = searchedProjects.filter(project => project.year == year);
-    
+
+    // Mark selected year for reference
+    document.querySelectorAll(".legend li").forEach(li => li.classList.remove("selected"));
+    document.querySelector(`.legend li[data-year='${year}']`)?.classList.add("selected");
+
     renderProjects_(filteredProjects);
 }
+
 
 
 // Search functionality
