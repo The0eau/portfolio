@@ -111,7 +111,7 @@ document.querySelector(".searchBar").addEventListener("input", (event) => {
 
     // Retrieve the currently selected year (if any)
     let selectedYear = document.querySelector(".legend .selected")?.dataset.year;
-
+    console.log(selectedYear);
     let filteredProjects = projects.filter(project => 
         Object.values(project).join('\n').toLowerCase().includes(query)
     );
