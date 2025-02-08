@@ -8,9 +8,10 @@ async function loadData() {
     // Fetch projects data
     projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json');
 
+    // Render projects
     renderProjects_(projects);
 
-    // Render Pie Chart
+    // Render pie chart
     renderPieChart(projects);
 }
 
@@ -99,17 +100,28 @@ function filterByYear(year) {
 }
 
 
-// Search functionality (Uses existing data instead of refetching)
+// Search functionality
 document.querySelector(".searchBar").addEventListener("input", (event) => {
   let query = event.target.value.toLowerCase();
+
+
+  // Retrieve the currently selected year (if any)
+  let selectedYear = document.querySelector(".legend .selected")?.dataset.year;
 
   let filteredProjects = projects.filter(project => {
       let values = Object.values(project).join('\n').toLowerCase();
       return values.includes(query);
   });
 
+  // If a year is selected, apply year filter on top of search filter
+  if (selectedYear) {
+    searchedProjects = searchedProjects.filter(project => project.year == selectedYear);
+    }
+
   renderProjects_(filteredProjects);
 });
+
+
 
 // Load data initially
 loadData();
