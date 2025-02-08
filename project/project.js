@@ -67,11 +67,11 @@ function renderPieChart(projectsGiven, selectedYear = null) {
 
     // Clear existing legend and render legend
     d3.select('.legend').selectAll('li').remove();
-    renderLegend(newData, colors);
+    renderLegend(newData, colors, selectedYear);
 }
 
 // Function to render the legend
-function renderLegend(data, colors) {
+function renderLegend(data, colors, selectedYear= null) {
     let legend = d3.select(".legend");
     legend.selectAll("li").remove(); // Clean legend
 
@@ -80,6 +80,7 @@ function renderLegend(data, colors) {
               .attr("style", `--color:${colors(idx)}`)
               .attr("data-year", d.label) // Add data-year attribute for filtering
               .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+              .classed("selected", d.label === selectedYear)
               .on("click", () => filterByYear(d.label));
     });
 }
