@@ -118,12 +118,9 @@ document.querySelector(".searchBar").addEventListener("input", (event) => {
 
     // If a year is selected, apply year filter on top of search filter
     if (selectedYear) {
-        filteredProjects = filteredProjects.filter(project => project.year == selectedYear);
+        filterByYear(selectedYear)
     }
-
-    renderProjects_(filteredProjects);
-    renderPieChart(projects, selectedYear); // Keep pie chart color updated
-});
+    });
 
 // Load data initially
 loadData();
