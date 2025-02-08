@@ -96,7 +96,6 @@ function filterByYear(year) {
     let filteredProjects = searchedProjects.filter(project => project.year == year);
     
     renderProjects_(filteredProjects);
-    renderPieChart(filteredProjects);
 }
 
 
