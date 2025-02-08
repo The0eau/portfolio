@@ -111,7 +111,7 @@ document.querySelector(".searchBar").addEventListener("input", (event) => {
 
     // Retrieve the currently selected year (if any)
     let selectedYear = document.querySelector(".legend .selected")?.dataset.year;
-    console.log(selectedYear);
+    console.log(selectedYear)
     let filteredProjects = projects.filter(project => 
         Object.values(project).join('\n').toLowerCase().includes(query)
     );
@@ -120,7 +120,12 @@ document.querySelector(".searchBar").addEventListener("input", (event) => {
     if (selectedYear) {
         filterByYear(selectedYear)
     }
+    else{
+        // Render updated project list and pie chart
+        renderProjects_(filteredProjects);
+    }
     });
+        
 
 // Load data initially
 loadData();
