@@ -98,7 +98,6 @@ document.querySelector(".searchBar").addEventListener("input", (event) => {
   });
 
   renderProjects_(filteredProjects);
-  renderPieChart(filteredProjects);
 });
 
 // Load data initially
