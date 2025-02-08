@@ -83,10 +83,21 @@ function renderLegend(data, colors, projects) {
 }
 
 // Function to filter the projects by year
-function filterByYear(year, allProjects) {
-    let filteredProjects = allProjects.filter(project => project.year == year);
+function filterByYear(year) {
+    let searchQuery = document.querySelector(".searchBar").value.toLowerCase();
+    
+    // Apply search filter first
+    let searchedProjects = projects.filter(project => 
+        Object.values(project).join('\n').toLowerCase().includes(searchQuery)
+    );
+
+    // Now apply the year filter on the search results
+    let filteredProjects = searchedProjects.filter(project => project.year == year);
+    
+    renderProjects_(filteredProjects);
     renderPieChart(filteredProjects);
 }
+
 
 // Search functionality (Uses existing data instead of refetching)
 document.querySelector(".searchBar").addEventListener("input", (event) => {
