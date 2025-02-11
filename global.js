@@ -116,7 +116,7 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     <p>${project.year}</p>
     <img src="${project.image}" alt="${project.title}">
     <p>${project.description}</p>
-    <p>${project.link}</p>
+    <url 'href = "https://the0eau.github.io/portfolio/cv/index.html"> Lien </url>
     `;
     containerElement.appendChild(article);
 });
