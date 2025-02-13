@@ -9,6 +9,7 @@ let pages = [
     { url: 'https://the0eau.github.io/portfolio/project/index.html', title: 'Projects' },
     { url: 'https://the0eau.github.io/portfolio/contact/index.html', title: 'Contact' },
     { url: 'https://the0eau.github.io/portfolio/cv/index.html', title: 'Resume' },
+    { url: 'https://the0eau.github.io/portfolio/meta/index.html', title: 'Meta' },
     { url: 'https://github.com/The0eau', title: 'Github' },
     // add the rest of your pages here
   ];
