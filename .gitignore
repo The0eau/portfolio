@@ -1,9 +1,2 @@
-# Exclure le fichier CSV généré automatiquement
 meta/loc.csv
-
-# Exclure le dossier node_modules
 node_modules/
-
-# Exclure les fichiers logs et cache
-*.log
-.DS_Store
