@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#chart {
+    margin-top: 40px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+}
+
+.gridlines path {
+    stroke: lightgray;
+    stroke-dasharray: 2;
+}
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+dl.info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+dl.info[hidden] {
+    visibility: hidden;
+    opacity: 0;
+}
+
+dl.info {
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+@keyframes marching-ants {
+    to {
+        stroke-dashoffset: -8;
+    }
+}
