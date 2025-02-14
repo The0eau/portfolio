@@ -1,0 +1,42 @@
+.pro {
+    display: grid; /* Enable Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive columns */
+  }
+  
+.pro {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em; /* Espace entre les articles */
+  }
+  
+.pro article {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    border: 1px solid #ccc;
+    padding: 1em;
+    background: #fff;
+    text-align: center;
+  }
+  
+.pro img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+    object-fit: cover; /* Ajuste bien l’image */
+  }
+  
+.pro h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  
+.pro p {
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  
+.pro h1, .pro h2, .pro h3, .pro h4, .pro h5, .pro h6 {
+    line-height: 1.1; /* Smaller line height for headings */
+    text-wrap: balance; /* Prevents uneven line breaks */
+  }
