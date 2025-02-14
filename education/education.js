@@ -11,7 +11,7 @@ function renderEducation(education, containerElement, headingLevel = 'h2') {
       <p>${education.year}</p>
       <img src="${education.image}" alt="${education.title}">
       <p>${education.description}</p>
-      <a href = "${education.link}"> Lien </a>
+      <a href = "${education.link}"> Link </a>
       `;
       containerElement.appendChild(article);
   });
