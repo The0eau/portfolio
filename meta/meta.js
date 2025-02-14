@@ -1,8 +1,8 @@
 let data = [];
 let commits = [];
 
-const width = 20000;
-const height = 20000;
+const width = 2000;
+const height = 2000;
 let xScale, yScale;
 
 async function loadData() {
@@ -74,9 +74,12 @@ function displayStats() {
 
 function createScatterplot() {
     const svg = d3.select('#chart')
-        .append('svg')
-        .attr('viewBox', `0 0 ${width} ${height}`)
-        .style('overflow', 'visible');
+    .append('svg')
+    .attr("width", width)  // Forcer la largeur
+    .attr("height", height)  // Forcer la hauteur
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .style('overflow', 'visible');
+
 
     const margin = { top: 10, right: 10, bottom: 30, left: 20 };
 
