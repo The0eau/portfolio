@@ -65,6 +65,24 @@ nav a:hover {
     width: 100%; /* Permet de prendre toute la largeur */
     text-align: center;
   }
+  nav a:hover {
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 5px;
+  }
+  
+  nav a.current {
+    font-weight: bold;
+    background-color: oklch(90% 3% 200 / 20%);
+    border-radius: 5px;
+  }
+
+  nav a:active {
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 5px;
+    transform: scale(1.02); 
+  }
 }
 
 
