@@ -39,7 +39,7 @@ nav a {
   text-decoration: none;
   color: inherit;
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 0; /* Suppression du padding */
   white-space: nowrap; /* Évite les coupures */
 }
 
@@ -60,11 +60,12 @@ nav a:hover {
   }
 
   nav a {
-    padding: 1em;
+    padding: 0; /* Pas de padding sur mobile */
     display: block;
     width: 100%; /* Permet de prendre toute la largeur */
     text-align: center;
   }
+
   nav a:hover {
     background-color: var(--color-accent);
     color: white;
@@ -84,6 +85,7 @@ nav a:hover {
     transform: scale(1.02); 
   }
 }
+
 
 
 
