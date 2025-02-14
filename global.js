@@ -6,6 +6,7 @@ function $$(selector, context = document) {
 
 let pages = [
     { url: 'https://the0eau.github.io/portfolio/', title: 'Me' },
+    { url: 'https://the0eau.github.io/portfolio/education/index.html', title: 'Education' },
     { url: 'https://the0eau.github.io/portfolio/project/index.html', title: 'Projects' },
     { url: 'https://the0eau.github.io/portfolio/contact/index.html', title: 'Contact' },
     { url: 'https://the0eau.github.io/portfolio/cv/index.html', title: 'Resume' },
