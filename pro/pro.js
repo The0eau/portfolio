@@ -16,6 +16,6 @@ function renderPro(pro, containerElement, headingLevel = 'h2') {
       containerElement.appendChild(article);
   });
   }
-const proContainer = document.querySelector('.educations');
+const proContainer = document.querySelector('.pro');
 
 renderPro(pro,proContainer,'h2')

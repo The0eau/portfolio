@@ -1,18 +1,34 @@
 [
     {
-    "title": "Intern in Airbus",
-    "place": "IMT Atlantique, France",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs).",
-    "link": "https://the0eau.github.io/portfolio/project/projects/chat_bot/index.html"
-},
-{
-    "title": "University exanche",
-    "place": "IMT Atlantique, France",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs).",
-    "link": "https://the0eau.github.io/portfolio/project/projects/chat_bot/index.html"
-}
+        "title": "Q&A AI Knowledge Graph, Airbus",
+        "place": "Airbus, France",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed AI-driven knowledge graphs to enhance decision-making and data retrieval for industrial applications. Integrated generative AI solutions using LangChain, MLflow, and GCP Vertex AI.",
+        "link": "https://the0eau.github.io/portfolio/project/projects/Airbus/index.html"
+    },
+    {
+        "title": "Civil Aviation Authority (DGAC)",
+        "place": "DGAC, France",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Managed the relocation of a communication system at the DGAC (VCS). Reorganized the workspace to optimize 15% of the working time, improving efficiency.",
+        "link": "https://the0eau.github.io/portfolio/project/projects/DGAC/index.html"
+    },
+    {
+        "title": "DECART Project",
+        "place": "IMT Atlantique, France",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Conducted strategic analysis on future industrial skills needs through targeted surveys. Provided data-driven insights to optimize educational training programs in 6 universities across 5 countries.",
+        "link": "https://the0eau.github.io/portfolio/project/projects/Decart/index.html"
+    },
+    {
+        "title": "Entrepreneurship",
+        "place": "Self-initiated, International",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Designed a ride-sharing mobile application, applying data analysis for market insights. Led UX/UI development and business intelligence reporting to enhance user engagement and achieve $10k in revenue.",
+        "link": "https://the0eau.github.io/portfolio/project/projects/Entrepreneurship/index.html"
+    }
 ]
