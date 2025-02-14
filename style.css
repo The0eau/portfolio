@@ -64,7 +64,6 @@ nav a:hover {
   nav a {
     padding: 1em; /* Garde le padding pour une meilleure visibilité */
     display: block; /* Les liens prennent toute la largeur */
-    width: 100%; /* Prend toute la largeur */
     text-align: center; /* Centre le texte */
   }
 
