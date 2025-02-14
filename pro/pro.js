@@ -3,15 +3,15 @@ const pro = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio
 function renderPro(pro, containerElement, headingLevel = 'h2') {
     // Your code will go here
     containerElement.innerHTML = '';
-    pro.forEach(prof => {
-      const prof = document.createElement('article');
+    pro.forEach(pro => {
+      const article = document.createElement('article');
       article.innerHTML = `
-      <h3>${prof.title}</h3>
-      <p>${prof.place}</p>
-      <p>${prof.year}</p>
-      <img src="${prof.image}" alt="${education.title}">
-      <p>${prof.description}</p>
-      <a href = "${prof.link}"> Link </a>
+      <h3>${pro.title}</h3>
+      <p>${pro.place}</p>
+      <p>${pro.year}</p>
+      <img src="${pro.image}" alt="${pro.title}">
+      <p>${pro.description}</p>
+      <a href = "${pro.link}"> Link </a>
       `;
       containerElement.appendChild(article);
   });
