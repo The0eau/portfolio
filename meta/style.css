@@ -1,52 +1,77 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f4f4f4;
 }
 
 h1 {
     text-align: center;
+    color: #333;
 }
 
+/* Chart Container */
 #chart {
     margin-top: 40px;
 }
 
-.stats {
+/* Statistics Panel */
+.stats, .stats-container {
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
     max-width: 400px;
     margin: auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.stats h3, .stats-container h3 {
+    text-align: center;
+    margin: 0 0 10px;
+    color: #222;
+}
+
+/* Definition List */
 dt {
     font-weight: bold;
+    color: #444;
 }
 
 dd {
     margin: 0;
+    text-align: right;
+    color: #666;
 }
 
+/* Gridlines in the Chart */
 .gridlines path {
     stroke: lightgray;
     stroke-dasharray: 2;
 }
 
+/* Data Points (Circles) */
 circle {
-    transition: 200ms;
+    transition: transform 200ms ease-in-out, fill-opacity 200ms;
     transform-origin: center;
     transform-box: fill-box;
 }
 
 circle:hover {
     transform: scale(1.5);
+    fill-opacity: 1;
 }
 
+/* Tooltip Styling */
 dl.info {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 500ms, visibility 500ms;
 }
 
 dl.info[hidden] {
@@ -54,11 +79,7 @@ dl.info[hidden] {
     opacity: 0;
 }
 
-dl.info {
-    transition-duration: 500ms;
-    transition-property: opacity, visibility;
-}
-
+/* Selection Box for Interactions */
 .selection {
     fill-opacity: 0.1;
     stroke: black;
@@ -70,5 +91,17 @@ dl.info {
 @keyframes marching-ants {
     to {
         stroke-dashoffset: -8;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+    .stats, .stats-container {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    
+    dd {
+        text-align: center;
     }
 }
