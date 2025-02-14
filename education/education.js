@@ -9,7 +9,7 @@ function renderEducation(education, containerElement, headingLevel = 'h2') {
       <h3>${education.title}</h3>
       <p>${educations.place}</p>
       <p>${education.year}</p>
-      <img src="${education.image}" alt="${project.title}">
+      <img src="${education.image}" alt="${education.title}">
       <p>${education.description}</p>
       <a href = "${education.link}"> Lien </a>
       `;
