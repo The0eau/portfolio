@@ -25,32 +25,62 @@ nav ul, nav li {
 
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
-  display: flex;         /* Enable Flexbox layout */
-  align-items: center;   /* Align items vertically */
-  padding: 0.5em;        /* Add some spacing inside the navbar */
-  margin-bottom: 1em;    /* Separate the navbar from content */
-  border-bottom: 1px solid oklch(80% 3% 200); /* Cool gray bottom border */
-  background-color: #f9f9f9; /* Optional: Light background color */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre les éléments */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
+nav ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* Permet de s'adapter aux petits écrans */
+}
+
+nav li {
+  flex: 1;
+}
+
 nav a {
-  flex: 1;               /* Make all links take equal space */
-  text-decoration: none; /* Remove underlines */
-  color: inherit;        /* Use the parent element's text color */
-  text-align: center;    /* Center the text within each link */
-  padding: 0.5em;        /* Add spacing inside each link */
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em 1em;
+  white-space: nowrap; /* Empêche la coupure des liens */
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(90% 3% 200); /* Highlight the current page link */
-  padding-bottom: 0.1em; /* Reduce padding to counteract border height */
+  border-bottom: 0.3em solid oklch(90% 3% 200);
+  padding-bottom: 0.1em;
 }
 
-
-
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent); /* Accent color for the bottom border */
+  border-bottom: 0.3em solid var(--color-accent);
+}
+
+/* Adaptation pour mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Menu en colonne sur petit écran */
+    align-items: stretch; /* Étire les éléments pour occuper toute la largeur */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 1em;
+  }
 }
 
 
