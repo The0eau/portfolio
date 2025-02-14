@@ -38,9 +38,10 @@ nav {
 nav a {
   text-decoration: none;
   color: inherit;
-  text-align: center;
-  padding: 0; /* Suppression du padding */
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 0.5em 1em; /* Padding normal pour tous les écrans */
   white-space: nowrap; /* Évite les coupures */
+  display: inline-block; /* Permet au texte de s'ajuster */
 }
 
 nav a.current {
@@ -56,14 +57,15 @@ nav a:hover {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: stretch; /* Étire les liens sur toute la largeur */
+    align-items: center; /* Centre les liens en colonne */
+    width: 100%; /* Prend toute la largeur de l'écran */
   }
 
   nav a {
-    padding: 0; /* Pas de padding sur mobile */
-    display: block;
-    width: 100%; /* Permet de prendre toute la largeur */
-    text-align: center;
+    padding: 1em; /* Garde le padding pour une meilleure visibilité */
+    display: block; /* Les liens prennent toute la largeur */
+    width: 100%; /* Prend toute la largeur */
+    text-align: center; /* Centre le texte */
   }
 
   nav a:hover {
