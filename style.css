@@ -27,61 +27,71 @@ nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   align-items: center;
-  justify-content: center; /* Centre les éléments */
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-  padding: 0.5em;
-  margin-bottom: 1em;
+  justify-content: space-between;
+  padding: 0.5em 1em;
   border-bottom: 1px solid oklch(80% 3% 200);
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
-nav ul {
+.nav-links {
   display: flex;
   gap: 1em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap; /* Permet de s'adapter aux petits écrans */
 }
 
-nav li {
-  flex: 1;
-}
-
-nav a {
-  display: block;
+.nav-links a {
   text-decoration: none;
   color: inherit;
   text-align: center;
   padding: 0.5em 1em;
-  white-space: nowrap; /* Empêche la coupure des liens */
+  white-space: nowrap;
 }
 
-nav a.current {
+.nav-links a.current {
   border-bottom: 0.3em solid oklch(90% 3% 200);
   padding-bottom: 0.1em;
 }
 
-nav a:hover {
+.nav-links a:hover {
   border-bottom: 0.3em solid var(--color-accent);
 }
 
-/* Adaptation pour mobile */
+/* Bouton menu pour mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mode mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column; /* Menu en colonne sur petit écran */
-    align-items: stretch; /* Étire les éléments pour occuper toute la largeur */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  nav ul {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
+    background: white;
   }
 
-  nav a {
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
     padding: 1em;
+    text-align: left;
   }
 }
+
 
 
 .profile {
