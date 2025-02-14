@@ -1,6 +1,6 @@
 import {fetchJSON} from 'https://the0eau.github.io/portfolio/global.js';
 const educations = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/education.json');
-const courses = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/education.json');
+const courses = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/courses.json');
 function renderEducation(education, containerElement, headingLevel = 'h2') {
     // Your code will go here
     containerElement.innerHTML = '';
