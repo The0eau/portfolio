@@ -1,5 +1,12 @@
 [
     {
+        "title": "Portfolio website",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Portfolio",
+        "link": "https://the0eau.github.io/portfolio/project/projects/website/index.html"
+    },
+    {
         "title": "Chat Bot",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
