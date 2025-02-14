@@ -1,18 +1,59 @@
 [
     {
-    "title": "Cours de Harvard",
-    "place": "IMT Atlantique, France",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs).",
-    "link": "https://the0eau.github.io/portfolio/project/projects/chat_bot/index.html"
-},
-{
-    "title": "University exanche",
-    "place": "IMT Atlantique, France",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs).",
-    "link": "https://the0eau.github.io/portfolio/project/projects/chat_bot/index.html"
-}
-]
+      "title": "Harvard Online Courses in Data Science – 'Data Science Machine Learning'",
+      "place": "Online, Harvard University",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Introduction to machine learning basics, cross-validation, popular machine learning algorithms, recommendation systems, and regularization.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/Harvard/datascienceml.html"
+    },
+    {
+      "title": "Harvard Online Courses in Data Science – 'Introduction to Data Science with Python'",
+      "place": "Online, Harvard University",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Hands-on experience with Python programming, data modeling, statistics, and machine learning.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/Harvard/introdsc.html"
+    },
+    {
+      "title": "CNRS Online Course – 'Introduction au Deep Learning'",
+      "place": "Online, CNRS",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Foundations of deep learning, natural language processing (NLP), and generative AI with PyTorch and Keras.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/CNRS/index.html"
+    },
+    {
+      "title": "Telecom Paris Online Course – 'Fundamentals of Big Data'",
+      "place": "Online, Telecom Paris",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Introduction to the basics of big data, covering Python, databases, algebra, probability, statistics, and the perceptron.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/Telecom/index.html"
+    },
+    {
+      "title": "University of Cambridge Online Courses in Finance – 'Foundations of Finance'",
+      "place": "Online, University of Cambridge",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Foundations of finance, including corporate finance, cash flows, risk management, interest, return, and financial reporting.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/Cambridge/index.html"
+    },
+    {
+      "title": "IBM Course – 'Mastering Generative AI: Model Foundations and NLP'",
+      "place": "Online, IBM",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Introduction to NLP, generative AI, word2vec, N-grams, sequence-to-sequence models, and text generation evaluation.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/IBM/index.html"
+    },
+    {
+      "title": "MIT Online Courses in Finance – 'MITx's Finance MicroMasters® Program'",
+      "place": "Online, MIT",
+      "year": "Completed",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Foundations of modern finance including corporate finance, risk management, derivatives pricing, portfolio theory, and asset pricing models.",
+      "link": "https://the0eau.github.io/portfolio/education/courses/MIT/index.html"
+    }
+  ]
+  
