@@ -3,7 +3,7 @@ const pro = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio
 function renderPro(pro, containerElement, headingLevel = 'h2') {
     // Your code will go here
     containerElement.innerHTML = '';
-    prof.forEach(prof => {
+    pro.forEach(prof => {
       const prof = document.createElement('article');
       article.innerHTML = `
       <h3>${prof.title}</h3>
