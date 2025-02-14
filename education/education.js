@@ -8,7 +8,7 @@ function renderEducation(education, containerElement, headingLevel = 'h2') {
       const article = document.createElement('article');
       article.innerHTML = `
       <h3>${education.title}</h3>
-      <p>${educations.place}</p>
+      <p>${education.place}</p>
       <p>${education.year}</p>
       <img src="${education.image}" alt="${education.title}">
       <p>${education.description}</p>
