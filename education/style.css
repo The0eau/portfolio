@@ -40,3 +40,47 @@
     line-height: 1.1; /* Smaller line height for headings */
     text-wrap: balance; /* Prevents uneven line breaks */
   }
+
+
+  .courses {
+    display: grid; /* Enable Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive columns */
+  }
+  
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1em; /* Espace entre les articles */
+  }
+  
+.courses article {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    border: 1px solid #ccc;
+    padding: 1em;
+    background: #fff;
+    text-align: center;
+  }
+  
+.courses img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+    object-fit: cover; /* Ajuste bien l’image */
+  }
+  
+.courses h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  
+.courses p {
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  
+.courses h1, .courses h2, .courses h3, .courses h4, .courses h5, .courses h6 {
+    line-height: 1.1; /* Smaller line height for headings */
+    text-wrap: balance; /* Prevents uneven line breaks */
+  }
