@@ -7,11 +7,25 @@
         "link": "https://the0eau.github.io/portfolio/project/projects/website/index.html"
     },
     {
+        "title": "Data Visualization",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Data Viz",
+        "link": "https://the0eau.github.io/portfolio/project/projects/datavis/index.html"
+    },
+    {
         "title": "Chat Bot",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Development of an intelligent chatbot using NLP and generative AI (LLMs).",
         "link": "https://the0eau.github.io/portfolio/project/projects/chat_bot/index.html"
+    },
+    {
+        "title": "Predictive Analysis of Agricultural Land (AI)",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Identifying promising agricultural land in response to climate change using predictive modeling.",
+        "link": "https://the0eau.github.io/portfolio/project/agriculture/index.html"
     },
     {
         "title": "Netflix Data Study with AI",
@@ -25,133 +39,97 @@
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed AI-based phishing detection model with Deep Learning and NLP techniques.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
-    },
-    {
-        "title": "Predictive Analysis of Agricultural Land (AI)",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Identifying promising agricultural land in response to climate change using predictive modeling.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/phishing/index.html"
     },
     {
         "title": "Finance Database",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed an SQL-based financial tracking system for expense management and reporting.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
-    },
-    {
-        "title": "AI-Powered QA Graphs",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Developed AI-driven knowledge graphs using LangChain, MLflow, and GCP Vertex AI.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
-    },
-    {
-        "title": "DECART Erasmus+",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Strategic analysis on future industrial skills needs via surveys and data-driven insights.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
-    },
-    {
-        "title": "Pick Pick App",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Designed a ride-sharing mobile application with market insights and BI reporting.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
-    },
-    {
-        "title": "Sustainable Health Project",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Coaching program for student well-being, focusing on stress management and fitness.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/finance_database/index.html"
     },
     {
         "title": "Asynchronous System (SAR)",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Designed and validated an asynchronous processor using VHDL.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/sar/index.html"
     },
     {
         "title": "Logistics Network Optimization (SER)",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Optimized logistics networks using MILP and ILS algorithms.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/ser/index.html"
     },
     {
         "title": "Decision Support Website for Schools",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed a web-based tool for French schools to optimize resource allocation using data analytics.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/codev/index.html"
     },
     {
         "title": "AI Chess Bot",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed an AI-powered chess bot using game theory and object-oriented programming.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
-        
+        "link": "https://the0eau.github.io/portfolio/project/chess_bot/index.html"
     },
     {
         "title": "Expense Management System",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Created a database to track and manage shared expenses among friends.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/finance_database/index.html"
     },
     {
         "title": "Stock Market Predictor AI",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed a predictive model for stock prices using machine learning and deep learning.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/stock_market_predictor/index.html"
     },
     {
         "title": "Autonomous Robot with RFID",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Designed an autonomous robot capable of RFID-based navigation for a competition.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/RFID/index.html"
     },
     {
         "title": "Amazon Web Scraping",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Automated data extraction from Amazon to analyze trends in pricing and reviews.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/amazon_web_scraping/index.html"
     },
     {
         "title": "Sociological Study on Bartending",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Conducted a qualitative study on the bartending profession, focusing on career paths and social dynamics.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/socio/index.html"
     },
     {
         "title": "Game Theory AI (Pyrat Project)",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed game-theory-based AI algorithms in Python to simulate competitive gaming strategies.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/pyrat/index.html"
     },
     {
         "title": "AI Image Generator",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Built an AI-powered image generator using OpenAI's generative AI models.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "link": "https://the0eau.github.io/portfolio/project/image_generator/index.html"
     },
     {
-        "title": "Eco-Responsible Menus Project",
+        "title": "Autonomous Greenhouse",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Designed sustainable and eco-friendly meal plans with a focus on reducing environmental impact.",
-        "link": "https://the0eau.github.io/portfolio/project/chat_bot/index.html"
+        "description": "Designed and implemented an autonomous greenhouse system that monitors and optimizes environmental factors for plant growth using IoT and automation.",
+        "link": "https://the0eau.github.io/portfolio/project/greenhouse/index.html"
     }
 ]
