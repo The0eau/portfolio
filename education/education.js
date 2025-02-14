@@ -3,11 +3,11 @@ const educations = await fetchJSON('https://raw.githubusercontent.com/The0eau/po
 function renderEducation(education, containerElement, headingLevel = 'h2') {
     // Your code will go here
     containerElement.innerHTML = '';
-    education.forEach(project => {
+    education.forEach(education => {
       const article = document.createElement('article');
       article.innerHTML = `
       <h3>${education.title}</h3>
-      <p>${education.place}</p>
+      <p>${educations.place}</p>
       <p>${education.year}</p>
       <img src="${education.image}" alt="${project.title}">
       <p>${education.description}</p>
