@@ -27,70 +27,46 @@ nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet d’adapter l'affichage si besoin */
   padding: 0.5em 1em;
   border-bottom: 1px solid oklch(80% 3% 200);
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+  gap: 1em; /* Espacement entre les liens */
 }
 
-.nav-links {
-  display: flex;
-  gap: 1em;
-}
-
-.nav-links a {
+nav a {
   text-decoration: none;
   color: inherit;
   text-align: center;
   padding: 0.5em 1em;
-  white-space: nowrap;
+  white-space: nowrap; /* Évite les coupures */
 }
 
-.nav-links a.current {
+nav a.current {
   border-bottom: 0.3em solid oklch(90% 3% 200);
   padding-bottom: 0.1em;
 }
 
-.nav-links a:hover {
+nav a:hover {
   border-bottom: 0.3em solid var(--color-accent);
 }
 
-/* Bouton menu pour mobile */
-.menu-toggle {
-  display: none;
-  font-size: 1.8em;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Mode mobile */
+/* Mode mobile : menu en colonne */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch; /* Étire les liens sur toute la largeur */
   }
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
+  nav a {
     padding: 1em;
-    text-align: left;
+    display: block;
+    width: 100%; /* Permet de prendre toute la largeur */
+    text-align: center;
   }
 }
+
 
 
 

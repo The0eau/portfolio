@@ -18,37 +18,27 @@ let pages = [
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
-
-
-const nav = document.querySelector('.nav-links');
-
-const menuToggle = document.querySelector('.menu-toggle');
-document.body.prepend(menuToggle);
+let nav = document.createElement('nav');
 document.body.prepend(nav);
 
 for (let p of pages) {
-  let url = p.url;
-  let title = p.title;
+    let url = p.url;
+    let title = p.title;
 
-  url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
 
-  let a = document.createElement('a');
-  a.href = url;
-  a.textContent = title;
+    let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
 
-  a.classList.toggle(
-    'current',
-    a.host === location.host && a.pathname === location.pathname
-  );
+    a.classList.toggle(
+      'current',
+      a.host === location.host && a.pathname === location.pathname
+    );
 
-  a.toggleAttribute('target', a.host !== location.host);
-  nav.append(a);
-}
-
-// Ajoute l'événement pour ouvrir/fermer le menu sur mobile
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('show');
-});
+    a.toggleAttribute('target', a.host !== location.host);
+    nav.append(a);
+  }
 
 
 function setColorScheme(colorScheme) {
