@@ -1,8 +1,8 @@
 let data = [];
 let commits = [];
 
-const width = 2000;
-const height = 2000;
+const width = 20000;
+const height = 20000;
 let xScale, yScale;
 
 async function loadData() {
