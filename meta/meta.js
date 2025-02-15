@@ -165,7 +165,7 @@ function updateTooltipPosition(event) {
 let brushSelection = null;
 
 function brushSelector(usableArea) {
-    const svg = document.querySelector('svg');
+    const svg = d3.select('svg');
     const brush = d3.brush().on('start brush end', brushed);
 
     // Crée un groupe pour le brush
