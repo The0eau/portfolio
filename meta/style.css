@@ -85,6 +85,7 @@ circle {
     transition: transform 200ms ease-in-out, fill-opacity 200ms ease-in-out;
     transform-origin: center;
     transform-box: fill-box;
+    z-index: 4;
 }
 
 circle:hover {
