@@ -114,11 +114,11 @@ function createScatterplot() {
     const rScale = d3.scaleSqrt().domain(d3.extent(commits, (d) => d.totalLines)).range([2, 30]);
     
     dots.selectAll('circle')
-        .data(d3.sort(commits, (d) => -d.totalLines)) // Sort by total lines descending
+        .data(d3.sort(commits, (d) => -d.totalLines))
         .join('circle')
-        .attr('cx', (d) => xScale(d.datetime))
-        .attr('cy', (d) => yScale(d.hourFrac))
-        .attr('r', (d) => rScale(d.totalLines))
+        .attr('cx', (d) => xScale(d.datetime))  // Vérifie que xScale renvoie des valeurs valides
+        .attr('cy', (d) => yScale(d.hourFrac))  // Vérifie que yScale renvoie des valeurs valides
+        .attr('r', (d) => rScale(d.totalLines)) // Assure-toi que les rayons sont assez grands
         .style('fill-opacity', 0.7)
         .on('mouseenter', function (event, d) {
             d3.select(event.currentTarget).style('fill-opacity', 1);
