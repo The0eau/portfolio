@@ -64,9 +64,25 @@ dd {
     stroke-dasharray: 2;
 }
 
-/* Data Points (Circles) */
+/* Tooltip Styling */
+dl.info {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10;
+    opacity: 0; /* Hidden by default */
+}
+
+dl.info[hidden] {
+    visibility: hidden;
+    opacity: 0;
+}
+
 circle {
-    transition: transform 200ms ease-in-out, fill-opacity 200ms;
+    transition: transform 200ms ease-in-out, fill-opacity 200ms ease-in-out;
     transform-origin: center;
     transform-box: fill-box;
 }
@@ -74,21 +90,9 @@ circle {
 circle:hover {
     transform: scale(1.5);
     fill-opacity: 1;
+    z-index: 5; /* Ensure hover circles are above others */
 }
 
-/* Tooltip Styling */
-dl.info {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 500ms, visibility 500ms;
-}
-
-dl.info[hidden] {
-    visibility: hidden;
-    opacity: 0;
-}
 
 /* Selection Box for Interactions */
 .selection {
