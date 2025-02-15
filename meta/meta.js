@@ -99,21 +99,17 @@ function displayStats() {
 
 // Update the tooltip content and position near the mouse cursor
 function updateTooltipContent(commit) {
-  const link = document.getElementById('commit-link');
-  const date = document.getElementById('commit-date');
-  const time = document.getElementById('commit-time');
-  const author = document.getElementById('commit-author');
-  const lines = document.getElementById('commit-lines');
-
-  if (Object.keys(commit).length === 0) return;
-
-  link.href = commit.url;
-  link.textContent = commit.id;
-  date.textContent = commit.datetime?.toLocaleString('en', { dateStyle: 'full' });
-  time.textContent = commit.datetime?.toLocaleString('en', { timeStyle: 'short' });
-  author.textContent = commit.author;
-  lines.textContent = commit.totalLines;
-}
+    const link = document.getElementById('commit-link');
+    const date = document.getElementById('commit-date');
+  
+    if (Object.keys(commit).length === 0) return;
+  
+    link.href = commit.url;
+    link.textContent = commit.id;
+    date.textContent = commit.datetime?.toLocaleString('en', {
+      dateStyle: 'full',
+    });
+  }
 
 // Update the tooltip visibility
 function updateTooltipVisibility(isVisible) {
@@ -225,6 +221,99 @@ function getColorByTime(hourFrac) {
     return '#4682B4'; // Night: SteelBlue
   }
 }
+
+
+
+
+let brushSelection = null;
+
+function brushSelector() {
+    const svg = document.querySelector('svg');
+    const brush = d3.brush()
+      .extent([[0, 0], [width, height]])  // Set the brushable area to cover the entire SVG
+      .on('start brush end', brushed);    // Listen for the brush events
+  
+    d3.select(svg).call(brush);  // Apply the brush to the SVG element
+  
+    // Raise dots and everything after overlay
+    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
+  }
+
+function brushed(event) {
+    brushSelection = event.selection;  // Track the current brush selection
+    updateSelection();                  // Update the selection visually
+    updateLanguageBreakdown();          // Update the language breakdown
+  }
+  
+
+function isCommitSelected(commit) {
+  if (!brushSelection) {
+    return false;  // If no selection, return false
+  }
+
+  // Get the top-left and bottom-right corners of the brush selection
+  const [[x0, y0], [x1, y1]] = brushSelection;
+
+  // Check if the commit's coordinates are inside the selection bounds
+  const cx = xScale(commit.datetime); // X position of the commit
+  const cy = yScale(commit.hourFrac); // Y position of the commit
+
+  // Return true if the commit is inside the selection bounds
+  return cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
+}
+
+function updateSelection() {
+  // Update the visual state of the dots based on selection
+  d3.selectAll('circle').classed('selected', (d) => isCommitSelected(d));
+}
+
+
+
+  
+
+
+function updateLanguageBreakdown() {
+    // Filter the selected commits using the brush selection
+    const selectedCommits = brushSelection
+      ? commits.filter(isCommitSelected)
+      : [];
+    const container = document.getElementById('language-breakdown');
+  
+    if (selectedCommits.length === 0) {
+      container.innerHTML = '';  // Clear the container if no commits are selected
+      return;
+    }
+  
+    // Use all commits if no selection or use the selected commits
+    const requiredCommits = selectedCommits.length ? selectedCommits : commits;
+  
+    // Flatten the lines from the required commits
+    const lines = requiredCommits.flatMap((d) => d.lines);
+  
+    // Use d3.rollup to count lines per language
+    const breakdown = d3.rollup(
+      lines,
+      (v) => v.length,  // Count the number of lines per language
+      (d) => d.type      // Group by language type
+    );
+  
+    // Update the DOM with the language breakdown
+    container.innerHTML = '';
+  
+    for (const [language, count] of breakdown) {
+      const proportion = count / lines.length;  // Calculate the proportion
+      const formatted = d3.format('.1~%')(proportion);  // Format as percentage
+  
+      // Update the container with the language stats
+      container.innerHTML += `
+        <dt>${language}</dt>
+        <dd>${count} lines (${formatted})</dd>
+      `;
+    }
+  
+    return breakdown;
+  }
+  
 
 // Call the function when the page loads
 document.addEventListener('DOMContentLoaded', async () => {
