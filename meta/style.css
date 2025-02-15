@@ -1,40 +1,43 @@
-/* Tooltip styling */
-dl.info {
+/* General tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    visibility: hidden; /* Hidden by default */
+  }
+  
+  /* Make tooltip visible when displayed */
+  .tooltip:not([hidden]) {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Tooltip text styling */
+  dl.info {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-gap: 8px;
-    margin: 0;
-    padding: 8px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation effect */
-    backdrop-filter: blur(10px); /* Optional frosted glass effect */
-    transition-duration: 500ms;
-    transition-property: opacity, visibility;
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
+    gap: 8px;
+    padding: 10px;
   }
   
   dl.info dt {
     font-weight: bold;
   }
   
-  dl.info dd {
-    margin: 0;
+  dl.info a {
+    text-decoration: none;
+    color: #007bff;
   }
   
-  /* Tooltip positioning and visibility */
-  .tooltip {
-    position: fixed;
-    pointer-events: none;  /* Prevents the tooltip from blocking other elements */
-    z-index: 10; /* Ensure the tooltip is on top of other elements */
+  dl.info a:hover {
+    text-decoration: underline;
   }
   
-  dl.info[hidden]:not(:hover, :focus-within) {
-    opacity: 0;
-    visibility: hidden;
-  }
   
   /* Hover effect on dots */
   circle {
