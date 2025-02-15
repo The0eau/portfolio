@@ -103,6 +103,7 @@ function displayStats() {
 
 // Update the tooltip content and position near the mouse cursor
 function updateTooltipContent(commit) {
+    console.log("B");
     const link = document.getElementById('commit-link');
     const date = document.getElementById('commit-date');
   
@@ -117,12 +118,14 @@ function updateTooltipContent(commit) {
 
 // Update the tooltip visibility
 function updateTooltipVisibility(isVisible) {
+    console.log("C");
     const tooltip = document.getElementById('commit-tooltip');
     tooltip.hidden = !isVisible;
   }
 
 // Update the tooltip position near the mouse cursor
 function updateTooltipPosition(event) {
+    console.log("D");
     const tooltip = document.getElementById('commit-tooltip');
     tooltip.style.left = `${event.clientX}px`;
     tooltip.style.top = `${event.clientY}px`;
@@ -180,6 +183,7 @@ function createScatterplot() {
     .style('fill-opacity', 0.7) // Add transparency for overlapping dots
     .on('mouseenter', function (event, d) {
       d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
+      console.log("A");
       updateTooltipContent(d); // Update tooltip content on hover
       updateTooltipVisibility(true); // Show tooltip
       updateTooltipPosition(event); // Position tooltip near the cursor
