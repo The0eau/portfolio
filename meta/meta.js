@@ -132,7 +132,11 @@ function createScatterplot() {
         .on('mouseleave', function () {
             d3.select(event.currentTarget).style('fill-opacity', 0.7);
             updateTooltipVisibility(false);
+        })
+        .classed('selected', function(d) {
+            return isCommitSelected(d); // Vérifie si le cercle est sélectionné
         });
+    
     brushSelector(usableArea);
 }
 
@@ -152,7 +156,10 @@ function updateTooltipContent(commit) {
 }
 
 function updateTooltipVisibility(isVisible) {
-    document.getElementById('commit-tooltip').hidden = !isVisible;
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
+    tooltip.style.visibility = isVisible ? 'visible' : 'hidden';  // Assure-toi que le tooltip soit visible ou caché
+    tooltip.style.transition = "visibility 0.2s, opacity 0.2s"; // Transition fluide
 }
 
 function updateTooltipPosition(event) {
@@ -160,6 +167,7 @@ function updateTooltipPosition(event) {
     tooltip.style.left = `${event.clientX}px`;
     tooltip.style.top = `${event.clientY}px`;
 }
+
 
 // Brushing functionality
 let brushSelection = null;
@@ -183,7 +191,22 @@ function brushed(event) {
     updateSelection();
     updateSelectionCount();
     updateLanguageBreakdown();
+
+    // Assure-toi que le tooltip est bien réactivé après brushing
+    d3.selectAll('.dots circle')
+        .style('fill-opacity', 0.7) // Remise à l'opacité normale après le brush
+        .on('mouseenter', function (event, d) {
+            d3.select(event.currentTarget).style('fill-opacity', 1);
+            updateTooltipContent(d);
+            updateTooltipVisibility(true);
+            updateTooltipPosition(event);
+        })
+        .on('mouseleave', function () {
+            d3.select(event.currentTarget).style('fill-opacity', 0.7);
+            updateTooltipVisibility(false);
+        });
 }
+
 
 function isCommitSelected(commit) {
     if (!brushSelection) return false;
