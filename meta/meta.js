@@ -118,7 +118,6 @@ function updateTooltipContent(commit) {
 
 // Update the tooltip visibility
 function updateTooltipVisibility(isVisible) {
-    console.log("C");
     const tooltip = document.getElementById('commit-tooltip');
     tooltip.hidden = !isVisible;
   }
