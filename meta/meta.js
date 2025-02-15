@@ -26,41 +26,56 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
 });
 
-// Process the commit data
 function processCommits() {
-  commits = d3.groups(data, (d) => d.commit)
-    .map(([commit, lines]) => {
-      let first = lines[0];
-      let { author, date, time, timezone, datetime } = first;
-      
-      let ret = {
-        id: commit,
-        url: 'https://github.com/YOUR_REPO/commit/' + commit,
-        author,
-        date,
-        time,
-        timezone,
-        datetime,
-        hourFrac: datetime.getHours() + datetime.getMinutes() / 60,
-        totalLines: lines.length,
-      };
+    commits = d3.groups(data, (d) => d.commit)
+        .map(([commit, lines]) => {
+            let first = lines[0];
+            let { author, date, time, timezone, datetime } = first;
 
-      Object.defineProperty(ret, 'lines', { value: lines });
+            let ret = {
+                id: commit,
+                url: 'https://github.com/YOUR_REPO/commit/' + commit,
+                author,
+                date,
+                time,
+                timezone,
+                datetime,
+                hourFrac: datetime.getHours() + datetime.getMinutes() / 60,
+                totalLines: lines.length,
+            };
 
-      return ret;
-    });
+            Object.defineProperty(ret, 'lines', {
+                value: lines,
+                enumerable: false,
+            });
+
+            return ret;
+        });
 }
 
-// Display summary stats
 function displayStats() {
-  const dl = d3.select('#stats').append('dl').attr('class', 'stats');
-  dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
-  dl.append('dd').text(data.length);
+    const dl = d3.select('#stats').append('dl').attr('class', 'stats');
 
-  dl.append('dt').text('Total commits');
-  dl.append('dd').text(commits.length);
+    dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+    dl.append('dd').text(data.length);
 
-  // More stats can be added here
+    dl.append('dt').text('Total commits');
+    dl.append('dd').text(commits.length);
+
+    dl.append('dt').text('Number of files');
+    dl.append('dd').text(d3.group(data, (d) => d.file).size);
+
+    dl.append('dt').text('Max file length');
+    dl.append('dd').text(d3.max(data, (d) => d.line));
+
+    const fileLengths = d3.rollups(
+        data,
+        (v) => d3.max(v, (v) => v.line),
+        (d) => d.file
+    );
+    const averageFileLength = d3.mean(fileLengths, (d) => d[1]);
+    dl.append('dt').text('Average file length');
+    dl.append('dd').text(averageFileLength.toFixed(2));
 }
 
 // Create scatterplot of commit times
