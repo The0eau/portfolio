@@ -2,8 +2,8 @@
 
 let data = [];
 let commits = [];
-const width = 1000;
-const height = 600;
+const width = 700;
+const height = 400;
 let xScale, yScale;
 
 // Load the CSV data
@@ -168,7 +168,7 @@ let brushSelection = null;
 
 function brushSelector() {
     const svg = document.querySelector('svg');
-    d3.select(svg).call(d3.brush());
+    d3.select(svg).call(d3.brush().on('start brush end', brushed));
     d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
 }
 
