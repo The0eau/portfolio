@@ -94,6 +94,15 @@ circle:hover {
     z-index: 5; /* Ensure hover circles are above others */
 }
 
+.dots {
+    z-index: 10;
+  }
+  
+.overlay {
+z-index: 5;
+}
+  
+
 
 /* Selection Box for Interactions */
 .selection {
