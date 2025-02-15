@@ -12,13 +12,13 @@ h1 {
 
 /* Chart Container */
 #chart {
-    max-width: 1600px;
+    max-width: 800px;
     width: 100%;
     height: auto;
 }
 #chart svg {
-    width: 1400px;
-    height: 800px;
+    width: 700px;
+    height: 400px;
 }
 
 #container-stat{

@@ -1,8 +1,8 @@
 let data = [];
 let commits = [];
 
-const width = 1400;
-const height = 800;
+const width = 700;
+const height = 400;
 let xScale, yScale;
 
 async function loadData() {
@@ -130,6 +130,7 @@ function createScatterplot() {
             d3.select(event.currentTarget).style('fill-opacity', 0.7);
             updateTooltipVisibility(false);
         });
+    brushSelector();
 }
 
 function updateTooltipContent(commit) {
