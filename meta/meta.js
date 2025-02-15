@@ -162,8 +162,14 @@ function updateTooltipPosition(event) {
 let brushSelection = null;
 
 function brushSelector() {
-    const svg = document.querySelector('svg');
-    d3.select(svg).call(d3.brush().on('start brush end', brushed));
+    function brushSelector() {
+        const svg = document.querySelector('svg');
+        const brush = d3.brush().on('start brush end', brushed);
+        svg.append('g')
+            .attr('class', 'brush')
+            .call(brush)
+            .attr('transform', `translate(${usableArea.left}, 0)`); // Positionner le brush correctement
+    }    
 }
 
 function brushed(event) {
