@@ -118,8 +118,10 @@ function updateTooltipContent(commit) {
 
 // Update the tooltip visibility
 function updateTooltipVisibility(isVisible) {
+    console.log("B");
     const tooltip = document.getElementById('commit-tooltip');
     tooltip.hidden = !isVisible;
+    console.log(tooltip.hidden)
   }
 
 // Update the tooltip position near the mouse cursor
