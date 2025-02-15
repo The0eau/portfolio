@@ -245,10 +245,18 @@ function brushSelector() {
   }
 
 function brushed(event) {
-    brushSelection = event.selection;  // Track the current brush selection
-    updateSelection();                  // Update the selection visually
-    updateLanguageBreakdown();          // Update the language breakdown
-  }
+    brushSelection = event.selection;
+    
+    if (!brushSelection) {  
+        // If brushSelection is null (brush cleared), reset selection
+        d3.selectAll('circle').classed('selected', false);
+        document.getElementById('language-breakdown').innerHTML = ''; // Clear breakdown
+        return;
+    }
+
+    updateSelection();
+    updateLanguageBreakdown();
+}
   
 
   function isCommitSelected(commit) {
