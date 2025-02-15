@@ -12,19 +12,15 @@ h1 {
 
 /* Chart Container */
 #chart {
-    max-width: 800px;
+    max-width: none;
     width: 100%;
     height: auto;
 }
-#chart svg {
-    width: 700px;
-    height: 400px;
+svg {
+    /*width: 100%;
+    /*height: auto;*/
 }
 
-#container-stat{
-    width: 1400px;
-    height: 800px;
-}
 
 /* Statistics Panel */
 .stats, .stats-container {
@@ -64,45 +60,31 @@ dd {
     stroke-dasharray: 2;
 }
 
+/* Data Points (Circles) */
+circle {
+    transition: transform 200ms ease-in-out, fill-opacity 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+    fill-opacity: 1;
+}
+
 /* Tooltip Styling */
 dl.info {
-    position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s, visibility 0.3s;
-    z-index: 10;
-    opacity: 0; /* Hidden by default */
+    transition: opacity 500ms, visibility 500ms;
 }
 
 dl.info[hidden] {
     visibility: hidden;
     opacity: 0;
 }
-
-circle {
-    transition: transform 200ms ease-in-out, fill-opacity 200ms ease-in-out;
-    transform-origin: center;
-    transform-box: fill-box;
-    z-index: 10;
-}
-
-circle:hover {
-    transform: scale(1.5);
-    fill-opacity: 1;
-    z-index: 11; /* Ensure hover circles are above others */
-}
-
-.dots {
-    z-index: 10;
-  }
-  
-.overlay {
-z-index: 5;
-}
-  
-
 
 /* Selection Box for Interactions */
 .selection {
