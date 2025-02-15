@@ -117,16 +117,16 @@ function updateTooltipContent(commit) {
 
 // Update the tooltip visibility
 function updateTooltipVisibility(isVisible) {
-  const tooltip = document.getElementById('commit-tooltip');
-  tooltip.hidden = !isVisible;
-}
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
+  }
 
 // Update the tooltip position near the mouse cursor
 function updateTooltipPosition(event) {
-  const tooltip = document.getElementById('commit-tooltip');
-  tooltip.style.left = `${event.clientX + 10}px`;  // Slight offset to avoid overlap with the cursor
-  tooltip.style.top = `${event.clientY + 10}px`;  // Slight offset to avoid overlap with the cursor
-}
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.style.left = `${event.clientX}px`;
+    tooltip.style.top = `${event.clientY}px`;
+  }
 
 // Create scatterplot visualization
 function createScatterplot() {
