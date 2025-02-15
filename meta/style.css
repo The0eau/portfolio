@@ -21,6 +21,10 @@ h1 {
     height: 800px;
 }
 
+#container-stat{
+    width: 1400px;
+    height: 800px;
+}
 
 /* Statistics Panel */
 .stats, .stats-container {
