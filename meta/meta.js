@@ -74,11 +74,10 @@ function displayStats() {
 
 function createScatterplot() {
     const svg = d3.select('#chart')
-    .append('svg')
-    .attr('width', width)
-    .attr('height', height)
-    .style('overflow', 'visible');
-
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .style('overflow', 'visible');
 
     const margin = { top: 50, right: 50, bottom: 50, left: 70 };
     const usableArea = {
@@ -89,7 +88,6 @@ function createScatterplot() {
         width: width - margin.left - margin.right,
         height: height - margin.top - margin.bottom,
     };
-
 
     xScale = d3.scaleTime()
         .domain(d3.extent(commits, (d) => d.datetime))
@@ -115,7 +113,6 @@ function createScatterplot() {
         .domain(d3.extent(commits, (d) => d.totalLines))
         .range([5, 50]);  // Augmenter la taille des cercles
 
-    
     dots.selectAll('circle')
         .data(d3.sort(commits, (d) => -d.totalLines))
         .join('circle')
@@ -136,7 +133,10 @@ function createScatterplot() {
         .classed('selected', function(d) {
             return isCommitSelected(d); // Vérifie si le cercle est sélectionné
         });
-    
+
+    // Raise the dots so they appear on top of the brush selection area
+    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
+
     brushSelector(usableArea);
 }
 
@@ -168,7 +168,6 @@ function updateTooltipPosition(event) {
     tooltip.style.top = `${event.clientY}px`;
 }
 
-
 // Brushing functionality
 let brushSelection = null;
 
@@ -183,16 +182,13 @@ function brushSelector(usableArea) {
         .attr('transform', `translate(${usableArea.left}, 0)`); // Positionner le brush correctement
 }
 
-
-
-
 function brushed(event) {
     brushSelection = event.selection;
     updateSelection();
     updateSelectionCount();
     updateLanguageBreakdown();
 
-    // Assure-toi que le tooltip est bien réactivé après brushing
+    // Assure-toi que les cercles sont interactifs après le brushing
     d3.selectAll('.dots circle')
         .style('fill-opacity', 0.7) // Remise à l'opacité normale après le brush
         .on('mouseenter', function (event, d) {
@@ -206,7 +202,6 @@ function brushed(event) {
             updateTooltipVisibility(false);
         });
 }
-
 
 function isCommitSelected(commit) {
     if (!brushSelection) return false;
@@ -228,10 +223,30 @@ function updateSelectionCount() {
 function updateLanguageBreakdown() {
     const selectedCommits = brushSelection ? commits.filter(isCommitSelected) : [];
     const container = document.getElementById('language-breakdown');
-    container.innerHTML = selectedCommits.length ? d3.rollup(
-        selectedCommits.flatMap(d => d.lines),
-        v => v.length, d => d.type
-    ).entries().map(([lang, count]) => `<dt>${lang}</dt><dd>${count} lines</dd>`).join('') : '';
+
+    if (selectedCommits.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+
+    const lines = selectedCommits.flatMap((d) => d.lines);
+    const breakdown = d3.rollup(
+        lines,
+        (v) => v.length,
+        (d) => d.type
+    );
+
+    container.innerHTML = '';
+    for (const [language, count] of breakdown) {
+        const proportion = count / lines.length;
+        const formatted = d3.format('.1~%')(proportion);
+
+        container.innerHTML += `
+            <dt>${language}</dt>
+            <dd>${count} lines (${formatted})</dd>
+        `;
+    }
+    return breakdown;
 }
 
 document.addEventListener('DOMContentLoaded', loadData);
