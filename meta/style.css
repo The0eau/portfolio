@@ -85,13 +85,13 @@ circle {
     transition: transform 200ms ease-in-out, fill-opacity 200ms ease-in-out;
     transform-origin: center;
     transform-box: fill-box;
-    z-index: 4;
+    z-index: 10;
 }
 
 circle:hover {
     transform: scale(1.5);
     fill-opacity: 1;
-    z-index: 5; /* Ensure hover circles are above others */
+    z-index: 11; /* Ensure hover circles are above others */
 }
 
 .dots {
