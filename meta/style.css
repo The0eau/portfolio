@@ -1,114 +1,49 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-/* Chart Container */
-#chart {
-    max-width: none;
-    width: 100%;
-    height: auto;
-}
-svg {
-    /*width: 100%;
-    /*height: auto;*/
-}
-
-
-/* Statistics Panel */
-.stats, .stats-container {
+/* Tooltip styling */
+dl.info {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.stats h3, .stats-container h3 {
-    text-align: center;
-    margin: 0 0 10px;
-    color: #222;
-}
-
-/* Definition List */
-dt {
-    font-weight: bold;
-    color: #444;
-}
-
-dd {
+    grid-template-columns: auto 1fr;
+    grid-gap: 8px;
     margin: 0;
-    text-align: right;
-    color: #666;
-}
-
-/* Gridlines in the Chart */
-.gridlines path {
-    stroke: lightgray;
-    stroke-dasharray: 2;
-}
-
-/* Data Points (Circles) */
-circle {
-    transition: transform 200ms ease-in-out, fill-opacity 200ms;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation effect */
+    backdrop-filter: blur(10px); /* Optional frosted glass effect */
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+  }
+  
+  dl.info dt {
+    font-weight: bold;
+  }
+  
+  dl.info dd {
+    margin: 0;
+  }
+  
+  /* Tooltip positioning and visibility */
+  .tooltip {
+    position: fixed;
+    pointer-events: none;  /* Prevents the tooltip from blocking other elements */
+    z-index: 10; /* Ensure the tooltip is on top of other elements */
+  }
+  
+  dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Hover effect on dots */
+  circle {
+    transition: 200ms;
     transform-origin: center;
     transform-box: fill-box;
-}
-
-circle:hover {
+  }
+  
+  circle:hover {
     transform: scale(1.5);
-    fill-opacity: 1;
-}
-
-/* Tooltip Styling */
-dl.info {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 500ms, visibility 500ms;
-}
-
-dl.info[hidden] {
-    visibility: hidden;
-    opacity: 0;
-}
-
-/* Selection Box for Interactions */
-.selection {
-    fill-opacity: 0.1;
-    stroke: black;
-    stroke-opacity: 0.7;
-    stroke-dasharray: 5 3;
-    animation: marching-ants 2s linear infinite;
-}
-
-@keyframes marching-ants {
-    to {
-        stroke-dashoffset: -8;
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 500px) {
-    .stats, .stats-container {
-        grid-template-columns: auto;
-        text-align: center;
-    }
-    
-    dd {
-        text-align: center;
-    }
-}
+  }
+  
