@@ -172,13 +172,15 @@ function updateTooltipPosition(event) {
 let brushSelection = null;
 
 function brushSelector() {
-    const svg = document.querySelector('svg');
-    // Update brush initialization to listen for events
-    d3.select(svg).call(d3.brush().on('start brush end', brushed));
-
-    // Raise dots and everything after overlay
-    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
-}
+    const svg = d3.select('svg'); // Select the SVG element directly with D3
+  
+    // Apply the brush to the SVG
+    svg.call(d3.brush().on('start brush end', brushed)); // Add brush events
+  
+    // Raise the dots and any elements after the overlay to the front
+    svg.selectAll('.dots, .overlay ~ *').raise();  // Use D3's selectAll() instead of querySelectorAll
+  }
+  
 
 function brushed(event) {
     brushSelection = event.selection;
