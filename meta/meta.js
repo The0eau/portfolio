@@ -171,15 +171,13 @@ function updateTooltipPosition(event) {
 // Brushing functionality
 let brushSelection = null;
 
-function brushSelector(usableArea) {
-    const svg = d3.select('svg');
-    const brush = d3.brush().on('start brush end', brushed);
+function brushSelector() {
+    const svg = document.querySelector('svg');
+    // Update brush initialization to listen for events
+    d3.select(svg).call(d3.brush().on('start brush end', brushed));
 
-    // Crée un groupe pour le brush
-    svg.append('g')
-        .attr('class', 'brush')
-        .call(brush)
-        .attr('transform', `translate(${usableArea.left}, 0)`); // Positionner le brush correctement
+    // Raise dots and everything after overlay
+    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
 }
 
 function brushed(event) {
@@ -187,20 +185,6 @@ function brushed(event) {
     updateSelection();
     updateSelectionCount();
     updateLanguageBreakdown();
-
-    // Assure-toi que les cercles sont interactifs après le brushing
-    d3.selectAll('.dots circle')
-        .style('fill-opacity', 0.7) // Remise à l'opacité normale après le brush
-        .on('mouseenter', function (event, d) {
-            d3.select(event.currentTarget).style('fill-opacity', 1);
-            updateTooltipContent(d);
-            updateTooltipVisibility(true);
-            updateTooltipPosition(event);
-        })
-        .on('mouseleave', function () {
-            d3.select(event.currentTarget).style('fill-opacity', 0.7);
-            updateTooltipVisibility(false);
-        });
 }
 
 function isCommitSelected(commit) {
@@ -216,37 +200,51 @@ function updateSelection() {
 }
 
 function updateSelectionCount() {
-    const selectedCommits = brushSelection ? commits.filter(isCommitSelected) : [];
-    document.getElementById('selection-count').textContent = `${selectedCommits.length || 'No'} commits selected`;
-}
+    const selectedCommits = brushSelection
+      ? commits.filter(isCommitSelected)
+      : [];
+  
+    const countElement = document.getElementById('selection-count');
+    countElement.textContent = `${
+      selectedCommits.length || 'No'
+    } commits selected`;
+  
+    return selectedCommits;
+  }
 
 function updateLanguageBreakdown() {
-    const selectedCommits = brushSelection ? commits.filter(isCommitSelected) : [];
+    const selectedCommits = brushSelection
+      ? commits.filter(isCommitSelected)
+      : [];
     const container = document.getElementById('language-breakdown');
-
+  
     if (selectedCommits.length === 0) {
-        container.innerHTML = '';
-        return;
+      container.innerHTML = '';
+      return;
     }
-
-    const lines = selectedCommits.flatMap((d) => d.lines);
+    const requiredCommits = selectedCommits.length ? selectedCommits : commits;
+    const lines = requiredCommits.flatMap((d) => d.lines);
+  
+    // Use d3.rollup to count lines per language
     const breakdown = d3.rollup(
-        lines,
-        (v) => v.length,
-        (d) => d.type
+      lines,
+      (v) => v.length,
+      (d) => d.type
     );
-
+  
+    // Update DOM with breakdown
     container.innerHTML = '';
+  
     for (const [language, count] of breakdown) {
-        const proportion = count / lines.length;
-        const formatted = d3.format('.1~%')(proportion);
-
-        container.innerHTML += `
-            <dt>${language}</dt>
-            <dd>${count} lines (${formatted})</dd>
-        `;
+      const proportion = count / lines.length;
+      const formatted = d3.format('.1~%')(proportion);
+  
+      container.innerHTML += `
+              <dt>${language}</dt>
+              <dd>${count} lines (${formatted})</dd>
+          `;
     }
+  
     return breakdown;
-}
-
+    }
 document.addEventListener('DOMContentLoaded', loadData);
