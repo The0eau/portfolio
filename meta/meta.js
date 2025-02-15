@@ -133,7 +133,7 @@ function createScatterplot() {
             d3.select(event.currentTarget).style('fill-opacity', 0.7);
             updateTooltipVisibility(false);
         });
-    brushSelector();
+    brushSelector(usableArea);
 }
 
 function updateTooltipContent(commit) {
@@ -164,7 +164,7 @@ function updateTooltipPosition(event) {
 // Brushing functionality
 let brushSelection = null;
 
-function brushSelector() {
+function brushSelector(usableArea) {
     const svg = document.querySelector('svg');
     const brush = d3.brush().on('start brush end', brushed);
 
@@ -174,6 +174,7 @@ function brushSelector() {
         .call(brush)
         .attr('transform', `translate(${usableArea.left}, 0)`); // Positionner le brush correctement
 }
+
 
 
 
