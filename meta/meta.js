@@ -80,75 +80,78 @@ function displayStats() {
 
 // Create scatterplot of commit times
 function createScatterplot() {
-  const svg = d3.select('#chart')
-    .append('svg')
-    .attr('width', width)
-    .attr('height', height)
-    .style('overflow', 'visible');
-
-  const margin = { top: 10, right: 10, bottom: 30, left: 20 };
-  const usableArea = {
-    top: margin.top,
-    right: width - margin.right,
-    bottom: height - margin.bottom,
-    left: margin.left,
-    width: width - margin.left - margin.right,
-    height: height - margin.top - margin.bottom,
-  };
-
-  // X scale for date
-  xScale = d3.scaleTime()
-    .domain(d3.extent(commits, (d) => d.datetime))
-    .range([usableArea.left, usableArea.right])
-    .nice();
-
-  // Y scale for hours of the day
-  yScale = d3.scaleLinear().domain([0, 24]).range([usableArea.height, 0]);
-
-  // Gridlines
-  svg.append('g')
-    .attr('class', 'gridlines')
-    .attr('transform', `translate(${usableArea.left}, 0)`)
-    .call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
-
-  // Create axes
-  const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisLeft(yScale).tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
-
-  svg.append('g')
-    .attr('transform', `translate(0, ${usableArea.height})`)
-    .call(xAxis);
-
-  svg.append('g')
-    .attr('transform', `translate(${usableArea.left}, 0)`)
-    .call(yAxis);
-
-  // Create the dots
-  const dots = svg.append('g').attr('class', 'dots');
-
-  const rScale = d3.scaleSqrt()
-    .domain(d3.extent(commits, (d) => d.totalLines))
-    .range([5, 50]);
-
-  dots.selectAll('circle')
-    .data(d3.sort(commits, (d) => -d.totalLines))
-    .join('circle')
-    .attr('cx', (d) => xScale(d.datetime))
-    .attr('cy', (d) => yScale(d.hourFrac))
-    .attr('r', (d) => rScale(d.totalLines))
-    .style('fill-opacity', 0.7)
-    .on('mouseenter', (event, commit) => {
-      updateTooltipContent(commit);
-      updateTooltipVisibility(true);
-      updateTooltipPosition(event);
-    })
-    .on('mouseleave', () => {
-      updateTooltipContent({});
-      updateTooltipVisibility(false);
-    });
-
-  brushSelector();
-}
+    const svg = d3.select('#chart')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .style('overflow', 'visible');
+  
+    const margin = { top: 10, right: 10, bottom: 30, left: 20 };
+    const usableArea = {
+      top: margin.top,
+      right: width - margin.right,
+      bottom: height - margin.bottom,
+      left: margin.left,
+      width: width - margin.left - margin.right,
+      height: height - margin.top - margin.bottom,
+    };
+  
+    // X scale for date
+    xScale = d3.scaleTime()
+      .domain(d3.extent(commits, (d) => d.datetime))
+      .range([usableArea.left, usableArea.right])
+      .nice();
+  
+    // Y scale for hours of the day
+    yScale = d3.scaleLinear().domain([0, 24]).range([usableArea.height, 0]);
+  
+    // Gridlines
+    svg.append('g')
+      .attr('class', 'gridlines')
+      .attr('transform', `translate(${usableArea.left}, 0)`)
+      .call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
+  
+    // Create axes
+    const xAxis = d3.axisBottom(xScale);
+    const yAxis = d3.axisLeft(yScale).tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
+  
+    svg.append('g')
+      .attr('transform', `translate(0, ${usableArea.height})`)
+      .call(xAxis);
+  
+    svg.append('g')
+      .attr('transform', `translate(${usableArea.left}, 0)`)
+      .call(yAxis);
+  
+    // Create the dots
+    const dots = svg.append('g').attr('class', 'dots');
+  
+    const rScale = d3.scaleSqrt()
+      .domain(d3.extent(commits, (d) => d.totalLines))
+      .range([5, 50]);
+  
+    dots.selectAll('circle')
+      .data(d3.sort(commits, (d) => -d.totalLines))
+      .join('circle')
+      .attr('cx', (d) => xScale(d.datetime))
+      .attr('cy', (d) => yScale(d.hourFrac))
+      .attr('r', (d) => rScale(d.totalLines))
+      .style('fill-opacity', 0.7)
+      .on('mouseenter', (event, commit) => {
+        updateTooltipContent(commit);
+        updateTooltipVisibility(true);
+        updateTooltipPosition(event);
+      })
+      .on('mouseleave', () => {
+        updateTooltipContent({});
+        updateTooltipVisibility(false);
+      });
+  
+    // Ensure dots are in front of the brush
+    svg.selectAll('.dots').raise();
+    brushSelector();
+  }
+  
 
 // Tooltip functions
 function updateTooltipContent(commit) {
