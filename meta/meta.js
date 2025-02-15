@@ -255,6 +255,7 @@ function brushed(event) {
     }
 
     updateSelection();
+    updateSelectionCount();
     updateLanguageBreakdown();
 }
   
@@ -277,6 +278,18 @@ function updateSelection() {
 }
 
 
+function updateSelectionCount() {
+    const selectedCommits = brushSelection
+      ? commits.filter(isCommitSelected)
+      : [];
+  
+    const countElement = document.getElementById('selection-count');
+    countElement.textContent = `${
+      selectedCommits.length || 'No'
+    } commits selected`;
+  
+    return selectedCommits;
+  }
 
   
 
