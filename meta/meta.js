@@ -206,6 +206,9 @@ function createScatterplot() {
     .append('g')
     .attr('transform', `translate(${usableArea.left}, 0)`)
     .call(yAxis);
+
+  // Call brush selector to enable brushing
+  brushSelector();
 }
 
 // Color the dots based on the time of day (bluer for night, orangish for day)
@@ -223,7 +226,7 @@ function getColorByTime(hourFrac) {
   }
 }
 
-// Run the function when the page loads
+// Call the function when the page loads
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
 });
