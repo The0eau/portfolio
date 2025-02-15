@@ -103,18 +103,27 @@ function displayStats() {
 
 // Update the tooltip content and position near the mouse cursor
 function updateTooltipContent(commit) {
-    console.log("B");
-    const link = document.getElementById('commit-link');
-    const date = document.getElementById('commit-date');
-  
-    if (Object.keys(commit).length === 0) return;
-  
-    link.href = commit.url;
-    link.textContent = commit.id;
-    date.textContent = commit.datetime?.toLocaleString('en', {
-      dateStyle: 'full',
-    });
-  }
+  console.log("B");
+  const link = document.getElementById('commit-link');
+  const date = document.getElementById('commit-date');
+  const author = document.getElementById('commit-author');  // Added author element
+  const time = document.getElementById('commit-time');      // Added time element
+  const linesEdited = document.getElementById('commit-lines'); // Added lines edited element
+
+  if (Object.keys(commit).length === 0) return;
+
+  link.href = commit.url;
+  link.textContent = commit.id;
+  date.textContent = commit.datetime?.toLocaleString('en', {
+    dateStyle: 'full',
+  });
+
+  // Display the author, time, and lines edited
+  author.textContent = commit.author || 'Unknown'; // Default to 'Unknown' if no author
+  time.textContent = commit.datetime?.toLocaleTimeString('en'); // Formats the time
+  linesEdited.textContent = commit.linesEdited || '0'; // Default to '0' if no lines edited
+}
+
 
 // Update the tooltip visibility
 function updateTooltipVisibility(isVisible) {
