@@ -111,7 +111,10 @@ function createScatterplot() {
 
     const dots = svg.append('g').attr('class', 'dots');
 
-    const rScale = d3.scaleSqrt().domain(d3.extent(commits, (d) => d.totalLines)).range([2, 30]);
+    const rScale = d3.scaleSqrt()
+        .domain(d3.extent(commits, (d) => d.totalLines))
+        .range([5, 50]);  // Augmenter la taille des cercles
+
     
     dots.selectAll('circle')
         .data(d3.sort(commits, (d) => -d.totalLines))
@@ -162,15 +165,17 @@ function updateTooltipPosition(event) {
 let brushSelection = null;
 
 function brushSelector() {
-    function brushSelector() {
-        const svg = document.querySelector('svg');
-        const brush = d3.brush().on('start brush end', brushed);
-        svg.append('g')
-            .attr('class', 'brush')
-            .call(brush)
-            .attr('transform', `translate(${usableArea.left}, 0)`); // Positionner le brush correctement
-    }    
+    const svg = document.querySelector('svg');
+    const brush = d3.brush().on('start brush end', brushed);
+
+    // Crée un groupe pour le brush
+    svg.append('g')
+        .attr('class', 'brush')
+        .call(brush)
+        .attr('transform', `translate(${usableArea.left}, 0)`); // Positionner le brush correctement
 }
+
+
 
 function brushed(event) {
     brushSelection = event.selection;
