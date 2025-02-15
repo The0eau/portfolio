@@ -75,7 +75,8 @@ function displayStats() {
 function createScatterplot() {
     const svg = d3.select('#chart')
     .append('svg')
-    .attr('viewBox', `0 0 ${width} ${height}`)
+    .attr('width', width)
+    .attr('height', height)
     .style('overflow', 'visible');
 
 
