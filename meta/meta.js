@@ -121,7 +121,7 @@ function updateTooltipContent(commit) {
   // Display the author, time, and lines edited
   author.textContent = commit.author || 'Unknown'; // Default to 'Unknown' if no author
   time.textContent = commit.datetime?.toLocaleTimeString('en'); // Formats the time
-  linesEdited.textContent = commit.linesEdited || '0'; // Default to '0' if no lines edited
+  linesEdited.textContent = commit.totalLines || '0'; // Default to '0' if no lines edited
 }
 
 
