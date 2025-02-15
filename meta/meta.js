@@ -132,7 +132,7 @@ function createScatterplot() {
       updateTooltipVisibility(false);
     });
 
-  brushSelector(svg);
+  brushSelector();
 }
 
 // Tooltip functions
@@ -166,9 +166,10 @@ function updateTooltipPosition(event) {
 // Brushing functionality
 let brushSelection = null;
 
-function brushSelector(svg) {
-  svg.call(d3.brush().on('start brush end', brushed));
-  svg.selectAll('.dots, .overlay ~ *').raise();
+function brushSelector() {
+    const svg = document.querySelector('svg');
+    d3.select(svg).call(d3.brush());
+    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
 }
 
 function brushed(event) {
