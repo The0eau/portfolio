@@ -17,6 +17,10 @@ const usableArea = {
   height: height - margin.top - margin.bottom,
 };
 
+// Global variables for scales
+let xScale, yScale, rScale;  // Define these globally
+
+
 // Load data from CSV and convert fields
 async function loadData() {
   data = await d3.csv('loc.csv', (row) => ({
@@ -126,8 +130,24 @@ function updateTooltipPosition(event) {
 
 // Create scatterplot visualization
 function createScatterplot() {
-  // Sort commits by total lines in descending order (larger dots rendered first)
-  const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+ // Sort commits by total lines in descending order
+ const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+
+ // Create the scales globally
+ xScale = d3.scaleTime()
+   .domain(d3.extent(sortedCommits, (d) => d.datetime))
+   .range([usableArea.left, usableArea.right])
+   .nice();
+
+ yScale = d3.scaleLinear()
+   .domain([0, 24])
+   .range([usableArea.height, 0]);
+
+ const [minLines, maxLines] = d3.extent(sortedCommits, (d) => d.totalLines);
+
+ rScale = d3.scaleSqrt()
+   .domain([minLines, maxLines])
+   .range([2, 30]);
 
   // Create SVG element
   const svg = d3
@@ -135,22 +155,6 @@ function createScatterplot() {
     .append('svg')
     .attr('viewBox', `0 0 ${width} ${height}`)
     .style('overflow', 'visible');
-
-  // X scale (time scale for datetime)
-  const xScale = d3
-    .scaleTime()
-    .domain(d3.extent(sortedCommits, (d) => d.datetime))
-    .range([usableArea.left, usableArea.right])
-    .nice();
-
-  // Y scale (linear scale for hours of the day)
-  const yScale = d3.scaleLinear().domain([0, 24]).range([usableArea.height, 0]);
-
-  // Calculate the range of edited lines across all commits
-  const [minLines, maxLines] = d3.extent(sortedCommits, (d) => d.totalLines);
-
-  // Use a square root scale for the radius to correct the area perception
-  const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([2, 30]); // adjust min and max values as needed
 
   // Create gridlines
   const gridlines = svg
@@ -246,21 +250,17 @@ function brushed(event) {
   }
   
 
-function isCommitSelected(commit) {
-  if (!brushSelection) {
-    return false;  // If no selection, return false
+  function isCommitSelected(commit) {
+    if (!brushSelection) {
+      return false;
+    }
+  
+    const [[x0, y0], [x1, y1]] = brushSelection;
+    const cx = xScale(commit.datetime);
+    const cy = yScale(commit.hourFrac);
+  
+    return cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
   }
-
-  // Get the top-left and bottom-right corners of the brush selection
-  const [[x0, y0], [x1, y1]] = brushSelection;
-
-  // Check if the commit's coordinates are inside the selection bounds
-  const cx = xScale(commit.datetime); // X position of the commit
-  const cy = yScale(commit.hourFrac); // Y position of the commit
-
-  // Return true if the commit is inside the selection bounds
-  return cx >= x0 && cx <= x1 && cy >= y0 && cy <= y1;
-}
 
 function updateSelection() {
   // Update the visual state of the dots based on selection
