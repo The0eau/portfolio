@@ -149,7 +149,6 @@ function createScatterplot() {
   
     // Ensure dots are in front of the brush
     svg.selectAll('.dots').raise();
-    brushSelector();
   }
   
 
@@ -181,65 +180,4 @@ function updateTooltipPosition(event) {
   tooltip.style.top = `${event.clientY + 10}px`;
 }
 
-// Brushing functionality
-let brushSelection = null;
 
-function brushSelector() {
-    const svg = document.querySelector('svg');
-    d3.select(svg).call(d3.brush().on('start brush end', brushed));
-    d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
-}
-
-function brushed(event) {
-  brushSelection = event.selection;
-  updateSelection();
-  updateSelectionCount();
-  updateLanguageBreakdown();
-}
-
-function isCommitSelected(commit) {
-  if (!brushSelection) return false;
-  const [[x0, y0], [x1, y1]] = brushSelection;
-  const x = xScale(commit.datetime);
-  const y = yScale(commit.hourFrac);
-  return x0 <= x && x <= x1 && y0 <= y && y <= y1;
-}
-
-function updateSelection() {
-  d3.selectAll('circle').classed('selected', (d) => isCommitSelected(d));
-}
-
-function updateSelectionCount() {
-  const selectedCommits = brushSelection ? commits.filter(isCommitSelected) : [];
-  const countElement = document.getElementById('selection-count');
-  countElement.textContent = `${selectedCommits.length || 'No'} commits selected`;
-}
-
-function updateLanguageBreakdown() {
-  const selectedCommits = brushSelection ? commits.filter(isCommitSelected) : [];
-  const container = document.getElementById('language-breakdown');
-
-  if (selectedCommits.length === 0) {
-    container.innerHTML = '';
-    return;
-  }
-
-  const lines = selectedCommits.flatMap((d) => d.lines);
-
-  const breakdown = d3.rollup(
-    lines,
-    (v) => v.length,
-    (d) => d.type
-  );
-
-  container.innerHTML = '';
-
-  for (const [language, count] of breakdown) {
-    const proportion = count / lines.length;
-    const formatted = d3.format('.1~%')(proportion);
-    container.innerHTML += `
-      <dt>${language}</dt>
-      <dd>${count} lines (${formatted})</dd>
-    `;
-  }
-}
