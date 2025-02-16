@@ -8,14 +8,6 @@
         "link": "https://the0eau.github.io/portfolio/pro/Airbus/index.html"
     },
     {
-        "title": "Civil Aviation Authority (DGAC)",
-        "place": "DGAC, France",
-        "year": "2025",
-        "image": "https://the0eau.github.io/portfolio/pro/DGAC/DGAC.svg.png",
-        "description": "Managed the relocation of a communication system at the DGAC (VCS). Reorganized the workspace to optimize 15% of the working time, improving efficiency.",
-        "link": "https://the0eau.github.io/portfolio/pro/DGAC/index.html"
-    },
-    {
         "title": "DECART Project",
         "place": "IMT Atlantique, France",
         "year": "2025",
@@ -30,5 +22,13 @@
         "image": "https://the0eau.github.io/portfolio/pro/Entrepreneurship/204616219-enterpreneurship-icon-monochrome-simple-sign-from-business-concept-collection-enterpreneurship.jpg",
         "description": "Designed a ride-sharing mobile application, applying data analysis for market insights. Led UX/UI development and business intelligence reporting to enhance user engagement and achieve $10k in revenue.",
         "link": "https://the0eau.github.io/portfolio/pro/Entrepreneurship/index.html"
+    },
+    {
+        "title": "Civil Aviation Authority (DGAC)",
+        "place": "DGAC, France",
+        "year": "2024",
+        "image": "https://the0eau.github.io/portfolio/pro/DGAC/DGAC.svg.png",
+        "description": "Managed the relocation of a communication system at the DGAC (VCS). Reorganized the workspace to optimize 15% of the working time, improving efficiency.",
+        "link": "https://the0eau.github.io/portfolio/pro/DGAC/index.html"
     }
 ]
