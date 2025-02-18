@@ -7,7 +7,14 @@
         "link": "https://the0eau.github.io/portfolio/project/projects/website/index.html"
     },
     {
-        "title": "Data Visualization",
+        "title": "Manager of a medium sized company simulation",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Simulation",
+        "link": "https://the0eau.github.io/portfolio/project/projects/datavis/index.html"
+    },
+    {
+        "title": "Data Visualizations: Static and Dynamic",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Data Viz",
@@ -40,6 +47,13 @@
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Developed AI-based phishing detection model with Deep Learning and NLP techniques.",
         "link": "https://the0eau.github.io/portfolio/project/projects/phishing/index.html"
+    },
+    {
+        "title": "Business simulation of an airline company",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Managed an airline company",
+        "link": "https://the0eau.github.io/portfolio/project/projects/scooter/index.html"
     },
     {
         "title": "Finance Database",
@@ -77,11 +91,11 @@
         "link": "https://the0eau.github.io/portfolio/project/projects/chess_bot/index.html"
     },
     {
-        "title": "Expense Management System",
+        "title": "Business simulation of a scooter company",
         "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Created a database to track and manage shared expenses among friends.",
-        "link": "https://the0eau.github.io/portfolio/project/projects/finance_database/index.html"
+        "description": "Managed a company of scooters",
+        "link": "https://the0eau.github.io/portfolio/project/projects/scooter/index.html"
     },
     {
         "title": "Stock Market Predictor AI",
@@ -103,6 +117,13 @@
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Automated data extraction from Amazon to analyze trends in pricing and reviews.",
         "link": "https://the0eau.github.io/portfolio/project/projects/amazon_web_scraping/index.html"
+    },
+    {
+        "title": "Business Study on a french company (Le slip Français)",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Conducted a qualitative study on the bartending profession, focusing on career paths and social dynamics.",
+        "link": "https://the0eau.github.io/portfolio/project/projects/business_study/index.html"
     },
     {
         "title": "Sociological Study on Bartending",
