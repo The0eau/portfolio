@@ -21,6 +21,13 @@
         "link": "https://the0eau.github.io/portfolio/project/projects/datavis/index.html"
     },
     {
+        "title": "Bike Traffic Visualization in Boston",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "An interactive map visualizing bike traffic across Boston, showcasing real-time data from various bike stations. It provides insights into bike arrivals, departures, and station activity patterns.",
+        "link": "https://the0eau.github.io/portfolio/project/projects/map_viz/index.html"
+    },    
+    {
         "title": "Chat Bot",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
