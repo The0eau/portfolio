@@ -337,10 +337,11 @@ form button {
 }
 
 /* Pie chart */
-svg {
-  max-width: 10em;
-  overflow: visible;
-}
+/* Réduction de la taille du SVG */
+.container svg {
+  width: 150px;  /* Taille réduite */
+  height: 150px; /* Taille réduite */
+} 
 
 
 /* Legend styling */
@@ -398,6 +399,12 @@ svg {
     width: 100%;
     max-width: none;
   }
+}
+
+
+path {
+  transition: none !important;
+  transition-property: transform, opacity, fill;
 }
 
 

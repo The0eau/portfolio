@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://the0eau.github.io/portfolio/style.css">
-    <link rel="stylesheet" href="https://the0eau.github.io/portfolio/meta/style.css">
-    <script type="module" src="https://the0eau.github.io/portfolio/global.js"></script>
-    <script type="module" src="https://the0eau.github.io/portfolio/meta/meta.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../global.js"></script>
+    <script type="module" src="meta.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,36 @@
     <h1>Commit Statistics</h1>
     <div id="stats"></div>
     <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+    
+    <div id="commit-filter">
+        <label>
+            Show commits until: 
+            <input type="range" id="commitSlider" min="0" max="100" value="100">
+            <time id="selectedTime"></time>
+        </label>
+    </div>
+    <!-- src/meta/index.html -->
+    <div id="scrollytelling">
+        <div id="scroll-container">
+        <div id="spacer"></div>
+        <div id="items-container"></div>
+        </div>
+        <div id="chart"></div>
+    </div>
+
+
+    <!-- Updated section for File Size Scrolling -->
+<div id="file-size-scrollytelling">
+    <dl class="files">
+        <!-- Files and their lines will be added here by D3.js -->
+      </dl>
+    <div id="scroll-container-file-sizes">
+        <div id="spacer-file-sizes"></div>
+        <div id="items-container-file-sizes"></div>
+      </div>
+  </div>
+  
+  
 
     <dl id="commit-tooltip" class="info tooltip">
         <dt>Commit</dt>
@@ -33,5 +62,7 @@
 
     <p id="selection-count">No commits selected</p>
     <dl id="language-breakdown" class="stats"></dl>
+    
+
 </body>
 </html>
