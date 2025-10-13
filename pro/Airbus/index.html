@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Experience</title>
-    <link rel="stylesheet" href="https://the0eau.github.io/portfolio/style.css">
-    <script type="module" src="https://the0eau.github.io/portfolio/global.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script type="module" src="../../global.js"></script>
 </head>
 <body>
 
     <h1>Professional Experience</h1>
 
     <div class="experience">
-        <h2>Q&A AI Knowledge Graph, Airbus</h2>
+        <h2>Airbus — GraphRAG for Technical Q&A</h2>
         <p>
-            I developed AI-driven knowledge graphs to enhance decision-making and data retrieval for industrial applications. 
-            By integrating generative AI solutions, I utilized cutting-edge tools such as LangChain, MLflow, and GCP Vertex AI to streamline workflows and improve performance.
+            I worked as a Data Science / Product Management intern to design and evaluate a
+            <strong>GraphRAG</strong> pipeline that answers questions on complex maintenance and technical
+            documents. The system augments LLM retrieval with <strong>knowledge graphs</strong> to ground
+            responses, reduce hallucinations, and make institutional knowledge easier to discover.
         </p>
         <p>
-            In my role, I ensured that the AI solutions aligned with business needs, working within an international agile environment. 
-            I also conducted rigorous testing and performance evaluations of AI models to ensure their efficiency and reliability. 
-            My work focused on enhancing data accessibility, enabling faster, more informed decision-making within the organization.
+            I led discovery → PRD → evaluation loops with engineers and stakeholders, and integrated
+            <strong>LangChain</strong>, <strong>MLflow</strong>, and <strong>GCP Vertex AI</strong> to
+            operationalize experiments and track model performance. I benchmarked internal approaches
+            against external references (e.g., IBM and HKU projects) to validate design choices and guide
+            roadmap trade-offs.
+        </p>
+        <ul>
+            <li><strong>Outcomes:</strong> <em>+50%</em> improvement in QA accuracy and <em>+70%</em> increase in data accessibility measured in internal evaluations and stakeholder demos.</li>
+            <li><strong>RAG design:</strong> entity/relation extraction → graph construction → retrieval over subgraphs → LLM generation with grounded citations.</li>
+            <li><strong>Evaluation:</strong> curated gold sets, exact-match/semantic metrics, error taxonomy, and failure-mode analysis to prioritize fixes.</li>
+            <li><strong>Scalability:</strong> designed for incremental graph updates and cost-aware inference on Vertex AI; tracked experiments with MLflow.</li>
+            <li><strong>Stakeholders:</strong> authored PRDs, ran live demos, and delivered English presentations to senior engineers and cross-functional teams.</li>
+        </ul>
+        <p>
+            This project bridged user needs and engineering constraints: we translated ambiguous questions
+            into reproducible retrieval tasks, instrumented quality and cost, and shipped a path to scale
+            GraphRAG across additional document families and use cases.
         </p>
     </div>
 

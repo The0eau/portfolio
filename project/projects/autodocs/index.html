@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoDocs – AI Code Documentation Generator | Theau Aguet</title>
+
+  <!-- Site styles & global behaviors -->
+  <link rel="stylesheet" href="../../style.css" />
+  <script type="module" src="../../portfolio/global.js"></script>
+
+  <!-- Lightweight SEO / share -->
+  <meta name="description" content="AI tool that auto-generates README, requirements and docstrings for any repo. 80% less manual documentation, 50% faster onboarding. Built with Python, LLMs, Gradio, GitHub API.">
+  <meta property="og:title" content="AutoDocs – AI Code Documentation Generator">
+  <meta property="og:description" content="LLM-powered documentation for codebases: READMEs, requirements, docstrings, multi-language support.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+  <header class="project-header">
+    <img class="logo" width="80" height="80" src="https://vis-society.github.io/labs/2/images/empty.svg" alt="AutoDocs logo placeholder" />
+    <h1>AutoDocs – AI Code Documentation Generator</h1>
+    <p class="project-subtitle">
+      <strong>Role:</strong> Lead Developer · <strong>Team:</strong> 2 ·
+      <strong>Stack:</strong> Python, LLMs, Gradio, GitHub API ·
+      <strong>Focus:</strong> DevEx, Automation, Product-Led Growth
+    </p>
+  </header>
+
+  <main class="content">
+
+    <!-- Overview -->
+    <section class="experience">
+      <h2>Overview</h2>
+      <p>
+        <strong>AutoDocs</strong> automates developer documentation at scale: <strong>README</strong>, <strong>requirements</strong>,
+        <strong>docstrings</strong>, and <strong>architecture summaries</strong> for any repository. It parses code, infers public APIs,
+        and generates consistent, maintainable docs with <strong>LLM prompt pipelines</strong>.
+      </p>
+      <ul>
+        <li><strong>80% reduction</strong> in manual documentation effort (pilot).</li>
+        <li><strong>50% faster</strong> onboarding for new developers across tested repos.</li>
+        <li>Supports multi-language codebases (Python, JavaScript to start).</li>
+      </ul>
+    </section>
+
+    <!-- Problem / Users -->
+    <section class="experience">
+      <h2>Problem & Users</h2>
+      <p>
+        Teams ship fast but documentation lags. Knowledge is tribal, onboarding is slow, and API drift creates bugs.
+        AutoDocs targets:
+      </p>
+      <ul>
+        <li><strong>Engineering teams</strong>: keep docs current with the codebase.</li>
+        <li><strong>Platform/DevEx groups</strong>: standardize documentation quality across services.</li>
+        <li><strong>Open-source maintainers</strong>: lower contribution friction with clear READMEs and examples.</li>
+      </ul>
+    </section>
+
+    <!-- Features -->
+    <section class="experience">
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Repo Ingestion</strong> — Clones/loads repos via GitHub API or local path; detects modules, packages, entrypoints.</li>
+        <li><strong>Code Intelligence</strong> — Static parsing + lightweight execution to extract signatures, types, and dependencies.</li>
+        <li><strong>Doc Generation</strong> — LLM prompts produce README, usage guides, <em>requirements.txt</em>, and docstrings with examples.</li>
+        <li><strong>Style & Conventions</strong> — Enforces docstring style (Google/NumPy), section templates, and changelog notes.</li>
+        <li><strong>Gradio UI</strong> — Upload/select repo → preview diffs → one-click export/PR suggestion.</li>
+        <li><strong>Multi-language</strong> — Initial support for Python/JS; extensible handlers for more languages.</li>
+      </ul>
+    </section>
+
+    <!-- How it works -->
+    <section class="experience">
+      <h2>How It Works</h2>
+      <ol>
+        <li><strong>Scan</strong> — Parse repository tree, build a symbol table and dependency graph.</li>
+        <li><strong>Summarize</strong> — Generate per-module/function embeddings and concise summaries.</li>
+        <li><strong>Compose</strong> — Prompt templates assemble README, quickstart, API docs, and requirements.</li>
+        <li><strong>Review</strong> — UI shows diffs vs. existing docs; accept or edit inline.</li>
+        <li><strong>Export</strong> — Write to repo or open a PR with the proposed documentation set.</li>
+      </ol>
+    </section>
+
+    <!-- Architecture -->
+    <section class="experience">
+      <h2>Architecture (High-Level)</h2>
+      <ul>
+        <li><strong>Frontend:</strong> Gradio app embedded in site for rapid previews and edits.</li>
+        <li><strong>Core:</strong> Python services for parsing (AST), symbol extraction, and prompt orchestration.</li>
+        <li><strong>LLM Layer:</strong> Prompt templates, guardrails, and evaluation harness for consistency.</li>
+        <li><strong>Integrations:</strong> GitHub API (clone/fetch/push PR), optional embeddings store for large repos.</li>
+        <li><strong>CI Hook:</strong> GitHub Actions to re-run AutoDocs on PRs or tagged releases.</li>
+      </ul>
+      <figure class="project-media">
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="AutoDocs architecture diagram placeholder" width="900" height="480"/>
+        <figcaption>Pipeline: Repo ingest → Parse/Summarize → LLM compose → Human review → Export/PR.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Results / Metrics -->
+    <section class="experience">
+      <h2>Results & Impact</h2>
+      <ul>
+        <li><strong>80% less manual documentation</strong> across 100+ test repos.</li>
+        <li><strong>50% faster onboarding</strong> for new developers (measured on pilot teams).</li>
+        <li><strong>Consistency</strong>: standardized style & sections across services; reduced API drift incidents.</li>
+      </ul>
+      <p class="note">Metrics based on pilot runs and repository audits; longitudinal study planned for wider rollout.</p>
+    </section>
+
+    <!-- My role -->
+    <section class="experience">
+      <h2>My Role & Responsibilities</h2>
+      <ul>
+        <li><strong>Product</strong>: defined target users (DevEx, OSS maintainers), success metrics, and adoption levers (PR bot, CI hooks).</li>
+        <li><strong>Tech lead</strong>: designed parsing pipeline, prompt strategy, and review UX; owned CI integration.</li>
+        <li><strong>DX & Quality</strong>: built evaluation suite for prompt regressions and style conformance checks.</li>
+        <li><strong>Go-to-market</strong>: positioned as a DevEx accelerator with PLG motion (try → PR → adopt).</li>
+      </ul>
+    </section>
+
+    <!-- Screens / Demo -->
+    <section class="experience">
+      <h2>Screens & Demo</h2>
+      <div class="gallery">
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Repo selection & ingest screen placeholder" width="360" height="220"/>
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="README preview & diff placeholder" width="360" height="220"/>
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Docstrings generation preview placeholder" width="360" height="220"/>
+      </div>
+      <p class="cta">
+        <a class="button" href="../../index.html">← Back to Projects</a>
+        <!-- Optional demo/repo buttons -->
+        <!-- <a class="button primary" href="https://demo-link" target="_blank" rel="noopener">Live Demo</a> -->
+        <!-- <a class="button" href="https://github.com/..." target="_blank" rel="noopener">Source</a> -->
+      </p>
+    </section>
+
+    <!-- Tech stack -->
+    <section class="experience">
+      <h2>Tech Stack</h2>
+      <ul class="skills-list">
+        <li><strong>Core:</strong> Python (AST, regex, static analysis), Pandas</li>
+        <li><strong>AI:</strong> OpenAI LLMs, prompt templates, evaluation harness</li>
+        <li><strong>UI:</strong> Gradio (preview & diff), minimal React shell (optional)</li>
+        <li><strong>Integrations:</strong> GitHub API (PRs, repos), CI via GitHub Actions</li>
+        <li><strong>Ops:</strong> Containerized services, simple artifact store</li>
+      </ul>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="experience">
+      <h2>Roadmap</h2>
+      <ul>
+        <li><strong>Language coverage</strong>: Java, Go, C# analyzers; auto UML diagrams.</li>
+        <li><strong>Style packs</strong>: company-wide docstyle presets; lint + autofix.</li>
+        <li><strong>Semantic diffs</strong>: highlight API changes and doc freshness score.</li>
+        <li><strong>In-IDE extension</strong>: VS Code plugin for inline doc generation.</li>
+        <li><strong>RAG on codebase</strong>: Q&A over docs + source using embeddings.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="project-footer">
+    <p>© Theau Aguet — AI & Tech Product Management</p>
+  </footer>
+
+</body>
+</html>

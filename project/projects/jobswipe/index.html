@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JobSwipe AI – AI-Powered Career Assistant | Theau Aguet</title>
+
+  <!-- Site styles & global behaviors -->
+  <link rel="stylesheet" href="https://the0eau.github.io/portfolio/style.css" />
+  <script type="module" src="https://the0eau.github.io/portfolio/global.js"></script>
+
+  <!-- Lightweight SEO / share -->
+  <meta name="description" content="LLM-powered platform to generate tailored CVs, cover letters, and interview prep with a job-matching ranker. Built with Python, React, Gradio, OpenAI API.">
+  <meta property="og:title" content="JobSwipe AI – AI-Powered Career Assistant">
+  <meta property="og:description" content="Generates tailored CVs, cover letters, and interview prep. Matching ranker & interactive UX.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+  <header class="project-header">
+    <img class="logo" width="80" height="80" src="https://vis-society.github.io/labs/2/images/empty.svg" alt="JobSwipe AI logo placeholder" />
+    <h1>JobSwipe AI – AI-Powered Career Assistant</h1>
+    <p class="project-subtitle">
+      <strong>Role:</strong> Lead Developer · <strong>Team:</strong> 4 ·
+      <strong>Stack:</strong> Python, React, Gradio, OpenAI API ·
+      <strong>Focus:</strong> AI Product, LLMs, UX, Matching
+    </p>
+  </header>
+
+  <main class="content">
+
+    <!-- Overview -->
+    <section class="experience">
+      <h2>Overview</h2>
+      <p>
+        JobSwipe AI streamlines job applications by generating <strong>tailored CVs</strong>, <strong>cover letters</strong>, and
+        <strong>interview questions</strong> from a user profile and a job description. A matching ranker scores roles and
+        suggests <strong>application strategy</strong> (what to apply to, how, and when).
+      </p>
+      <ul>
+        <li>Projected to <strong>reduce time-to-offer by ~30%</strong> through automation and guidance.</li>
+        <li>Integrated <strong>LLM interview simulator</strong> for practice with adaptive feedback.</li>
+        <li>Built an <strong>interactive Gradio UI</strong> for instant upload → preview → download flows.</li>
+      </ul>
+    </section>
+
+    <!-- Problem / Users -->
+    <section class="experience">
+      <h2>Problem & Users</h2>
+      <p>
+        Candidates waste hours tailoring materials, struggle to prioritize roles, and get little feedback. JobSwipe AI targets:
+      </p>
+      <ul>
+        <li><strong>Students & early-career</strong>: fast, guided applications with high-quality outputs.</li>
+        <li><strong>Career switchers</strong>: skill translation and gap-centric cover letters.</li>
+        <li><strong>Busy professionals</strong>: batch processing and interview rehearsal on demand.</li>
+      </ul>
+    </section>
+
+    <!-- Product / Features -->
+    <section class="experience">
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Smart Matching Ranker</strong> — Scores job–candidate fit with weighted signal fusion (skills, seniority, responsibilities, keywords).</li>
+        <li><strong>Auto-Tailored CV & Cover Letter</strong> — Content distilled from the user’s profile, achievements, and the JD with role-specific emphasis.</li>
+        <li><strong>Interview Simulator</strong> — LLM-generated, role-specific questions; real-time feedback on clarity, structure (STAR), and depth.</li>
+        <li><strong>One-click Gradio Workflow</strong> — Upload CV + JD → get ranked roles, AI outputs, and interview practice in minutes.</li>
+        <li><strong>Versioning</strong> — Save, compare, and iterate on multiple CV/CL versions per role.</li>
+      </ul>
+    </section>
+
+    <!-- How it works -->
+    <section class="experience">
+      <h2>How It Works</h2>
+      <ol>
+        <li><strong>Ingest</strong> — User uploads CV (PDF/Doc) and pastes a job description.</li>
+        <li><strong>Parse</strong> — Extraction & normalization (skills, metrics, entities, dates).</li>
+        <li><strong>Match</strong> — Ranker computes fit score and identifies gaps/opportunities.</li>
+        <li><strong>Generate</strong> — LLM drafts CV variants, cover letter, and interview questions.</li>
+        <li><strong>Review</strong> — User edits in-app and exports ready-to-apply assets.</li>
+      </ol>
+    </section>
+
+    <!-- Architecture -->
+    <section class="experience">
+      <h2>Architecture (High-Level)</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React SPA embedding a <em>Gradio</em> app for rapid prototyping of flows and previews.</li>
+        <li><strong>Orchestration:</strong> Python services coordinating parsing, ranking, and LLM prompts.</li>
+        <li><strong>LLM Layer:</strong> OpenAI API with prompt templates and guardrails for consistency.</li>
+        <li><strong>Matching:</strong> Hybrid scoring (keyword overlap, semantic embeddings, seniority heuristics).</li>
+        <li><strong>Storage:</strong> User session artifacts (drafts, feedback, exports) persisted server-side.</li>
+      </ul>
+      <!-- Optional diagram placeholder -->
+      <figure class="project-media">
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Architecture diagram placeholder" width="900" height="480"/>
+        <figcaption>System overview: React + Gradio (UI) → Python services → LLM + Ranker.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Results / Metrics -->
+    <section class="experience">
+      <h2>Results & Impact</h2>
+      <ul>
+        <li><strong>−30% time-to-offer (projected)</strong> via automation and better prioritization.</li>
+        <li><strong>Faster first draft:</strong> CV/CL drafts in <em>minutes</em> vs hours; higher output quality.</li>
+        <li><strong>Better prep:</strong> Interview simulator drives structured answers and confidence.</li>
+      </ul>
+      <p class="note">Note: Some figures are based on pilot tests and modeled scenarios; full live-user study planned.</p>
+    </section>
+
+    <!-- My role -->
+    <section class="experience">
+      <h2>My Role & Responsibilities</h2>
+      <ul>
+        <li><strong>Product strategy</strong>: defined problem, user segments, success metrics, and roadmap.</li>
+        <li><strong>Tech lead</strong>: designed architecture; implemented ranker, prompt flows, and UI.</li>
+        <li><strong>UX</strong>: designed upload → preview → iterate flow to minimize friction and cognitive load.</li>
+        <li><strong>QA & eval</strong>: built prompt regression tests and qualitative review loops.</li>
+        <li><strong>Delivery</strong>: milestones, scope control, and stakeholder communication.</li>
+      </ul>
+    </section>
+
+    <!-- Screens / Demo -->
+    <section class="experience">
+      <h2>Screens & Demo</h2>
+      <div class="gallery">
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Upload & Match screen placeholder" width="360" height="220"/>
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Tailored cover letter preview placeholder" width="360" height="220"/>
+        <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Interview simulator placeholder" width="360" height="220"/>
+      </div>
+      <p class="cta">
+        <a class="button" href="../../index.html">← Back to Projects</a>
+        <!-- If you have a live demo or repo, add here -->
+        <!-- <a class="button primary" href="https://demo-link" target="_blank" rel="noopener">Live Demo</a> -->
+      </p>
+    </section>
+
+    <!-- Tech stack -->
+    <section class="experience">
+      <h2>Tech Stack</h2>
+      <ul class="skills-list">
+        <li><strong>Frontend:</strong> React, Gradio</li>
+        <li><strong>Backend:</strong> Python (FastAPI/Flask style orchestration), Pandas</li>
+        <li><strong>AI:</strong> OpenAI API (LLM), embeddings, prompt templates</li>
+        <li><strong>Data:</strong> PDF/Doc parsing, entity extraction, vector search (optional)</li>
+        <li><strong>Ops:</strong> GitHub Actions (CI), containerized services</li>
+      </ul>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="experience">
+      <h2>Roadmap</h2>
+      <ul>
+        <li><strong>ATS-aware CV formatter</strong> (Docx/PDF templates, keyword density, section ordering).</li>
+        <li><strong>Multi-JD batch mode</strong> to mass-tailor assets and prioritize top matches.</li>
+        <li><strong>Analytics layer</strong> for application tracking and improvement loops.</li>
+        <li><strong>Fine-tuned models</strong> for domain-specific roles (AI/ML, PM, data, fintech).</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="project-footer">
+    <p>© Theau Aguet — AI & Tech Product Management</p>
+  </footer>
+
+</body>
+</html>

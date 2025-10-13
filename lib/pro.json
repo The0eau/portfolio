@@ -1,34 +1,42 @@
 [
     {
-        "title": "Q&A AI Knowledge Graph, Airbus",
-        "place": "Airbus, France",
-        "year": "2025",
-        "image": "https://the0eau.github.io/portfolio/pro/Airbus/Airbus-Logo.png",
-        "description": "Developed AI-driven knowledge graphs to enhance decision-making and data retrieval for industrial applications. Integrated generative AI solutions using LangChain, MLflow, and GCP Vertex AI.",
-        "link": "https://the0eau.github.io/portfolio/pro/Airbus/index.html"
-    },
-    {
-        "title": "DECART Project",
-        "place": "IMT Atlantique, France",
-        "year": "2025",
-        "image": "https://the0eau.github.io/portfolio/pro/Decart/images.jpg",
-        "description": "Conducted strategic analysis on future industrial skills needs through targeted surveys. Provided data-driven insights to optimize educational training programs in 6 universities across 5 countries.",
-        "link": "https://the0eau.github.io/portfolio/pro/Decart/index.html"
-    },
-    {
-        "title": "Entrepreneurship",
-        "place": "Self-initiated, International",
-        "year": "2025",
-        "image": "https://the0eau.github.io/portfolio/pro/Entrepreneurship/204616219-enterpreneurship-icon-monochrome-simple-sign-from-business-concept-collection-enterpreneurship.jpg",
-        "description": "Designed a ride-sharing mobile application, applying data analysis for market insights. Led UX/UI development and business intelligence reporting to enhance user engagement and achieve $10k in revenue.",
-        "link": "https://the0eau.github.io/portfolio/pro/Entrepreneurship/index.html"
-    },
-    {
-        "title": "Civil Aviation Authority (DGAC)",
-        "place": "DGAC, France",
-        "year": "2024",
-        "image": "https://the0eau.github.io/portfolio/pro/DGAC/DGAC.svg.png",
-        "description": "Managed the relocation of a communication system at the DGAC (VCS). Reorganized the workspace to optimize 15% of the working time, improving efficiency.",
-        "link": "https://the0eau.github.io/portfolio/pro/DGAC/index.html"
-    }
+    "title": "Data Science / Product Manager Intern – GraphRAG (AI Q&A on Technical Docs)",
+    "place": "Airbus, Toulouse, France (Onsite)",
+    "year": "Apr–Aug 2025 · 5 months",
+    "image": "../pro/Airbus/Airbus-Logo.png",
+    "description": "Studied and optimized a GraphRAG pipeline leveraging knowledge graphs for maintenance-document Q&A. Integrated LangChain, MLflow, and GCP Vertex AI; benchmarked against IBM/HKU approaches. Outcomes: +50% model accuracy, +70% data accessibility. Wrote PRDs/demos, presented results to senior engineers, ensured scalability and business alignment.",
+    "link": "../pro/Airbus/index.html"
+  },
+  {
+    "title": "Entrepreneur – Safe Hitchhiking Mobile App",
+    "place": "Pick Industry · Brest, France",
+    "year": "Sep 2024 – Mar 2025",
+    "image": "../pro/Entrepreneurship/204616219-enterpreneurship-icon-monochrome-simple-sign-from-business-concept-collection-enterpreneurship.jpg",
+    "description": "Led discovery → UX → prototype for a safety-focused ride-sharing app. Ran field research and user interviews; defined MVP and trust features; designed intuitive UI to drive adoption. Managed delivery end-to-end with collaborators. Outcome: ~5% increase in local interest in hitchhiking; strengthened PM, UX, and go-to-market skills.",
+    "link": "../pro/Entrepreneurship/index.html"
+  },
+  {
+    "title": "Communications Lead – IMT Atlantique Gala 2025",
+    "place": "IMT Atlantique · Brest, France",
+    "year": "Jul 2024 – Feb 2025",
+    "image": "../pro/GalaIMT/imt_gala_logo.png",
+    "description": "Owned comms strategy for a 300+ attendee flagship event with a €100k budget. Launched multi-channel campaigns (posters, socials, newsletters). Outcomes: +45% social engagement, +30% newsletter open rate, +20% external ticket registrations, 95% satisfaction. Coordinated cross-functional teams and vendors.",
+    "link": "../pro/GalaIMT/index.html"
+  },
+  {
+    "title": "Team Leader – Strategic Education Project",
+    "place": "University of KwaZulu-Natal (South Africa) · IMT Atlantique",
+    "year": "Sep 2024 – Jan 2025",
+    "image": "../pro/UKZN/ukzn_logo.png",
+    "description": "Led a team of 6; conducted 20+ interviews (students, managers) to identify future industry competencies. Built a strategic framework aligning programs with evolving tech/market needs. Outcomes: +25% employability readiness (post-project surveys), 3 program changes adopted; developed stakeholder management and research rigor.",
+    "link": "../pro/UKZN/index.html"
+  },
+  {
+    "title": "Engineering Intern – Operational Lead (VCS Relocation)",
+    "place": "DGAC (Civil Aviation Authority), Toulouse, France",
+    "year": "Jun–Jul 2024 · 2 months",
+    "image": "../pro/DGAC/DGAC.svg.png",
+    "description": "Led relocation and commissioning of a critical Voice Communication System (VCS). Redesigned technical spaces and ergonomics; ensured compliance and safety. Outcomes: ~15% operator efficiency improvement; produced comprehensive technical documentation and coordinated multi-disciplinary teams.",
+    "link": "../pro/DGAC/index.html"
+  }
 ]

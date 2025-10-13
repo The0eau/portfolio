@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects } from 'https://the0eau.github.io/portfolio/global.js';
+import { fetchJSON, renderProjects } from '../global.js';
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
 let projects = []; // Global variable to store project data
@@ -6,7 +6,7 @@ let projects = []; // Global variable to store project data
 // Async function to load and render data
 async function loadData() {
     // Fetch projects data
-    projects = await fetchJSON('https://raw.githubusercontent.com/The0eau/portfolio/main/lib/project.json');
+    projects = await fetchJSON('../lib/project.json');
 
     // Render projects
     renderProjects_(projects);
