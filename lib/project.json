@@ -5,7 +5,7 @@
     "category": ["AI", "Product Management", "Full-Stack", "LLM"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led development of an LLM-driven career assistant that generates personalized CVs, cover letters, and interview simulations from job descriptions. Integrated matching algorithms and interactive UX with React and Gradio, reducing job search time by 30%.",
-    "link": "../project/projects/jobswipe/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/jobswipe/index.html"
   },
   {
     "title": "AutoDocs – AI Code Documentation Generator",
@@ -13,7 +13,7 @@
     "category": ["AI", "Automation", "Developer Tools", "LLM"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built an AI system that automatically documents codebases across languages (Python, JS) using LLMs and GitHub APIs. Delivered 80% reduction in manual documentation effort and 50% faster onboarding for dev teams. Designed prompt workflows, UX, and deployment.",
-    "link": "../project/projects/autodocs/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/autodocs/index.html"
   },
   {
     "title": "Nutrition Dashboard – Interactive Health Analytics",
@@ -21,7 +21,7 @@
     "category": ["AI", "Data Science", "Product Design", "Health Tech"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed a React+D3 health dashboard tracking meals, calories, and macronutrients. Integrated AI-powered recommendations and multi-sensor data (glucose, heart rate) via Flask API. Increased user engagement by 60% in pilot testing.",
-    "link": "../project/projects/nutrition_dashboard/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/nutrition_dashboard/index.html"
   },
   {
     "title": "Interactive Data Visualization Suite",
@@ -29,7 +29,7 @@
     "category": ["Data Visualization", "Analytics", "PM Communication"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Designed interactive dashboards in Python and Tableau to present complex analytics to non-technical stakeholders. Improved comprehension by 40% and decision speed by 25% in simulation use cases.",
-    "link": "../project/projects/datavis/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/datavis/index.html"
   },
   {
     "title": "Portfolio Website – AI / Tech PM Showcase",
@@ -37,7 +37,7 @@
     "category": ["Product Design", "Frontend", "Personal Branding"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed and deployed a personal website to showcase 20+ AI and PM projects. Implemented responsive React interface, improving recruiter engagement by 60% and securing 10+ interviews within months.",
-    "link": "../project/projects/website/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/website/index.html"
   },
   {
     "title": "Bike Traffic Visualization – Smart Mobility Dashboard",
@@ -45,7 +45,7 @@
     "category": ["Data Science", "Visualization", "Urban Tech"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built an interactive D3 + Mapbox visualization of Boston bike traffic. Analyzed >100k data points to identify optimization opportunities, boosting simulated station utilization by 30%.",
-    "link": "../project/projects/map_viz/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/map_viz/index.html"
   },
   {
     "title": "Predictive Analysis of Agricultural Land",
@@ -53,7 +53,7 @@
     "category": ["AI", "Sustainability", "Data Science"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led 5-person team to build ML models predicting land suitability under climate change. Improved predictive accuracy by 25% and designed dashboards for sustainable land management insights.",
-    "link": "../project/projects/agriculture/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/agriculture/index.html"
   },
   {
     "title": "Phishing Detection using Deep Learning",
@@ -61,7 +61,7 @@
     "category": ["AI", "Cybersecurity", "NLP"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed AI-based phishing link detection using NLP and deep learning. Achieved 92% accuracy and 15% fewer false positives compared to baselines. Designed explainable dashboards for stakeholders.",
-    "link": "../project/projects/phishing/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/phishing/index.html"
   },
   {
     "title": "Netflix Data Intelligence",
@@ -69,7 +69,7 @@
     "category": ["AI", "Data Science", "Business Analytics"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Performed customer segmentation and trend forecasting using clustering algorithms. Delivered insights leading to a simulated 20% improvement in recommendation accuracy.",
-    "link": "../project/projects/netflix/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/netflix/index.html"
   },
   {
     "title": "Decision Support Website for Schools",
@@ -77,7 +77,7 @@
     "category": ["Full-Stack", "Data Analytics", "Education Tech"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led 3-person team building a Flask+SQL decision platform optimizing classroom and staff allocation. Improved efficiency by 25% and reduced planning time by 40%.",
-    "link": "../project/projects/codev/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/codev/index.html"
   },
   {
     "title": "Chatbot – Intelligent Q&A System",
@@ -85,7 +85,7 @@
     "category": ["AI", "NLP", "Product Prototype"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Designed a modular LLM-based chatbot leveraging LangChain. Reached 85% accuracy and improved query response time by 40%. Demonstrated AI integration and deployment feasibility.",
-    "link": "../project/projects/chat_bot/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/chat_bot/index.html"
   },
   {
     "title": "Stock Market Predictor (AI)",
@@ -93,7 +93,7 @@
     "category": ["AI", "Finance", "Data Science"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built LSTM-based predictive model for financial time series forecasting. Improved accuracy by 15% and visualized investment insights via dashboards.",
-    "link": "../project/projects/stock_market_predictor/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/stock_market_predictor/index.html"
   },
   {
     "title": "Logistics Network Optimization",
@@ -101,7 +101,7 @@
     "category": ["Operations Research", "Optimization", "Supply Chain"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Designed MILP and ILS models optimizing logistics costs by 30% while maintaining service levels. Delivered decision-support tools bridging engineering and business strategy.",
-    "link": "../project/projects/ser/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/ser/index.html"
   },
   {
     "title": "AI Image Generator",
@@ -109,7 +109,7 @@
     "category": ["AI", "Generative AI", "Prompt Engineering"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed natural language–to–image generator using OpenAI APIs. Created prompt engineering system producing high-quality, contextually relevant images in seconds.",
-    "link": "../project/projects/image_generator/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/image_generator/index.html"
   },
   {
     "title": "Business Simulation – Airline Company",
@@ -117,7 +117,7 @@
     "category": ["Business Strategy", "Data-Driven Management"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led 4-member team managing operations, finance, and marketing in a simulation. Applied data analysis and strategic KPIs to improve operational efficiency by 25%.",
-    "link": "../project/projects/airline/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/airline/index.html"
   },
   {
     "title": "Autonomous Robot with RFID Navigation",
@@ -125,7 +125,7 @@
     "category": ["IoT", "Embedded Systems", "Automation"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Engineered autonomous robot using RFID sensors for real-time navigation. Achieved 90% task completion accuracy and demonstrated robust control system design.",
-    "link": "../project/projects/RFID/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/RFID/index.html"
   },
   {
     "title": "Game Theory AI (Pyrat Project)",
@@ -133,7 +133,7 @@
     "category": ["AI", "Algorithms", "Game Theory"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed competitive AI agents using game-theoretic decision models. Improved win rate by 30% and demonstrated algorithmic optimization under constraints.",
-    "link": "../project/projects/pyrat/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/pyrat/index.html"
   },
   {
     "title": "Amazon Web Data Extraction & Market Analytics",
@@ -141,7 +141,7 @@
     "category": ["Data Engineering", "Web Scraping", "E-commerce Analytics"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Automated data extraction from Amazon (pricing, reviews) using Python. Reduced manual analysis effort by 90% and produced trend insights for strategic pricing.",
-    "link": "../project/projects/amazon_web_scraping/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/amazon_web_scraping/index.html"
   },
   {
     "title": "Autonomous Greenhouse (IoT & Sustainability)",
@@ -149,6 +149,6 @@
     "category": ["IoT", "Sustainability", "Automation"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led IoT-based greenhouse system regulating temperature and humidity. Increased simulated plant growth by 30% and showcased end-to-end hardware/software integration.",
-    "link": "../project/projects/greenhouse/index.html"
+    "link": "https://the0eau.github.io/portfolio/project/projects/greenhouse/index.html"
   }
 ]
