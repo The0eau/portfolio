@@ -5,12 +5,12 @@ function $$(selector, context = document) {
 }
 
 let pages = [
-    { url: 'index.html', title: 'Me' },
-    { url: 'education/index.html', title: 'Education' },
-    { url: 'pro/index.html', title: 'Professional' },
-    { url: 'project/index.html', title: 'Projects' },
-    { url: 'contact/index.html', title: 'Contact' },
-    { url: 'cv/index.html', title: 'Resume' },
+    { url: 'portfolio/index.html', title: 'Me' },
+    { url: 'portfolio/education/index.html', title: 'Education' },
+    { url: 'portfolio/pro/index.html', title: 'Professional' },
+    { url: 'portfolio/project/index.html', title: 'Projects' },
+    { url: 'portfolio/contact/index.html', title: 'Contact' },
+    { url: 'portfolio/cv/index.html', title: 'Resume' },
     { url: 'https://github.com/The0eau', title: 'Github' },
     // add the rest of your pages here
   ];
