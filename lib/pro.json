@@ -1,42 +1,106 @@
 [
     {
+    "id": "airbus",
+    "category": "internships",
     "title": "Data Science / Product Manager Intern – GraphRAG (AI Q&A on Technical Docs)",
     "place": "Airbus, Toulouse, France (Onsite)",
     "year": "Apr–Aug 2025 · 5 months",
-    "image": "https://the0eau.github.io/portfolio/pro/Airbus/Airbus-Logo.png",
+    "image": "pro/Airbus/Airbus-Logo.png",
     "description": "Studied and optimized a GraphRAG pipeline leveraging knowledge graphs for maintenance-document Q&A. Integrated LangChain, MLflow, and GCP Vertex AI; benchmarked against IBM/HKU approaches. Outcomes: +50% model accuracy, +70% data accessibility. Wrote PRDs/demos, presented results to senior engineers, ensured scalability and business alignment.",
-    "link": "https://the0eau.github.io/portfolio/pro/Airbus/index.html"
+    "details": {
+        "subtitle": "Apr–Aug 2025 · 5 months",
+        "intro": "I worked as a Data Science / Product Management intern to design and evaluate a <strong>GraphRAG</strong> pipeline that answers questions on complex maintenance and technical documents. The system augments LLM retrieval with <strong>knowledge graphs</strong> to ground responses, reduce hallucinations, and make institutional knowledge easier to discover.",
+        "sections": [
+            {
+                "content": "I led discovery → PRD → evaluation loops with engineers and stakeholders, and integrated <strong>LangChain</strong>, <strong>MLflow</strong>, and <strong>GCP Vertex AI</strong> to operationalize experiments and track model performance. I benchmarked internal approaches against external references (e.g., IBM and HKU projects) to validate design choices and guide roadmap trade-offs.",
+                "list": [
+                    "<strong>Outcomes:</strong> <em>+50%</em> improvement in QA accuracy and <em>+70%</em> increase in data accessibility measured in internal evaluations and stakeholder demos.",
+                    "<strong>RAG design:</strong> entity/relation extraction → graph construction → retrieval over subgraphs → LLM generation with grounded citations.",
+                    "<strong>Evaluation:</strong> curated gold sets, exact-match/semantic metrics, error taxonomy, and failure-mode analysis to prioritize fixes.",
+                    "<strong>Scalability:</strong> designed for incremental graph updates and cost-aware inference on Vertex AI; tracked experiments with MLflow.",
+                    "<strong>Stakeholders:</strong> authored PRDs, ran live demos, and delivered English presentations to senior engineers and cross-functional teams."
+                ]
+            }
+        ],
+        "conclusion": "This project bridged user needs and engineering constraints: we translated ambiguous questions into reproducible retrieval tasks, instrumented quality and cost, and shipped a path to scale GraphRAG across additional document families and use cases."
+    }
   },
   {
+    "id": "entrepreneurship",
+    "category": "entrepreneurship",
     "title": "Entrepreneur – Safe Hitchhiking Mobile App",
     "place": "Pick Industry · Brest, France",
     "year": "Sep 2024 – Mar 2025",
-    "image": "https://the0eau.github.io/portfolio/pro/Entrepreneurship/204616219-enterpreneurship-icon-monochrome-simple-sign-from-business-concept-collection-enterpreneurship.jpg",
+    "image": "pro/Entrepreneurship/204616219-enterpreneurship-icon-monochrome-simple-sign-from-business-concept-collection-enterpreneurship.jpg",
     "description": "Led discovery → UX → prototype for a safety-focused ride-sharing app. Ran field research and user interviews; defined MVP and trust features; designed intuitive UI to drive adoption. Managed delivery end-to-end with collaborators. Outcome: ~5% increase in local interest in hitchhiking; strengthened PM, UX, and go-to-market skills.",
-    "link": "https://the0eau.github.io/portfolio/pro/Entrepreneurship/index.html"
+    "details": {
+        "subtitle": "Sep 2024 – Mar 2025",
+        "intro": "Founded and led the development of a <strong>ride-sharing mobile application</strong> designed to promote safe and sustainable hitchhiking. Conducted market research and user interviews to identify key pain points in shared mobility and safety, translating findings into actionable product requirements.",
+        "sections": [
+            {
+                "content": "Designed and implemented the <strong>UX/UI</strong> for the prototype, integrating user feedback to enhance trust and usability. Built dashboards for <strong>business intelligence</strong> and engagement tracking to inform iterative product improvements. Managed the end-to-end lifecycle—from concept to pilot testing—achieving strong local traction and validating product-market fit."
+            }
+        ],
+        "conclusion": "This entrepreneurial experience strengthened my skills in <strong>product management, user research, data-driven decision-making,</strong> and <strong>team leadership</strong>, while fostering an innovation mindset focused on delivering real-world impact."
+    }
   },
   {
+    "id": "galaimt",
+    "category": "missions",
     "title": "Communications Lead – IMT Atlantique Gala 2025",
     "place": "IMT Atlantique · Brest, France",
     "year": "Jul 2024 – Feb 2025",
-    "image": "https://the0eau.github.io/portfolio/pro/GalaIMT/imt_gala_logo.png",
+    "image": "pro/GalaIMT/imt_gala_logo.png",
     "description": "Owned comms strategy for a 300+ attendee flagship event with a €100k budget. Launched multi-channel campaigns (posters, socials, newsletters). Outcomes: +45% social engagement, +30% newsletter open rate, +20% external ticket registrations, 95% satisfaction. Coordinated cross-functional teams and vendors.",
-    "link": "https://the0eau.github.io/portfolio/pro/GalaIMT/index.html"
+    "details": {
+        "subtitle": "Jul 2024 – Feb 2025",
+        "intro": "Led the communications and marketing strategy for the <strong>IMT Atlantique Gala 2025</strong>, the school’s flagship event gathering over 300 participants, including students, alumni, and corporate partners. Managed a <strong>€100,000 budget</strong> and oversaw all digital and print communication initiatives from concept to execution.",
+        "sections": [
+            {
+                "content": "Designed and launched <strong>multi-channel campaigns</strong> (social media, newsletters, posters, video teasers) that increased online engagement by <strong>45%</strong> and newsletter open rates by <strong>30%</strong> compared to the previous edition. Managed content calendars, branding, and visual identity to ensure message consistency and high audience engagement."
+            },
+            {
+                "content": "Coordinated a cross-functional team of designers, developers, and marketing volunteers to deliver the event website and promotional materials on schedule. Strengthened partnerships with sponsors and external stakeholders, driving a <strong>20% increase in external ticket sales</strong> and a <strong>95% satisfaction rate</strong> in post-event surveys."
+            }
+        ],
+        "conclusion": "This role enhanced my expertise in <strong>communication strategy, stakeholder management, event marketing,</strong> and <strong>project leadership</strong>—skills directly transferable to product management and cross-functional coordination in tech environments."
+    }
   },
   {
+    "id": "ukzn",
+    "category": "missions",
     "title": "Team Leader – Strategic Education Project",
     "place": "University of KwaZulu-Natal (South Africa) · IMT Atlantique",
     "year": "Sep 2024 – Jan 2025",
-    "image": "https://the0eau.github.io/portfolio/pro/UKZN/ukzn_logo.png",
+    "image": "pro/UKZN/ukzn_logo.png",
     "description": "Led a team of 6; conducted 20+ interviews (students, managers) to identify future industry competencies. Built a strategic framework aligning programs with evolving tech/market needs. Outcomes: +25% employability readiness (post-project surveys), 3 program changes adopted; developed stakeholder management and research rigor.",
-    "link": "https://the0eau.github.io/portfolio/pro/UKZN/index.html"
+    "details": {
+        "subtitle": "Sep 2024 – Jan 2025",
+        "intro": "Led a mixed-methods study on future industrial skills, conducting 20+ interviews with students and industry managers and running targeted surveys to map emerging competency needs across sectors.",
+        "sections": [
+            {
+                "content": "Translated findings into a practical capability framework and recommendations adopted by partner institutions, aligning curricula with market demand across 6 universities in 5 countries. Outcomes: <strong>+25%</strong> employability readiness (post-project surveys) and implementation of <strong>3</strong> program changes. Responsibilities included scoping, stakeholder facilitation, insight synthesis, and presentation to academic and industry boards."
+            }
+        ]
+    }
   },
   {
+    "id": "dgac",
+    "category": "internships",
     "title": "Engineering Intern – Operational Lead (VCS Relocation)",
     "place": "DGAC (Civil Aviation Authority), Toulouse, France",
     "year": "Jun–Jul 2024 · 2 months",
-    "image": "https://the0eau.github.io/portfolio/pro/DGAC/DGAC.svg.png",
+    "image": "pro/DGAC/DGAC.svg.png",
     "description": "Led relocation and commissioning of a critical Voice Communication System (VCS). Redesigned technical spaces and ergonomics; ensured compliance and safety. Outcomes: ~15% operator efficiency improvement; produced comprehensive technical documentation and coordinated multi-disciplinary teams.",
-    "link": "https://the0eau.github.io/portfolio/pro/DGAC/index.html"
+    "details": {
+        "subtitle": "Jun–Jul 2024 · 2 months",
+        "intro": "Led the relocation and operational deployment of a <strong>Voice Communication System (VCS)</strong> within the DGAC’s control facilities, ensuring uninterrupted service continuity during transition.",
+        "sections": [
+            {
+                "content": "Collaborated with multidisciplinary engineering and operations teams to redesign the technical workspace, improving layout and ergonomics for controllers. The reorganization increased operator efficiency by approximately <strong>15%</strong> and enhanced communication reliability across critical systems."
+            }
+        ],
+        "conclusion": "Produced comprehensive technical documentation to support maintenance and knowledge transfer, ensuring long-term sustainability of the new setup. This experience strengthened my expertise in <strong>project management, process optimization, and systems engineering</strong> within a high-stakes, safety-critical environment."
+    }
   }
 ]

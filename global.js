@@ -5,26 +5,32 @@ function $$(selector, context = document) {
 }
 
 let pages = [
-    { url: 'https://the0eau.github.io/portfolio/index.html', title: 'Me' },
-    { url: 'https://the0eau.github.io/portfolio/education/index.html', title: 'Education' },
-    { url: 'https://the0eau.github.io/portfolio/pro/index.html', title: 'Professional' },
-    { url: 'https://the0eau.github.io/portfolio/project/index.html', title: 'Projects' },
-    { url: 'https://the0eau.github.io/portfolio/contact/index.html', title: 'Contact' },
-    { url: 'https://the0eau.github.io/portfolio/cv/index.html', title: 'Resume' },
+    { url: 'index.html', title: 'Me' },
+    { url: 'education/index.html', title: 'Education' },
+    { url: 'pro/index.html', title: 'Professional' },
+    { url: 'project/index.html', title: 'Projects' },
+    { url: 'contact/index.html', title: 'Contact' },
+    { url: 'cv/index.html', title: 'Resume' },
     { url: 'https://github.com/The0eau', title: 'Github' },
     // add the rest of your pages here
   ];
 
-const ARE_WE_HOME = document.documentElement.classList.contains('home');
+export const ARE_WE_HOME = document.documentElement.classList.contains('home');
+
+export function getRelativePath(path) {
+    if (ARE_WE_HOME || !path || path.startsWith('http') || path.startsWith('#') || path.startsWith('mailto:')) {
+        return path;
+    }
+    return `../${path}`;
+}
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
 for (let p of pages) {
-    let url = p.url;
     let title = p.title;
 
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+    let url = getRelativePath(p.url);
 
     let a = document.createElement('a');
     a.href = url;
@@ -99,7 +105,6 @@ export async function fetchJSON(url) {
         throw new Error(`Failed to fetch projects: ${response.statusText}`);
          
       }
-      console.log(response)
       const data = await response.json();
       return data;
   } catch (error) {
@@ -113,12 +118,14 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
   project.forEach(project => {
     const article = document.createElement('article');
+    const imageSrc = getRelativePath(project.image);
+    const linkHref = getRelativePath(project.link);
     article.innerHTML = `
     <h3>${project.title}</h3>
     <p>${project.year}</p>
-    <img src="${project.image}" alt="${project.title}">
+    <img src="${imageSrc}" alt="${project.title}">
     <p>${project.description}</p>
-    <a href = "${project.link}"> Link </a>
+    <a href = "${linkHref}"> Link </a>
     `;
     containerElement.appendChild(article);
 });
@@ -131,7 +138,6 @@ export async function fetchGitHubData(username) {
 
 const githubData = await fetchGitHubData('The0eau');
 const profileStats = document.querySelector('#profile-stats');
-console.log("test")
 if (profileStats) {
   profileStats.innerHTML = `
         <dl>

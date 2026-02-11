@@ -1,22 +1,43 @@
+/* Modern Portfolio Design - Dribbble Inspired */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    background-color: Canvas;
-    color: CanvasText;
-    font: 100%/1.5 system-ui;
-    max-width: 100ch; /* Limit the content width */
-    margin-inline: auto; /* Center the content horizontally */
-    padding: 1rem;          /* Add spacing inside the body */
-  }
+    background-color: var(--tertiary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
 
 :root {
-    --color-accent: oklch(65% 50% 0); /* Define the main accent color */
-    color-scheme: light dark;
-  }
+    --bg: #F8F8F8;
+    --surface: #FFFFFF;
+    --tertiary: #F8F8F8;
+    --surface-highlight: #F0F0F0;
+    --border: #7B7B7B;
+    --text-primary: #222222;
+    --text-secondary: #7B7B7B;
+    --accent: #222222;
+    --radius: 16px;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    
+    /* Compatibility variables for existing JS/HTML that might use them */
+    --color-surface: var(--surface);
+    --color-primary: var(--accent);
+    --color-on-surface: var(--text-primary);
+    --color-on-surface-secondary: var(--text-secondary);
+    --color-background: var(--bg);
+    --border-color: var(--border);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --color-accent: var(--accent);
+    color-scheme: light;
+}
 
 html {
   accent-color: var(--color-accent); /* Use the accent color available to the entire document */
+  scroll-padding-top: 80px; /* Offset for sticky nav */
 }
 
 nav ul, nav li {
@@ -24,266 +45,250 @@ nav ul, nav li {
 }
 
 nav {
-  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Permet d’adapter l'affichage si besoin */
-  padding: 0.5em 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
-  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
-  gap: 1em; /* Espacement entre les liens */
+  flex-wrap: wrap;
+  padding: 0 1em;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--color-surface);
+  gap: 0.5em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
   text-decoration: none;
-  color: inherit;
-  text-align: center; /* Centre le texte horizontalement */
-  padding: 0.5em 1em; /* Padding normal pour tous les écrans */
-  white-space: nowrap; /* Évite les coupures */
-  display: inline-block; /* Permet au texte de s'ajuster */
+  color: var(--color-on-surface-secondary);
+  font-weight: 500;
+  text-align: center;
+  padding: 1em 0.5em;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease-in-out;
 }
 
 nav a.current {
-  border-bottom: 0.3em solid oklch(90% 3% 200);
-  padding-bottom: 0.1em;
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
 nav a:hover {
-  border-bottom: 0.3em solid var(--color-accent);
+  color: var(--color-primary);
+  background-color: rgba(34, 34, 34, 0.05); /* Dark hover for light theme */
 }
 
 /* Mode mobile : menu en colonne */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: center; /* Centre les liens en colonne */
-    width: 100%; /* Prend toute la largeur de l'écran */
+    align-items: stretch;
   }
 
   nav a {
-    padding: 1em; /* Garde le padding pour une meilleure visibilité */
-    display: block; /* Les liens prennent toute la largeur */
-    text-align: center; /* Centre le texte */
-  }
-
-  nav a:hover {
-    background-color: var(--color-accent);
-    color: white;
-    border-radius: 5px;
-  }
-  
-  nav a.current {
-    font-weight: bold;
-    background-color: oklch(90% 3% 200 / 20%);
-    border-radius: 5px;
-  }
-
-  nav a:active {
-    background-color: var(--color-accent);
-    color: white;
-    border-radius: 5px;
-    transform: scale(1.02); 
+    padding: 0.8em 1em;
+    border-bottom-width: 0;
   }
 }
 
-
-
-
-
-.profile {
-  display: flex;
-  gap: 2em;
-  align-items: flex-start; /* Align the items to the top */
-  justify-content: center;
-  gap: 3em; /* Increased the gap between pie chart and legend */
-  margin-top: 2em;
-}
 
 
 input, textarea, button, select {
   font: inherit; /* Inherit all font-related properties (family, size, weight, etc.) */
 }
 
-
-/* Apply consistent box-sizing */
-form * {
-  box-sizing: border-box;
-  display: grid; /* Enable grid layout */
-  grid-template-columns: auto 1fr; /* Two columns: labels (auto width), inputs (remaining space) */
-  gap: 1em; /* Spacing between grid items */
-  align-items: center; /* Align items vertically within their grid cells */
-  max-width: 600px; /* Optional: Limit form width for better readability */
-  margin: 0 auto; /* Center the form horizontally in the viewport */
-  gap: 1em; /* Spacing between grid items */
+/* Form Styles */
+.form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: var(--color-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
-/* Layout for labels */
-form label {
-  display: grid;
-  grid-template-columns: subgrid; /* Inherits columns from the parent grid */
-  grid-column: 1 / -1; /* Makes labels span the entire row */
+.form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: var(--color-on-surface-secondary);
+    font-weight: 500;
 }
 
-/* Layout for form controls */
-form input, form textarea, form select, form button, form label {
-  display: block; /* Ensure controls take up their own line */
-  width: 100%; /* Make controls span the full width of the container */
-  box-sizing: border-box; /* Make their width of 100% include their padding and border */
-  padding: 0.5em; /* Add internal spacing for better readability */
-  margin-block: 0.5em; /* Add spacing above and below */
-  /*border: 1px solid #ccc; /* Optional: Add a subtle border */
-  /*border-radius: 0.3em; /* Optional: Smooth corners for aesthetics */
-  /*font: inherit; /* Ensure form controls inherit the page font */
+.form input[type="text"],
+.form textarea {
+    width: 100%;
+    font: inherit;
+    padding: 0.8em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--color-background);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 1.5em;
 }
 
-/* Spanning the button */
-form button {
-  grid-column: 1 / -1; /* Make the submit button span the full form width*/
-  justify-self: center; /* Center the button horizontally */
+.form input[type="text"]:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
 }
 
-.projects {
-  display: grid; /* Enable Grid Layout */
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive columns */
+.form button[type="submit"] {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--bg);
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.projects {
+.form button[type="submit"]:hover {
+    background-color: #000000; /* Darker black */
+}
+
+/* Card Grid Styles */
+.projects, .educations, .pro, .courses {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em; /* Espace entre les articles */
+  gap: 1.5em;
 }
 
-.projects article {
+.projects article, .educations article, .pro article, .courses article {
   display: flex;
-  flex-direction: column; /* Alignement vertical */
-  border: 1px solid #ccc;
-  padding: 1em;
-  background: #fff;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
   text-align: center;
+  padding: 1em;
+  transition: box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
 }
 
-.projects img {
+.projects article:hover, .educations article:hover, .pro article:hover, .courses article:hover {
+    box-shadow: var(--card-shadow);
+}
+
+.projects img, .educations img, .pro img, .courses img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 0.5em;
-  object-fit: cover; /* Ajuste bien l’image */
+  margin-bottom: 1em;
+  object-fit: cover;
+  border-radius: calc(var(--border-radius) - 4px);
 }
 
-.projects h2 {
+.projects article h3, .educations article h3, .pro article h3, .courses article h3 {
   font-size: 1.2em;
   margin: 0.5em 0;
+  color: var(--color-on-surface);
 }
 
-.projects p {
+.projects p, .educations p, .pro p, .courses p {
   font-size: 1em;
   margin: 0;
+  color: var(--color-on-surface-secondary);
 }
 
-
-.project h1, .project h2, .project h3, .project h4, .project h5, .project h6 {
+.projects h1, .projects h2, .projects h3, .projects h4, .projects h5, .projects h6 {
   line-height: 1.1; /* Smaller line height for headings */
   text-wrap: balance; /* Prevents uneven line breaks */
 }
 
+/* CV Page Styles */
 .cv {
-  display: grid; /* Use grid layout for the entire CV */
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 48px;
+    margin-top: 48px;
+}
+
+.cv header {
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .cv header h1 {
-  text-align: center; /* Center the text */
-  color: #1b756271; /* Set the header color */
+  color: var(--text-primary);
+  margin-bottom: 0.25em;
+}
+
+.cv header p {
+  color: var(--text-secondary);
+  font-size: 1.1em;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.cv section {
+  margin-bottom: 40px;
 }
 
 .cv h2 {
-  text-decoration: underline; /* Add an underline to the heading */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  border-bottom: none;
+  margin-bottom: 16px;
+  text-decoration: none;
 }
 
-.cv p {
-  background-color: #2a92c271; /* Light blue with transparency */
-  border: 2px solid #1e6f9f; /* Darker border color */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Add padding for better text structure */
+.cv p, .cv ul {
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
 }
 
 .cv ul {
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Padding for better structure */
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .cv li {
-  margin-left: 2em; /* Indent list items */
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    padding-left: 0;
 }
 
-/* Contacts */
-.cv .contacts ul {
-  background-color: #f4a261; /* Light orange */
-  border: 2px solid #e76f51; /* Darker orange border */
+.cv li::before {
+  content: '';
 }
 
-/* Education */
-.cv .education ul {
-  background-color: #a8dadc; /* Light blue */
-  border: 2px solid #457b9d; /* Dark blue border */
+.cv strong {
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
-/* Skills */
-.cv .skills ul {
-  background-color: #f4d35e; /* Light yellow */
-  border: 2px solid #ee964b; /* Dark yellow border */
-}
-
-/* Projects */
-.cv .projects {
-  display: block; /* Ensure the projects section is displayed as a block */
-}
-
-.cv .projects header {
-  display: block; /* Ensure the project header is displayed as a block */
-}
-
-.cv .projects ul {
-  display: block; /* Display the list as a block */
-  background-color: #bde0fe; /* Pastel blue */
-  border: 2px solid #0077b6; /* Deep blue border */
-}
-
-/* Professional Experience */
-.cv .pro ul {
-  background-color: #caffbf; /* Pastel green */
-  border: 2px solid #6a994e; /* Dark green border */
+.cv time {
+  float: right;
+  font-style: italic;
+  color: var(--text-secondary);
 }
 
 .color-scheme {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
-
-/* Adjust styles for dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-
-  nav {
-    background-color: color-mix(in oklch, var(--color-accent), canvas 20%);
-  }
-
-  nav a:hover {
-    border-bottom: 0.4em solid var(--color-accent);
-  }
-}
-
 
 #profile-stats {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  background: #f9f9f9;
-  font-family: Arial, sans-serif;
+    /* Reset stats container */
+    width: auto;
+    border: none;
+    background: transparent;
+    padding: 0;
 }
 
 #profile-stats h3 {
@@ -293,20 +298,24 @@ form button {
 }
 
 #profile-stats dl {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  text-align: center;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    text-align: left;
 }
 
 #profile-stats dt {
-  font-weight: bold;
-  grid-row: 1;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 #profile-stats dd {
-  margin: 0;
-  grid-row: 2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
 }
 
 
@@ -318,13 +327,15 @@ form button {
 
 /* Search Bar */
 .searchBar {
-  display: grid;
-  margin: 0 auto;
-  padding: 0.5em;
-  width: 50%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 12px 20px;
+    border-radius: 100px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 32px;
+    display: block;
 }
 
 /* Container holding the pie chart and legend */
@@ -348,9 +359,9 @@ form button {
 .legend {
   list-style: none;
   padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
   flex: 1; /* Allow legend to take available space */
   /* Make the legend a vertical column */
   display: flex;
@@ -365,16 +376,17 @@ form button {
   align-items: center;
   gap: 0.5em;
   padding: 0.5em;
-  background: white;
+  background: var(--surface);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background 0.3s ease;
+  border: 1px solid transparent;
 }
 
 /* Hover effect for legend items */
 .legend li:hover {
-  background-color: #ececec;
+  background-color: var(--surface-highlight);
+  color: var(--text-primary);
 }
 
 /* Swatch styling for legend */
@@ -385,7 +397,7 @@ form button {
   background-color: var(--color);
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
 }
 
 /* Responsive adjustments */
@@ -407,4 +419,407 @@ path {
   transition-property: transform, opacity, fill;
 }
 
+/* Skills List (Home) */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
 
+.skills-list li {
+    background: var(--surface-highlight);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border: 1px solid transparent;
+}
+
+.skills-list li:hover {
+    border-color: var(--border);
+    color: var(--text-primary);
+}
+
+/* Homepage Design Enhancements */
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 3em;
+    margin: 4em auto;
+    max-width: 1000px;
+    padding-inline: 24px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+    color: var(--text-primary);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 65ch;
+    margin-bottom: 1.5em;
+}
+
+.hero-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--surface);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    justify-self: center;
+}
+
+/* Main content sections */
+main {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+main > section {
+    margin-bottom: 5em;
+}
+
+main h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    text-align: center;
+    position: relative;
+    color: var(--text-primary);
+}
+
+/* Underline effect for section titles */
+main h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    opacity: 0.6;
+}
+
+/* Skills section grid */
+#skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5em;
+}
+
+#skills-container h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1em;
+    border-bottom: 2px solid var(--surface-highlight);
+    padding-bottom: 0.5em;
+}
+
+.skills-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2em;
+    }
+    .hero-image {
+        grid-row: 1; /* Move image to top on mobile */
+        margin: 0 auto;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #profile-stats dl {
+        justify-content: center;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Education Page Design */
+.page-header {
+    text-align: center;
+    padding: 5em 1.5em;
+    margin: 2em auto;
+    border-radius: var(--radius);
+    background-image: linear-gradient(rgba(34,34,34,0.5), rgba(34,34,34,0.5));
+    background-size: cover;
+    background-position: center;
+    max-width: 1000px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+/* Menu on Education page */
+.educations.category-menu, .pro.category-menu, .projects.category-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+/* Education & Pro Items List Design (Sub-categories) */
+.educations.items-list, .pro.items-list, .projects.items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    padding-bottom: 4em;
+}
+
+.educations.items-list article, .pro.items-list article, .projects.items-list article {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.educations.items-list article:hover, .pro.items-list article:hover, .projects.items-list article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+    border-color: var(--text-secondary);
+}
+
+.educations.items-list .image-container, .pro.items-list .image-container, .projects.items-list .image-container {
+    width: 100%;
+    height: 180px;
+    background: #FFFFFF; /* White background for logos */
+    overflow: hidden;
+    border-bottom: 1px solid var(--surface-highlight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.educations.items-list .image-container img, .pro.items-list .image-container img, .projects.items-list .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 0;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+}
+
+.educations.items-list article:hover .image-container img, .pro.items-list article:hover .image-container img, .projects.items-list article:hover .image-container img {
+    transform: scale(1.05);
+}
+
+.educations.items-list .content, .pro.items-list .content, .projects.items-list .content {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.educations.items-list h3, .pro.items-list h3, .projects.items-list h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5em 0;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.educations.items-list .meta, .pro.items-list .meta, .projects.items-list .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.educations.items-list p, .pro.items-list p, .projects.items-list p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.pro.items-list .content, .projects.items-list .content {
+    justify-content: space-between;
+}
+
+.projects.items-list .meta {
+    justify-content: flex-end;
+}
+
+.educations.items-list .card-link, .pro.items-list .card-link, .projects.items-list .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: auto;
+    border-bottom: 1px solid var(--border-color);
+    width: fit-content;
+    transition: border-color 0.2s;
+}
+
+.educations.items-list .card-link:hover, .pro.items-list .card-link:hover, .projects.items-list .card-link:hover {
+    border-color: var(--text-primary);
+}
+
+.educations.category-menu article, .pro.category-menu article, .projects.category-menu article {
+    /* Override default card styles */
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    padding: 2em;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none;
+}
+
+.educations.category-menu article:hover, .pro.category-menu article:hover, .projects.category-menu article:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+    border-color: var(--accent);
+}
+
+.educations.category-menu article h3, .pro.category-menu article h3, .projects.category-menu article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+/* When showing the list, it should revert to the normal card grid */
+.educations.items-list, .pro.items-list, .projects.items-list {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+/* Detail View Design (for Education, etc.) */
+.detail-view {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    display: block;
+}
+
+.detail-view .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2em;
+}
+
+.detail-view .hero-image {
+    grid-row: 1; /* Move image to top */
+    margin: 0 auto;
+}
+
+.detail-view .hero-text {
+    align-items: center;
+}
+
+.hero-image .detail-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius);
+    object-fit: contain;
+    background: var(--surface);
+    padding: 1em;
+    border: 1px solid var(--border-color);
+}
+
+.detail-view h1 {
+    /* Inherits from hero-text h1 */
+}
+
+.detail-view .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: 500;
+}
+
+.hero-text .detail-intro {
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+.detail-view p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.detail-view ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.detail-view li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.detail-view li::before {
+    content: '🔹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    opacity: 0.8;
+    font-size: 0.9em;
+    top: 0.1em;
+}
+
+/* Hide header paragraph on detail views */
+.page-header:has(+ main.detail-view) p {
+    display: none;
+}

@@ -1,75 +1,169 @@
 [
     {
+      "id": "mckinsey",
       "title": "McKinsey Forward Program",
       "place": "Online, McKinsey & Company",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/McKinsey/mckinsey_logo.png",
+      "image": "education/courses/McKinsey/mckinsey_logo.png",
       "description": "Career acceleration program focused on problem solving, digital & analytics, business fundamentals, leadership, and communication through hands-on projects and peer learning.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/McKinsey/index.html"
+      "details": {
+        "intro": "Career acceleration program focused on problem solving, digital & analytics, business fundamentals, leadership, and communication through hands-on projects and peer learning.",
+        "sections": []
+      }
     },
     {
+      "id": "harvard-ml",
       "title": "Harvard Online Courses in Data Science – 'Data Science Machine Learning'",
       "place": "Online, Harvard University",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/Harvard/Harvard_University_coat_of_arms.svg.png",
+      "image": "education/courses/Harvard/Harvard_University_coat_of_arms.svg.png",
       "description": "Introduction to machine learning basics, cross-validation, popular machine learning algorithms, recommendation systems, and regularization.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/Harvard/datascienceml.html"
+      "details": {
+        "subtitle": "8 weeks, 4 hours per week",
+        "intro": "I have completed this online course offered by Harvard, which introduced me to the fundamentals of machine learning. During the course, I learned how to perform cross-validation to avoid overfitting models and explored several popular machine learning algorithms. I also gained hands-on experience in building a recommendation system.",
+        "sections": [
+            {
+                "title": "Key concepts covered include:",
+                "list": ["The basics of machine learning.", "Cross-validation techniques to prevent overfitting.", "An introduction to popular algorithms such as random forests and support vector machines (SVM).", "How to build a recommendation system.", "Regularization, an essential concept for improving model performance and preventing overfitting."]
+            }
+        ],
+        "conclusion": "This course provided me with a solid foundation in machine learning, and I now feel well-prepared to apply these principles in real-world projects and pursue further studies in the field."
+      }
     },
     {
+      "id": "harvard-python",
       "title": "Harvard Online Courses in Data Science – 'Introduction to Data Science with Python'",
       "place": "Online, Harvard University",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/Harvard/Harvard_University_coat_of_arms.svg.png",
+      "image": "education/courses/Harvard/Harvard_University_coat_of_arms.svg.png",
       "description": "Hands-on experience with Python programming, data modeling, statistics, and machine learning.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/Harvard/introdsc.html"
+      "details": {
+        "subtitle": "8 weeks, 4 hours per week",
+        "intro": "I have completed this online course offered by Harvard, which provided hands-on experience in using Python to tackle real-world data science challenges. The course focused on practicing Python programming for modeling, statistics, and data storytelling. It also included the use of popular libraries such as Pandas, NumPy, Matplotlib, and SKLearn.",
+        "sections": [
+            {
+                "title": "Key concepts covered include:",
+                "list": ["Python programming for data modeling, statistics, and storytelling.", "Utilizing libraries like Pandas, NumPy, Matplotlib, and SKLearn.", "Running basic machine learning models using Python and evaluating their performance.", "Applying machine learning models to real-world problems.", "Building a foundation for Python use in machine learning and artificial intelligence."]
+            }
+        ],
+        "conclusion": "This course helped me build a strong foundation in Python for data science and prepared me for future studies in machine learning and AI."
+      }
     },
     {
+      "id": "cnrs",
       "title": "CNRS Online Course – 'Introduction au Deep Learning'",
       "place": "Online, CNRS",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/CNRS/images.png",
+      "image": "education/courses/CNRS/images.png",
       "description": "Foundations of deep learning, natural language processing (NLP), and generative AI with PyTorch and Keras.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/CNRS/index.html"
+      "details": {
+        "intro": "This course provided an introduction to deep learning, covering its foundations, key concepts, and societal implications. It is accessible to all, with no prerequisites, and offers an overview of the history and challenges of AI.",
+        "sections": [
+            {
+                "title": "Key sections of the course:",
+                "list": ["<strong>Foundations, Concepts, and Challenges:</strong> An introduction to deep learning and AI, suitable for everyone, covering the history and societal impact of AI.", "<strong>AI as a Tool:</strong> A hands-on course for Python programmers, focusing on using PyTorch and Keras 3 in various applications.", "<strong>AI Practitioner:</strong> A deeper exploration of recent advances and current research in deep learning for those who completed the earlier sections of the course."]
+            }
+        ],
+        "conclusion": "This course helped me gain a strong understanding of deep learning and its applications, and I am now equipped to continue my studies and practice with advanced deep learning techniques."
+      }
     },
     {
+      "id": "telecom",
       "title": "Telecom Paris Online Course – 'Fundamentals of Big Data'",
       "place": "Online, Telecom Paris",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/Telecom/Logo_Télécom_ParisTech.png",
+      "image": "education/courses/Telecom/Logo_Télécom_ParisTech.png",
       "description": "Introduction to the basics of big data, covering Python, databases, algebra, probability, statistics, and the perceptron.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/Telecom/index.html"
+      "details": {
+        "subtitle": "6 weeks, 4 hours per week",
+        "intro": "I have completed the \"Fundamentals of Big Data\" MOOC offered by Telecom Paris, which provided essential foundations in computer science, mathematics, and statistics to approach data science and big data. The course covered key topics including Python, algebra, databases, probabilities, statistics, and the perceptron.",
+        "sections": [
+            {
+                "title": "Key concepts covered include:",
+                "list": ["Introduction to Python programming for data science.", "Algebra and mathematical foundations for working with data.", "Understanding databases and how to manage large datasets.", "Fundamentals of probability and statistics applied to big data.", "Introduction to the perceptron and its role in machine learning."]
+            }
+        ],
+        "conclusion": "This course provided me with the foundational knowledge necessary to dive deeper into the world of big data and data science, equipping me with skills that are essential for working with large datasets and machine learning algorithms."
+      }
     },
     {
+      "id": "cambridge",
       "title": "University of Cambridge Online Courses in Finance – 'Foundations of Finance'",
       "place": "Online, University of Cambridge",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/Cambridge/images.png",
+      "image": "education/courses/Cambridge/images.png",
       "description": "Foundations of finance, including corporate finance, cash flows, risk management, interest, return, and financial reporting.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/Cambridge/index.html"
+      "details": {
+        "subtitle": "5 weeks, 3-5 hours per week",
+        "intro": "I have completed the \"Foundations of Finance\" online course offered by the University of Cambridge. The course provided a strong foundation in key financial concepts, including money and capital, cash flow forecasting, financial reporting, interest and return, and risk management.",
+        "sections": [
+            {
+                "title": "Key concepts covered include:",
+                "list": ["Money and capital in the financial system.", "Cash flows and techniques for cash flow forecasting.", "Financial reporting and analysis of financial statements.", "Understanding interest, return, and their impact on financial decisions.", "Risk and risk management strategies in finance."]
+            }
+        ],
+        "conclusion": "This course provided me with essential knowledge of finance, preparing me to apply these concepts in real-world financial analysis and decision-making."
+      }
     },
     {
+      "id": "ibm",
       "title": "IBM Course – 'Mastering Generative AI: Model Foundations and NLP'",
       "place": "Online, IBM",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/IBM/IBM_logo.png",
+      "image": "education/courses/IBM/IBM_logo.png",
       "description": "Introduction to NLP, generative AI, word2vec, N-grams, sequence-to-sequence models, and text generation evaluation.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/IBM/index.html"
+      "details": {
+        "subtitle": "2 weeks, 2 to 3 hours per week",
+        "intro": "I have completed the \"Mastering Generative AI: Model Foundations and NLP\" course offered by IBM. This course served as an introduction to understanding language in the context of generative AI. It covered the fundamentals of natural language processing (NLP) and AI model development, focusing on linguistic models such as N-grams, word2vec, and sequence-to-sequence models.",
+        "sections": [
+            {
+                "title": "Key concepts covered include:",
+                "list": ["The foundations of natural language processing (NLP) and generative AI.", "Understanding different linguistic models and neural networks, including N-grams, word2vec, and sequence-to-sequence models.", "Evaluation metrics for assessing the quality of generated text.", "Building and training a simple language model, integrating word2vec, and developing a sequence-to-sequence model."]
+            }
+        ],
+        "conclusion": "This course is part of the professional certificate in generative AI engineering, providing essential skills in Python, PyTorch, and neural networks applied to large language models (LLMs)."
+      }
     },
     {
+      "id": "mit",
       "title": "MIT Online Courses in Finance – 'MITx's Finance MicroMasters® Program'",
       "place": "Online, MIT",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/MIT/MIT_logo.png",
+      "image": "education/courses/MIT/MIT_logo.png",
       "description": "Foundations of modern finance including corporate finance, risk management, derivatives pricing, portfolio theory, and asset pricing models.",
-      "link": "https://the0eau.github.io/portfolio/education/courses/MIT/index.html"
+      "details": {
+        "subtitle": "1 year and 4 months, 10-14 per week",
+        "intro": "I'm completing the \"MITx's Finance MicroMasters® Program,\" which provided a comprehensive understanding of modern finance. The course covered key areas such as corporate finance, capital budgeting, risk management, and valuation. It also explored financial decision-making, efficient markets, portfolio theory, derivatives pricing, and asset pricing models.",
+        "sections": [
+            {
+                "title": "Key concepts covered include:",
+                "list": ["The foundations of corporate finance and capital budgeting.", "Risk management and financial decision-making processes.", "Efficient markets, portfolio theory, and asset pricing models.", "Derivatives pricing and valuation techniques.", "Analysis of financial statements and assessment of corporate performance.", "Application of computational techniques in R, utilizing advanced mathematics such as linear algebra, optimization, probability, and stochastic processes."]
+            }
+        ],
+        "conclusion": "This course equipped me with the tools to analyze financial statements, assess corporate performance, and apply advanced mathematical techniques to solve real-world financial problems."
+      }
     },
     {
+      "id": "cem",
       "title": "Management et business online course – 'De l'idée à l'entreprise - agissez maintenant ! - 2024'",
       "place": "Online, Compétences et métiers",
       "year": "Completed",
-      "image": "https://the0eau.github.io/portfolio/education/courses/CEM/comptences_et_mtiers_75017_logo.jpg",
+      "image": "education/courses/CEM/comptences_et_mtiers_75017_logo.jpg",
       "description": "Foundations of business, marketing and management",
-      "link": "https://the0eau.github.io/portfolio/education/courses/CEM/index.html"
+      "details": {
+        "subtitle": "30h",
+        "intro": "I participated in the 'From Idea to Business - Act Now! - 2024' training offered by Compétences et Métiers. This program allowed me to develop my entrepreneurial skills and structure my business creation project.",
+        "sections": [
+            {
+                "title": "Key points of the training:",
+                "list": ["<b>Idea development:</b> I learned to refine my business idea, identify market needs and define my unique value proposition.", "<b>Business plan:</b> I acquired the tools and methods to develop a solid business plan, including a market study, a financial strategy and a development plan.", "<b>Legal and administrative aspects:</b> I was made aware of the different legal forms of companies, legal obligations and administrative procedures to be carried out.", "<b>Financing:</b> I explored the different possible sources of financing for my company and I learned to prepare a presentation file for investors.", "<b>Marketing and communication:</b> I discovered the basics of marketing and communication to promote my company and attract customers."]
+            },
+            {
+                "title": "Benefits of the training:",
+                "list": ["<b>Acquisition of skills:</b> I have developed essential skills in entrepreneurship, such as project management, decision-making and problem-solving.", "<b>Personalized support:</b> I benefited from individualized support from the trainers, who advised and supported me in my project.", "<b>Professional network:</b> I have joined a network of professionals and entrepreneurs, which has opened up opportunities for collaboration and mentoring."]
+            }
+        ],
+        "conclusion": "The 'From Idea to Business - Act Now! - 2024' training was a very enriching experience and gave me the tools and confidence necessary to launch my business. I highly recommend this program to anyone who wants to turn their idea into a concrete reality."
+      }
     }
   ]
-  

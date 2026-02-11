@@ -1,34 +1,198 @@
 [
     {
+        "id": "imt",
         "title": "Diplôme d'ingénieur, Master of Science",
         "place": "IMT Atlantique, France",
         "year": "2023-2026",
-        "image": "https://the0eau.github.io/portfolio/education/IMT/Logo_IMT_Atlantique.svg.png",
-        "description": "Data Science and Business",
-        "link": "https://the0eau.github.io/portfolio/education/IMT/index.html"
+        "image": "education/IMT/Logo_IMT_Atlantique.svg.png",
+        "description": "Data Science and Business, 3,90/4 GPA",
+        "details": {
+            "subtitle": "August 2023 – Present",
+            "intro": "As an engineering student at <strong>IMT Atlantique</strong>, I’ve built a strong foundation in mathematics, programming, and economics before specializing in <strong>Product Management, Artificial Intelligence, and Supply Chain Strategy</strong>. This multidisciplinary background allows me to bridge data, technology, and business — turning analytical insights into impactful, user-centric AI products.",
+            "sections": [
+                {
+                    "title": "🔹 Third Year – Product Management, AI & Supply Chain",
+                    "content": "In my final year, I focused on how to design, build, and manage AI-driven products while applying data science and optimization to real business problems.",
+                    "list": [
+                        "<strong>Product Management:</strong> Product strategy, user research, MVP definition, PRD writing, stakeholder communication",
+                        "<strong>AI & Advanced Analytics:</strong> LLMs, Generative AI, MLOps, Product metrics, AI ethics & governance",
+                        "<strong>Supply Chain & Operations:</strong> Demand forecasting, network optimization, logistics simulation, operations management",
+                        "<strong>Management & Leadership:</strong> Business strategy, innovation management, and agile project delivery"
+                    ]
+                },
+                {
+                    "title": "Projects",
+                    "list": [
+                        "<strong>GraphRAG @ Airbus:</strong> PM & Data Science internship optimizing knowledge retrieval (+50% accuracy, +70% accessibility)",
+                        "<strong>JobSwipe AI:</strong> Product-led AI app that generates tailored CVs, cover letters, and interview prep",
+                        "<strong>AutoDocs:</strong> AI documentation generator reducing manual doc time by 80%",
+                        "<strong>Supply Chain Simulator:</strong> Multi-echelon inventory optimization using MILP and heuristic algorithms",
+                        "<strong>Strategic Business Case:</strong> Market entry & pricing simulation for a digital logistics platform"
+                    ]
+                },
+                {
+                    "title": "🔹 Second Year – Specialization in Data Science & AI",
+                    "content": "I deepened my expertise in machine learning, artificial intelligence, and business strategy through hands-on academic and professional experiences.",
+                    "list": [
+                        "<strong>Data Science & AI:</strong> Machine Learning, Artificial Intelligence, Ethics & Economics of AI",
+                        "<strong>Business & Strategy:</strong> Entrepreneurship, Organizational Analysis, Financial Strategy",
+                        "<strong>Finance & Self-Learning:</strong> Financial Markets, Empirical Finance, Portfolio Management & Trading Algorithms"
+                    ]
+                },
+                {
+                    "title": "Professional experience",
+                    "list": [
+                        "<strong>Entrepreneurship:</strong> Designed a ride-sharing mobile app (from problem discovery to prototype)",
+                        "<strong>DECART Project:</strong> Strategic analysis on the future of industrial skills (qualitative & quantitative research)"
+                    ]
+                },
+                {
+                    "title": "Projects",
+                    "list": [
+                        "Predictive Analysis of Agricultural Land (AI)",
+                        "Phishing Link Detection using NLP & Deep Learning",
+                        "Netflix Data Study with AI (segmentation & recommendation)",
+                        "Business Simulation – Airline Company"
+                    ]
+                },
+                {
+                    "title": "🔹 First Year – Foundations in Science, Engineering & Economics",
+                    "content": "A comprehensive introduction to mathematical modeling, programming, and business fundamentals — establishing the analytical foundation for later AI and PM work.",
+                    "list": [
+                        "<strong>Mathematics & Data Science:</strong> Analysis, Probability & Statistics (R)",
+                        "<strong>Programming & Technology:</strong> Python, Java, C++, Arduino",
+                        "<strong>Theoretical Foundations:</strong> Game Theory, Optimization",
+                        "<strong>Databases & Interaction:</strong> SQL, Human-Computer Interaction (HCI)",
+                        "<strong>Economics & Management:</strong> Microeconomics, Macroeconomics, Marketing, Management"
+                    ]
+                },
+                {
+                    "title": "Projects",
+                    "list": [
+                        "Decision-Making Website for Education",
+                        "Finance Database (SQL)",
+                        "Business Simulation – Scooter Company",
+                        "Business Analysis – Le Slip Français",
+                        "Asynchronous System (VHDL)",
+                        "Logistics Network Optimization (MILP)",
+                        "Autonomous Robot with RFID",
+                        "Sociological Study on Bartending",
+                        "Game Theory AI"
+                    ]
+                }
+            ],
+            "conclusion": "Through these three years, I’ve built a strong analytical and strategic mindset — combining <strong>AI, business, and operations</strong> to deliver measurable impact. This experience shaped my ambition to work as an <strong>AI / Tech Product Manager</strong> driving innovation at the intersection of data, product, and user experience."
+        }
     },
     {
-        "title": "University Exchange",
+        "id": "ucsd",
+        "title": "Master of Science",
         "place": "University of California, San Diego, USA",
-        "year": "2025",
-        "image": "https://the0eau.github.io/portfolio/education/UCSD/Seal_of_the_University_of_California,_San_Diego.svg.png",
-        "description": "Artificial Intelligence and Business",
-        "link": "https://the0eau.github.io/portfolio/education/UCSD/index.html"
+        "year": "2024-2025",
+        "image": "education/UCSD/Seal_of_the_University_of_California,_San_Diego.svg.png",
+        "description": "Artificial Intelligence and Business, 4/4 GPA",
+        "details": {
+            "intro": "During my university exchange at the University of California, San Diego, I deepened my knowledge in artificial intelligence, business management, and data visualization through cutting-edge courses that combined theory and practical applications.",
+            "sections": [
+                {
+                    "title": "🔹 AI Probabilistic and Modeling",
+                    "content": "I studied probabilistic models for <strong>knowledge representation</strong> and <strong>decision-making</strong>, covering:",
+                    "list": ["Graphical models", "Temporal models", "Online learning"]
+                },
+                {
+                    "title": "Mathematical Concepts",
+                    "list": ["Nearest Neighbors", "ERM and Least Squares", "Gradient Descent", "SGD and Subgradients", "Subgradients and Convexity", "Convexity and Linear Classifiers", "Feature Maps", "Regularization", "Kernels", "Bayes Decision Theory", "Density Estimation", "Maximum Likelihood", "Naive Bayes", "Regression Revisited", "Decision Trees"]
+                },
+                {
+                    "title": "Applications",
+                    "list": ["Natural language processing", "Adversarial learning", "Computational biology", "Robotics"]
+                },
+                {
+                    "title": "🔹 Foundations of Business",
+                    "content": "An in-depth look at the <strong>foundations and principles of modern enterprises</strong>, including:",
+                    "list": ["Business life cycles & global market strategies", "Leadership & organizational structures", "Human resources, marketing, finance, and operations management"]
+                },
+                {
+                    "title": "Projects",
+                    "list": ["Manager of a medium sized company simulation"]
+                },
+                {
+                    "title": "🔹 Data Visualization",
+                    "content": "Explored key <strong>principles, techniques, and algorithms</strong> for creating <strong>effective interactive visualizations</strong>, integrating concepts from:",
+                    "list": ["Computer graphics", "Human-computer interaction", "Cognitive psychology", "Statistical graphics"]
+                },
+                {
+                    "title": "Projects",
+                    "list": ["Personal portfolio website", "Static data visualizations on weather and depression in america and healthcare", "Dynamic data visualization"]
+                }
+            ],
+            "conclusion": "This exchange strengthened my expertise in <strong>probabilistic AI approaches</strong>, <strong>business strategy</strong>, and <strong>data visualization</strong>, equipping me with a comprehensive perspective that blends <strong>analysis, innovation, and strategic decision-making</strong>."
+        }
     },
     {
-        "title": "Classe préparatoire MPSI-PSI*",
+        "id": "fermat",
+        "title": "Preparatory class, Classe préparatoire MPSI-PSI*",
         "place": "Lycée Pierre de Fermat, Toulouse, France",
         "year": "2021-2023",
-        "image": "https://the0eau.github.io/portfolio/education/Fermat/46d279c5-8b86-4530-915e-8df7c463213a.svg",
-        "description": "Advanced studies in physics, engineering sciences, and mathematics with a focus on problem-solving and technical applications.",
-        "link": "https://the0eau.github.io/portfolio/education/Fermat/index.html"
+        "image": "education/Fermat/46d279c5-8b86-4530-915e-8df7c463213a.svg",
+        "description": "Physics and Mathematics",
+        "details": {
+            "subtitle": "September 2021 - July 2023",
+            "intro": "I pursued an intensive two-year preparatory program (<strong>Classes Préparatoires aux Grandes Écoles – CPGE</strong>) at <strong>Lycée Pierre de Fermat</strong> in Toulouse, specializing in mathematics, physics, and engineering sciences.",
+            "sections": [
+                {
+                    "title": "🔹 Second Year – PSI* (Physics & Engineering Sciences)",
+                    "content": "As part of the top-ranked PSI* class in France (2022-2023), I developed strong analytical and problem-solving skills through an advanced curriculum:",
+                    "list": [
+                        "<strong>Mathematics & Analysis:</strong> Linear Algebra, Differential & Integral Calculus, Geometry, Probability & Statistics, Game Theory, Optimization, Differential Equations, Arithmetic, Functional Analysis",
+                        "<strong>Physics & Engineering Sciences:</strong> Mechanics, Electromagnetism, Thermodynamics, Waves & Optics, Quantum Physics, Fluid Mechanics, Materials Resistance, Structural Analysis, Energy Systems",
+                        "<strong>Computer Science & Modeling:</strong> Programming (Python, C), Algorithms & Data Structures, Computational Complexity, Graph Theory, Databases, System Modeling, Control Systems, Sensors & Communication",
+                        "<strong>Industrial Project:</strong> Applied engineering skills to real-world collaborative projects"
+                    ]
+                },
+                {
+                    "title": "Project",
+                    "list": ["Autonomous Greenhouse"]
+                },
+                {
+                    "title": "🔹 First Year – MPSI (Mathematics, Physics & Engineering Sciences)",
+                    "content": "During my first year, I built a solid foundation in advanced mathematics, physics, and computer science:",
+                    "list": [
+                        "<strong>Mathematics:</strong> Algebra, Analysis, Geometry, Differential & Integral Calculus, Probability",
+                        "<strong>Physics:</strong> Mechanics, Thermodynamics, Waves & Optics, Electromagnetism",
+                        "<strong>Computer Science & Programming:</strong> Algorithms, Data Structures, Python Programming",
+                        "<strong>Engineering Sciences:</strong> System Modeling, Control Systems"
+                    ]
+                }
+            ],
+            "conclusion": "This demanding program strengthened my problem-solving abilities, technical expertise, and analytical thinking, preparing me for advanced studies in data science, artificial intelligence, and engineering."
+        }
     },
     {
-        "title": "Baccalauréat",
+        "id": "pibrac",
+        "title": "French Baccalauréat, High School Diploma",
         "place": "Lycée Nelson Mandela, Pibrac, France",
         "year": "2018-2021",
-        "image": "https://the0eau.github.io/portfolio/education/Pibrac/logo_occitanie.png",
-        "description": "Graduated with Honors, specializing in physical sciences with a strong foundation in mathematics, engineering, and physics.",
-        "link": "https://the0eau.github.io/portfolio/education/Pibrac/index.html"
+        "image": "education/Pibrac/logo_occitanie.png",
+        "description": "Graduated with Honors, Physics and Mathematics",
+        "details": {
+            "subtitle": "September 2018 - June 2021",
+            "intro": "I completed my Baccalauréat Général at Lycée Nelson Mandela in Pibrac, France, with a specialization in Physical Sciences, graduating with Highest Honors.<br><br>During these years, I honed my skills in mathematics, engineering sciences, and physics, gaining a deep understanding of core scientific principles:",
+            "sections": [
+                {
+                    "title": "🔹 Key Skills Acquired",
+                    "list": [
+                        "<strong>Mathematics:</strong> Analysis, Geometry, Differential & Integral Calculus",
+                        "<strong>Engineering Sciences:</strong> Materials Resistance, System Modeling, Dynamics of Systems",
+                        "<strong>Physics & Chemistry:</strong> Mechanics, Thermodynamics, Optics, Physical Chemistry"
+                    ]
+                },
+                {
+                    "title": "🏅 Achievements",
+                    "content": "I graduated with Mention Très Bien, a recognition of my commitment to academic excellence and my dedication to mastering scientific concepts."
+                }
+            ],
+            "conclusion": "This experience at Lycée Nelson Mandela laid the foundation for my further studies in engineering, data science, and AI, preparing me for the next step in my academic journey."
+        }
     }
 ]
