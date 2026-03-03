@@ -1,5 +1,77 @@
 [
     {
+    "id": "airbus-pm",
+    "category": "internships",
+    "title": "AI Product Manager Intern – Financial Optimization",
+    "place": "Airbus, Toulouse, France",
+    "year": "Mar–Aug 2026 · 6 months",
+    "image": "pro/Airbus/Airbus-Logo.png",
+    "description": "Managing decision-support AI for A320/A350 programs. Acting as the strategic interface between finance and tech teams to align algorithms with industrial profitability. Outcomes: Backlog prioritization for operational cost optimization and transformation of complex models into strategic steering levers.",
+    "details": {
+      "subtitle": "Mar–Aug 2026 · 6 months",
+      "intro": "Incoming leadership role focusing on the <strong>financial optimization</strong> of Airbus's flagship aircraft programs (A320/A350) through advanced AI integration.",
+      "sections": [
+        {
+          "content": "I serve as the <strong>strategic interface</strong> between global financial departments and technical engineering teams, ensuring that data science initiatives translate directly into industrial ROI.",
+          "list": [
+            "<strong>Product Backlog:</strong> Managing and prioritizing features based on industrial profitability requirements and operational constraints.",
+            "<strong>Strategic Steering:</strong> Transforming complex black-box models into transparent steering levers for executive decision-making.",
+            "<strong>Cost Optimization:</strong> Identifying and implementing AI-driven efficiencies to reduce operational expenditures in aircraft manufacturing."
+          ]
+        }
+      ],
+      "conclusion": "This role bridges the gap between high-level industrial strategy and technical execution, driving digital transformation at the core of Airbus's financial operations."
+    }
+  },
+  {
+    "id": "jobswipe-ai",
+    "category": "entrepreneurship",
+    "title": "Product Vision & Leadership – JobSwipe AI",
+    "place": "Entrepreneurial Project",
+    "year": "Sep 2025 – Present",
+    "image": "pro/Entrepreneurship/jobswipe_logo.png",
+    "description": "Directing product lifecycle and roadmap for an AI-driven recruitment platform. Led a 2-person team to develop matching algorithms with a 30% efficiency gain. Aligning LLM technical decisions with market needs and UX.",
+    "details": {
+      "subtitle": "Sep 2025 – Present",
+      "intro": "Leading the <strong>end-to-end product lifecycle</strong> for JobSwipe AI, an innovative platform designed to revolutionize the recruitment experience through intelligent matching.",
+      "sections": [
+        {
+          "content": "Overseeing the strategic roadmap and technical architecture to ensure the MVP meets rigorous market demands while maintaining a seamless user experience.",
+          "list": [
+            "<strong>Team Leadership:</strong> Managed a 2-person development team, achieving a <strong>30% efficiency gain</strong> in core matching algorithms.",
+            "<strong>Technical Strategy:</strong> Made critical decisions regarding <strong>LLM integration</strong> and foundational model selection to optimize for both accuracy and latency.",
+            "<strong>UX Alignment:</strong> Conducted iterative feedback loops to translate complex technical capabilities into intuitive user-facing features."
+          ]
+        }
+      ],
+      "conclusion": "This project demonstrates my ability to lead lean teams and navigate the 'zero-to-one' phase of AI product development."
+    }
+  },
+  {
+    "id": "naval-group",
+    "category": "missions",
+    "title": "Team Leader – Submarine System Reliability",
+    "place": "Naval Group · Industrial Partnership",
+    "year": "Jan 2026 – Feb 2026",
+    "image": "pro/NavalGroup/naval_group_logo.png",
+    "description": "Leading a 4-engineer team in FMEA risk assessment for nuclear submarine condenser units (400m depth). Modeled fault trees to identify critical failure points. Proposed 'Defense in Depth' strategies to mitigate catastrophic flooding risks.",
+    "details": {
+      "subtitle": "Jan 2026 – Present",
+      "intro": "Leading a specialized 4-person engineering team in a <strong>high-stakes reliability study</strong> for critical nuclear submarine components operating in extreme deep-sea environments.",
+      "sections": [
+        {
+          "content": "Utilized advanced reliability engineering methodologies (FMEA/APR) to ensure the integrity of condenser units at depths of 400m, where system failure is not an option.",
+          "list": [
+            "<strong>Fault Tree Modeling:</strong> Mathematically identified the seawater pump as the primary failure point using <strong>Birnbaum importance factors</strong>.",
+            "<strong>Risk Mitigation:</strong> Proposed and modeled a <strong>'Defense in Depth'</strong> strategy utilizing active redundancy to prevent catastrophic flooding.",
+            "<strong>System Optimization:</strong> Improved overall system availability through data-driven maintenance scheduling and failure mode simulations."
+          ]
+        }
+      ],
+      "conclusion": "This mission highlights my capability to lead technical teams through complex, safety-critical industrial assessments where mathematical precision meets strategic risk management."
+    }
+  },
+    {
     "id": "airbus",
     "category": "internships",
     "title": "Data Science / Product Manager Intern – GraphRAG (AI Q&A on Technical Docs)",
