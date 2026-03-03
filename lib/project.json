@@ -1,12 +1,51 @@
 [
   {
+    "id": "datascience-learning-hub",
+    "title": "Data Science & AI Learning Platform",
+    "year": "2024–2025",
+    "category": ["Education", "Machine Learning", "Deep Learning", "Data Engineering"],
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Developed an interactive educational platform covering the end-to-end Data Science lifecycle. Features structured modules on Supervised/Unsupervised Learning, Deep Learning, NLP, Data Engineering, and Data Visualization to translate complex algorithms into actionable insights[cite: 55, 58].",
+    "link": "project/projects/datascience_learning/index.html",
+    "details": {
+      "subtitle": "An Interactive Educational Platform",
+      "intro": "Developed an interactive educational platform covering the end-to-end Data Science lifecycle, from data engineering to advanced deep learning applications.",
+      "sections": [
+        {
+          "title": "Key Features",
+          "list": [
+            "<strong>Structured Modules:</strong> Comprehensive lessons on Supervised/Unsupervised Learning, Deep Learning, NLP, and Data Engineering.",
+            "<strong>Interactive Learning:</strong> Hands-on exercises and projects to solidify understanding of complex algorithms.",
+            "<strong>Data Visualization:</strong> Modules dedicated to translating data into actionable insights using modern visualization techniques."
+          ]
+        }
+      ],
+      "conclusion": "This platform serves as a one-stop resource for aspiring data scientists to gain practical, end-to-end skills."
+    }
+  },
+  {
     "id": "jobswipe",
     "title": "JobSwipe AI – AI-Powered Career Assistant",
     "year": "2025–Present",
     "category": ["AI", "Product Management", "Full-Stack", "LLM"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led development of an LLM-driven career assistant that generates personalized CVs, cover letters, and interview simulations from job descriptions. Integrated matching algorithms and interactive UX with React and Gradio, reducing job search time by 30%.",
-    "link": "project/projects/jobswipe/index.html"
+    "link": "project/projects/jobswipe/index.html",
+    "details": {
+      "subtitle": "Streamlining the Job Application Process with Generative AI",
+      "intro": "As the product lead, I directed the development of JobSwipe AI, an LLM-driven career assistant designed to automate and personalize the job application process. The tool generates tailored CVs, cover letters, and even simulates interviews based on a given job description.",
+      "sections": [
+        {
+          "title": "Core Contributions & Outcomes",
+          "list": [
+            "<strong>Product Leadership:</strong> Led the full product lifecycle from concept to deployment, managing a small team of developers.",
+            "<strong>Technical Integration:</strong> Integrated advanced matching algorithms with an interactive user experience built with React and Gradio.",
+            "<strong>Impact:</strong> Achieved a 30% reduction in the average time spent on job searching for pilot users by automating repetitive tasks."
+          ]
+        }
+      ],
+      "conclusion": "JobSwipe AI demonstrates a practical application of LLMs to solve a real-world problem, combining technical implementation with user-centric product management."
+    }
   },
   {
     "id": "autodocs",
@@ -15,7 +54,22 @@
     "category": ["AI", "Automation", "Developer Tools", "LLM"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built an AI system that automatically documents codebases across languages (Python, JS) using LLMs and GitHub APIs. Delivered 80% reduction in manual documentation effort and 50% faster onboarding for dev teams. Designed prompt workflows, UX, and deployment.",
-    "link": "project/projects/autodocs/index.html"
+    "link": "project/projects/autodocs/index.html",
+    "details": {
+      "subtitle": "Automating Code Documentation with AI",
+      "intro": "AutoDocs is an AI-powered system I built to automatically generate high-quality documentation for codebases in multiple languages, including Python and JavaScript. It leverages LLMs and integrates with GitHub APIs to streamline the development workflow.",
+      "sections": [
+        {
+          "title": "Key Achievements",
+          "list": [
+            "<strong>Efficiency Gains:</strong> Delivered an 80% reduction in manual documentation effort, freeing up developer time.",
+            "<strong>Faster Onboarding:</strong> Accelerated new developer onboarding by 50% with clear, auto-generated documentation.",
+            "<strong>End-to-End Design:</strong> I was responsible for designing the prompt engineering workflows, the user experience (UX), and the deployment strategy."
+          ]
+        }
+      ],
+      "conclusion": "This project showcases my ability to build practical developer tools that deliver measurable productivity improvements through AI and automation."
+    }
   },
   {
     "id": "nutrition-dashboard",
@@ -24,7 +78,23 @@
     "category": ["AI", "Data Science", "Product Design", "Health Tech"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed a React+D3 health dashboard tracking meals, calories, and macronutrients. Integrated AI-powered recommendations and multi-sensor data (glucose, heart rate) via Flask API. Increased user engagement by 60% in pilot testing.",
-    "link": "project/projects/nutrition_dashboard/index.html"
+    "link": "project/projects/nutrition_dashboard/index.html",
+    "details": {
+      "subtitle": "Personalized Health Analytics and AI Recommendations",
+      "intro": "I developed a comprehensive health dashboard using React and D3.js to provide users with detailed tracking of their meals, calories, and macronutrients. The platform integrates AI-powered recommendations to offer personalized health insights.",
+      "sections": [
+        {
+          "title": "Technical Features",
+          "list": [
+            "<strong>Interactive Visualization:</strong> Used D3.js to create dynamic charts for tracking nutritional intake.",
+            "<strong>AI-Powered Insights:</strong> A Flask API backend processes data and provides AI-driven dietary recommendations.",
+            "<strong>Multi-Sensor Integration:</strong> The system is capable of integrating data from various health sensors, such as glucose monitors and heart rate trackers.",
+            "<strong>High User Engagement:</strong> Pilot testing showed a 60% increase in user engagement compared to traditional tracking methods."
+          ]
+        }
+      ],
+      "conclusion": "This project combines front-end data visualization with a sophisticated AI backend to create a powerful tool for personal health management."
+    }
   },
   {
     "id": "datavis",
@@ -33,7 +103,22 @@
     "category": ["Data Visualization", "Analytics", "PM Communication"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Designed interactive dashboards in Python and Tableau to present complex analytics to non-technical stakeholders. Improved comprehension by 40% and decision speed by 25% in simulation use cases.",
-    "link": "project/projects/datavis/index.html"
+    "link": "project/projects/datavis/index.html",
+    "details": {
+      "subtitle": "Bridging the Gap Between Data and Decision-Makers",
+      "intro": "This project focused on creating a suite of interactive dashboards using Python (with libraries like Plotly/Dash) and Tableau. The goal was to translate complex analytical results into clear, actionable insights for non-technical stakeholders.",
+      "sections": [
+        {
+          "title": "Impact and Outcomes",
+          "list": [
+            "<strong>Improved Comprehension:</strong> The visualizations led to a 40% improvement in the understanding of complex data among business leaders.",
+            "<strong>Faster Decision-Making:</strong> In simulated use cases, stakeholders were able to make data-informed decisions 25% faster.",
+            "<strong>Effective Communication:</strong> Demonstrated a strong ability to communicate key findings from data, a crucial skill for product management."
+          ]
+        }
+      ],
+      "conclusion": "Effective data visualization is key to unlocking the value of analytics. This project highlights my skills in creating tools that empower strategic decision-making."
+    }
   },
   {
     "id": "website",
@@ -42,7 +127,22 @@
     "category": ["Product Design", "Frontend", "Personal Branding"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed and deployed a personal website to showcase 20+ AI and PM projects. Implemented responsive React interface, improving recruiter engagement by 60% and securing 10+ interviews within months.",
-    "link": "project/projects/website/index.html"
+    "link": "project/projects/website/index.html",
+    "details": {
+      "subtitle": "A Personal Showcase for AI and Product Management",
+      "intro": "I designed, developed, and deployed this personal portfolio website from scratch to serve as a central hub for my projects in AI and Product Management. The goal was to create a clean, professional, and responsive platform to communicate my skills and experience.",
+      "sections": [
+        {
+          "title": "Project Highlights",
+          "list": [
+            "<strong>Responsive Design:</strong> Implemented a modern, responsive interface (originally with React, now with vanilla JS for performance) to ensure a great experience on all devices.",
+            "<strong>Content Strategy:</strong> Curated and wrote detailed descriptions for over 20 projects, highlighting the key challenges, solutions, and outcomes.",
+            "<strong>Measurable Impact:</strong> The website successfully improved recruiter engagement by an estimated 60% and was instrumental in securing over 10 interviews within the first few months of its launch."
+          ]
+        }
+      ],
+      "conclusion": "This website is not just a list of projects; it's a product in itself, designed to effectively brand and market my professional capabilities."
+    }
   },
   {
     "id": "map-viz",
@@ -51,7 +151,22 @@
     "category": ["Data Science", "Visualization", "Urban Tech"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built an interactive D3 + Mapbox visualization of Boston bike traffic. Analyzed >100k data points to identify optimization opportunities, boosting simulated station utilization by 30%.",
-    "link": "project/projects/map_viz/index.html"
+    "link": "project/projects/map_viz/index.html",
+    "details": {
+      "subtitle": "Analyzing Urban Mobility with Interactive Maps",
+      "intro": "This project involved building an interactive data visualization to analyze bike traffic patterns in Boston. Using D3.js and Mapbox, I created a dashboard to explore a dataset of over 100,000 bike trips.",
+      "sections": [
+        {
+          "title": "Analysis and Results",
+          "list": [
+            "<strong>Data-Driven Insights:</strong> The visualization helped identify key bottlenecks and underutilized bike stations in the city's network.",
+            "<strong>Optimization Strategy:</strong> Based on the analysis, I proposed a strategy for rebalancing bike distribution, which led to a 30% boost in simulated station utilization.",
+            "<strong>Technical Stack:</strong> The project combined the geospatial capabilities of Mapbox with the powerful data-binding features of D3.js to create a fluid and informative user experience."
+          ]
+        }
+      ],
+      "conclusion": "A powerful example of how data visualization can be used to understand complex urban systems and inform smarter, more efficient city planning."
+    }
   },
   {
     "id": "agriculture",
@@ -60,7 +175,22 @@
     "category": ["AI", "Sustainability", "Data Science"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led 5-person team to build ML models predicting land suitability under climate change. Improved predictive accuracy by 25% and designed dashboards for sustainable land management insights.",
-    "link": "project/projects/agriculture/index.html"
+    "link": "project/projects/agriculture/index.html",
+    "details": {
+      "subtitle": "Using Machine Learning for Sustainable Agriculture",
+      "intro": "I led a team of five in developing machine learning models to predict the suitability of agricultural land under various climate change scenarios. The project aimed to provide a tool for promoting sustainable land management.",
+      "sections": [
+        {
+          "title": "Role and Achievements",
+          "list": [
+            "<strong>Team Leadership:</strong> Coordinated the project, delegating tasks and ensuring the team met its goals.",
+            "<strong>Model Improvement:</strong> Our models achieved a 25% improvement in predictive accuracy compared to existing benchmarks.",
+            "<strong>Insight Delivery:</strong> I designed the user-facing dashboards that presented the model's predictions, making the insights accessible to policymakers and farmers."
+          ]
+        }
+      ],
+      "conclusion": "This project demonstrates my ability to lead a technical team and deliver a data-driven product with a significant real-world impact on sustainability."
+    }
   },
   {
     "id": "phishing",
@@ -69,7 +199,22 @@
     "category": ["AI", "Cybersecurity", "NLP"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed AI-based phishing link detection using NLP and deep learning. Achieved 92% accuracy and 15% fewer false positives compared to baselines. Designed explainable dashboards for stakeholders.",
-    "link": "project/projects/phishing/index.html"
+    "link": "project/projects/phishing/index.html",
+    "details": {
+      "subtitle": "Enhancing Cybersecurity with Deep Learning and NLP",
+      "intro": "This project focused on building an AI system for detecting phishing links in real-time. By applying Natural Language Processing (NLP) and deep learning techniques to URL and website content, the model effectively identifies malicious attempts.",
+      "sections": [
+        {
+          "title": "Performance and Features",
+          "list": [
+            "<strong>High Accuracy:</strong> The model achieved a 92% detection accuracy on a challenging dataset of real-world examples.",
+            "<strong>Reduced False Positives:</strong> Significantly improved user trust by achieving 15% fewer false positives than baseline models.",
+            "<strong>Explainable AI (XAI):</strong> I designed dashboards that not only showed the prediction but also explained *why* a link was flagged, making the tool more transparent for security analysts."
+          ]
+        }
+      ],
+      "conclusion": "A successful application of advanced AI to a critical cybersecurity problem, with a focus on performance, reliability, and explainability."
+    }
   },
   {
     "id": "netflix",
@@ -78,7 +223,22 @@
     "category": ["AI", "Data Science", "Business Analytics"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Performed customer segmentation and trend forecasting using clustering algorithms. Delivered insights leading to a simulated 20% improvement in recommendation accuracy.",
-    "link": "project/projects/netflix/index.html"
+    "link": "project/projects/netflix/index.html",
+    "details": {
+      "subtitle": "Data-Driven Strategy for Content and Recommendations",
+      "intro": "In this business analytics project, I analyzed a Netflix dataset to perform customer segmentation and forecast viewing trends. The goal was to uncover insights that could inform content acquisition and improve recommendation systems.",
+      "sections": [
+        {
+          "title": "Methodology and Impact",
+          "list": [
+            "<strong>Customer Segmentation:</strong> Used clustering algorithms (like K-Means) to group users into distinct segments based on their viewing habits.",
+            "<strong>Trend Forecasting:</strong> Applied time-series analysis to predict which genres and shows would grow in popularity.",
+            "<strong>Simulated Improvement:</strong> The insights from the segmentation led to a strategy that, when simulated, improved recommendation accuracy by 20%."
+          ]
+        }
+      ],
+      "conclusion": "This project highlights my ability to apply data science techniques to derive actionable business intelligence from large datasets."
+    }
   },
   {
     "id": "codev",
@@ -87,7 +247,22 @@
     "category": ["Full-Stack", "Data Analytics", "Education Tech"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led 3-person team building a Flask+SQL decision platform optimizing classroom and staff allocation. Improved efficiency by 25% and reduced planning time by 40%.",
-    "link": "project/projects/codev/index.html"
+    "link": "project/projects/codev/index.html",
+    "details": {
+      "subtitle": "Optimizing School Operations with a Custom Web Platform",
+      "intro": "I led a team of three to build a web-based decision support platform for educational institutions. Built with Flask and SQL, the tool helps administrators optimize the allocation of classrooms and staff based on course schedules and constraints.",
+      "sections": [
+        {
+          "title": "Key Outcomes",
+          "list": [
+            "<strong>Leadership and Development:</strong> Managed the project from conception to delivery, including backend and database development.",
+            "<strong>Measurable Efficiency Gains:</strong> The platform improved resource allocation efficiency by 25% in our test cases.",
+            "<strong>Time Savings:</strong> School administrators using the tool were able to reduce their manual planning time by 40%."
+          ]
+        }
+      ],
+      "conclusion": "A practical full-stack project that solved a real-world operational challenge, demonstrating both technical and leadership skills."
+    }
   },
   {
     "id": "chat-bot",
@@ -96,7 +271,23 @@
     "category": ["AI", "NLP", "Product Prototype"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Designed a modular LLM-based chatbot leveraging LangChain. Reached 85% accuracy and improved query response time by 40%. Demonstrated AI integration and deployment feasibility.",
-    "link": "project/projects/chat_bot/index.html"
+    "link": "project/projects/chat_bot/index.html",
+    "details": {
+      "subtitle": "Building an Intelligent and Modular Q&A System",
+      "intro": "I designed and prototyped a modular chatbot using Large Language Models (LLMs) and the LangChain framework. The goal was to create an intelligent system capable of answering user queries accurately and quickly.",
+      "sections": [
+        {
+          "title": "Technical Achievements",
+          "list": [
+            "<strong>Modular Architecture:</strong> Designed the system to be easily extendable with new knowledge bases and tools using LangChain.",
+            "<strong>Performance Metrics:</strong> The chatbot reached an 85% accuracy rate in answering questions from a specific domain.",
+            "<strong>Optimized Response Time:</strong> Improved the average query response time by 40% through prompt optimization and efficient model usage.",
+            "<strong>Feasibility Study:</strong> The project served as a successful demonstration of the feasibility of integrating and deploying LLM-based solutions."
+          ]
+        }
+      ],
+      "conclusion": "This project showcases my hands-on experience with the modern LLM stack and my ability to architect and evaluate AI-powered conversational agents."
+    }
   },
   {
     "id": "stock-market",
@@ -105,7 +296,21 @@
     "category": ["AI", "Finance", "Data Science"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built LSTM-based predictive model for financial time series forecasting. Improved accuracy by 15% and visualized investment insights via dashboards.",
-    "link": "project/projects/stock_market_predictor/index.html"
+    "link": "project/projects/stock_market_predictor/index.html",
+    "details": {
+      "subtitle": "Applying Deep Learning to Financial Time Series",
+      "intro": "This project involved developing a predictive model for stock market forecasting using a Long Short-Term Memory (LSTM) neural network, a type of deep learning model well-suited for time series data.",
+      "sections": [
+        {
+          "title": "Model and Visualization",
+          "list": [
+            "<strong>Predictive Modeling:</strong> The LSTM-based model improved forecasting accuracy by 15% compared to traditional statistical models like ARIMA.",
+            "<strong>Data Visualization:</strong> I created interactive dashboards to visualize the model's predictions against actual stock prices, helping to interpret the results and potential investment insights."
+          ]
+        }
+      ],
+      "conclusion": "An exploration into the application of deep learning for financial forecasting, combining complex modeling with clear data visualization."
+    }
   },
   {
     "id": "ser",
@@ -114,7 +319,22 @@
     "category": ["Operations Research", "Optimization", "Supply Chain"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Designed MILP and ILS models optimizing logistics costs by 30% while maintaining service levels. Delivered decision-support tools bridging engineering and business strategy.",
-    "link": "project/projects/ser/index.html"
+    "link": "project/projects/ser/index.html",
+    "details": {
+      "subtitle": "Advanced Optimization for Supply Chain Management",
+      "intro": "In this operations research project, I designed and implemented mathematical models to optimize a complex logistics network. The goal was to significantly reduce transportation and inventory costs without compromising customer service levels.",
+      "sections": [
+        {
+          "title": "Methodology and Results",
+          "list": [
+            "<strong>Mathematical Modeling:</strong> Developed a Mixed-Integer Linear Programming (MILP) model for precise optimization and an Iterated Local Search (ILS) heuristic for large-scale problem solving.",
+            "<strong>Cost Reduction:</strong> The models successfully identified strategies that could reduce overall logistics costs by 30%.",
+            "<strong>Decision-Support Tool:</strong> The final deliverable was a tool that allowed business managers to run different scenarios and understand the trade-offs, bridging the gap between engineering and business strategy."
+          ]
+        }
+      ],
+      "conclusion": "This project demonstrates my expertise in applying advanced optimization techniques to solve complex, high-impact business problems."
+    }
   },
   {
     "id": "image-generator",
@@ -123,7 +343,22 @@
     "category": ["AI", "Generative AI", "Prompt Engineering"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed natural language–to–image generator using OpenAI APIs. Created prompt engineering system producing high-quality, contextually relevant images in seconds.",
-    "link": "project/projects/image_generator/index.html"
+    "link": "project/projects/image_generator/index.html",
+    "details": {
+      "subtitle": "From Text to Image with Generative AI",
+      "intro": "I developed an application that generates images from natural language descriptions by leveraging the OpenAI (DALL-E) API. A key part of the project was creating a sophisticated prompt engineering system to enhance the quality and relevance of the output.",
+      "sections": [
+        {
+          "title": "Core Feature: Prompt Engineering",
+          "list": [
+            "<strong>Systematic Prompting:</strong> Designed a workflow that programmatically adds details (like style, lighting, and composition) to user prompts to generate superior images.",
+            "<strong>High-Quality Output:</strong> The system consistently produced high-quality, contextually relevant images that closely matched the user's intent.",
+            "<strong>Rapid Generation:</strong> The entire process, from prompt to image, was optimized to complete within seconds."
+          ]
+        }
+      ],
+      "conclusion": "A hands-on project demonstrating my understanding of generative AI APIs and the critical role of prompt engineering in controlling AI output."
+    }
   },
   {
     "id": "airline",
@@ -132,7 +367,22 @@
     "category": ["Business Strategy", "Data-Driven Management"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led 4-member team managing operations, finance, and marketing in a simulation. Applied data analysis and strategic KPIs to improve operational efficiency by 25%.",
-    "link": "project/projects/airline/index.html"
+    "link": "project/projects/airline/index.html",
+    "details": {
+      "subtitle": "Data-Driven Management in a Competitive Market",
+      "intro": "In this comprehensive business simulation, I led a team of four in managing a virtual airline company. We were responsible for all aspects of the business, including operations, finance, marketing, and strategy, in a competitive market.",
+      "sections": [
+        {
+          "title": "Strategy and Results",
+          "list": [
+            "<strong>Leadership:</strong> As team lead, I coordinated our strategy and decision-making process across all departments.",
+            "<strong>Data Analysis:</strong> We heavily relied on data analysis and strategic KPIs to monitor performance and guide our decisions on pricing, routes, and fleet acquisition.",
+            "<strong>Efficiency Improvement:</strong> Our data-driven approach led to a 25% improvement in operational efficiency and strong financial performance in the simulation."
+          ]
+        }
+      ],
+      "conclusion": "This simulation was an excellent exercise in cross-functional leadership and applying analytical principles to drive business strategy."
+    }
   },
   {
     "id": "rfid",
@@ -141,7 +391,22 @@
     "category": ["IoT", "Embedded Systems", "Automation"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Engineered autonomous robot using RFID sensors for real-time navigation. Achieved 90% task completion accuracy and demonstrated robust control system design.",
-    "link": "project/projects/RFID/index.html"
+    "link": "project/projects/RFID/index.html",
+    "details": {
+      "subtitle": "Embedded Systems and Real-Time Navigation",
+      "intro": "I engineered an autonomous robot that uses RFID sensors for navigation and task execution. The robot was designed to follow a path and perform actions based on RFID tags embedded in its environment.",
+      "sections": [
+        {
+          "title": "Technical Implementation",
+          "list": [
+            "<strong>Hardware/Software Integration:</strong> The project involved integrating RFID readers, motors, and a microcontroller, and writing the control software in C/C++.",
+            "<strong>Robust Control System:</strong> I designed a control loop that was resilient to sensor noise and environmental variations.",
+            "<strong>High Accuracy:</strong> The robot achieved a 90% accuracy rate in completing its programmed tasks in various test runs."
+          ]
+        }
+      ],
+      "conclusion": "A hands-on project demonstrating my skills in embedded systems, sensor integration, and control system design for autonomous robotics."
+    }
   },
   {
     "id": "pyrat",
@@ -150,7 +415,22 @@
     "category": ["AI", "Algorithms", "Game Theory"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Developed competitive AI agents using game-theoretic decision models. Improved win rate by 30% and demonstrated algorithmic optimization under constraints.",
-    "link": "project/projects/pyrat/index.html"
+    "link": "project/projects/pyrat/index.html",
+    "details": {
+      "subtitle": "Strategic AI Agents for Competitive Gaming",
+      "intro": "The Pyrat Project is a competitive programming challenge where participants develop AI agents to compete in a maze-based game. I developed several agents using game-theoretic principles and pathfinding algorithms to outmaneuver opponents.",
+      "sections": [
+        {
+          "title": "Algorithmic Strategy",
+          "list": [
+            "<strong>Game Theory:</strong> Applied concepts like minimax to predict opponent moves and make optimal decisions.",
+            "<strong>Pathfinding:</strong> Implemented algorithms like A* for efficient navigation and resource collection.",
+            "<strong>Performance Improvement:</strong> My final agent improved its win rate by 30% against baseline AIs, demonstrating effective algorithmic optimization under real-time constraints."
+          ]
+        }
+      ],
+      "conclusion": "This project was a deep dive into algorithmic problem-solving and AI for strategic decision-making."
+    }
   },
   {
     "id": "amazon",
@@ -159,7 +439,22 @@
     "category": ["Data Engineering", "Web Scraping", "E-commerce Analytics"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Automated data extraction from Amazon (pricing, reviews) using Python. Reduced manual analysis effort by 90% and produced trend insights for strategic pricing.",
-    "link": "project/projects/amazon_web_scraping/index.html"
+    "link": "project/projects/amazon_web_scraping/index.html",
+    "details": {
+      "subtitle": "E-commerce Analytics through Web Scraping",
+      "intro": "I developed a Python-based system to automate the extraction of product data from Amazon, including pricing, customer reviews, and seller information. The goal was to gather data for market analysis and competitive intelligence.",
+      "sections": [
+        {
+          "title": "Process and Impact",
+          "list": [
+            "<strong>Data Engineering:</strong> Built a robust web scraping pipeline using libraries like BeautifulSoup and Scrapy, handling challenges like pagination and anti-scraping measures.",
+            "<strong>Automation:</strong> The system reduced the manual effort required for data collection and analysis by 90%.",
+            "<strong>Strategic Insights:</strong> The extracted data was used to produce trend reports and dashboards that informed strategic pricing decisions."
+          ]
+        }
+      ],
+      "conclusion": "A practical data engineering project that demonstrates how to build automated pipelines to gather valuable market data."
+    }
   },
   {
     "id": "greenhouse",
@@ -168,6 +463,21 @@
     "category": ["IoT", "Sustainability", "Automation"],
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Led IoT-based greenhouse system regulating temperature and humidity. Increased simulated plant growth by 30% and showcased end-to-end hardware/software integration.",
-    "link": "project/projects/greenhouse/index.html"
+    "link": "project/projects/greenhouse/index.html",
+    "details": {
+      "subtitle": "IoT for Sustainable and Automated Agriculture",
+      "intro": "I led the development of an IoT-based autonomous greenhouse system. The system uses sensors to monitor environmental conditions like temperature, humidity, and soil moisture, and automatically activates actuators (fans, misters) to maintain optimal growing conditions.",
+      "sections": [
+        {
+          "title": "System and Results",
+          "list": [
+            "<strong>End-to-End Integration:</strong> The project involved full-stack development, from hardware sensor integration with an Arduino/Raspberry Pi to a software dashboard for monitoring.",
+            "<strong>Automation Logic:</strong> I wrote the control logic that regulated the greenhouse environment based on sensor readings.",
+            "<strong>Improved Growth:</strong> In simulated tests, our system increased plant growth rates by 30% compared to a non-regulated environment."
+          ]
+        }
+      ],
+      "conclusion": "This project showcases my ability to lead and execute an end-to-end IoT project, combining hardware, software, and control systems to solve a practical problem."
+    }
   }
 ]

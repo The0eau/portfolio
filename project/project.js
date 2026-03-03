@@ -90,7 +90,7 @@ function renderList(items, title) {
     items.forEach(item => contentContainer.appendChild(renderCard(item)));
 }
 
-async function renderDetail(id) {
+function renderDetail(id) {
     const item = findItem(id);
     if (!item) return;
 
@@ -111,39 +111,28 @@ async function renderDetail(id) {
     pageTitle.appendChild(link);
     pageTitle.appendChild(document.createTextNode(` > ${item.title}`));
 
-    contentContainer.innerHTML = '<div style="text-align:center; padding: 2rem;">Loading details...</div>';
-    contentContainer.className = 'project-detail';
-
-    if (item.link) {
-        try {
-            // item.link is like "project/projects/jobswipe/index.html"
-            // We are in "project/", so we need "projects/jobswipe/index.html"
-            const fetchUrl = item.link.replace(/^project\//, '');
-            const response = await fetch(fetchUrl);
-            if (!response.ok) throw new Error('Failed to load');
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, 'text/html');
-            
-            const relativeDir = fetchUrl.replace(/[^/]*$/, '');
-            
-            doc.querySelectorAll('[src],[href]').forEach(el => {
-                const src = el.getAttribute('src');
-                const href = el.getAttribute('href');
-                if (src && !src.match(/^(http|\/|data:)/)) el.setAttribute('src', relativeDir + src);
-                if (href && !href.match(/^(http|\/|#|mailto:)/)) el.setAttribute('href', relativeDir + href);
-            });
-
-            doc.querySelectorAll('script, link[rel="stylesheet"], meta, title').forEach(el => el.remove());
-            const logo = doc.querySelector('.project-header .logo');
-            if (logo) logo.remove();
-            contentContainer.innerHTML = doc.body.innerHTML;
-        } catch (e) {
-            contentContainer.innerHTML = `<p>Error loading details. <a href="../${item.link}">Open directly</a></p>`;
-        }
+    if (item.details) {
+        contentContainer.innerHTML = `
+            <header class="hero">
+                <div class="hero-text">
+                    <h1>${item.title}</h1>
+                    ${item.details.subtitle ? `<p class="subtitle">${item.details.subtitle}</p>` : ''}
+                    ${item.details.intro ? `<p class="detail-intro">${item.details.intro}</p>` : ''}
+                </div>
+            </header>
+            ${item.details.sections ? item.details.sections.map(section => `
+                <section>
+                    ${section.title ? `<h2>${section.title}</h2>` : ''}
+                    ${section.content ? `<p>${section.content}</p>` : ''}
+                    ${section.list ? `<ul>${section.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
+                </section>
+            `).join('') : ''}
+            ${item.details.conclusion ? `<section><p>${item.details.conclusion}</p></section>` : ''}
+        `;
     } else {
-        contentContainer.innerHTML = `<p>${item.description}</p>`;
+        contentContainer.innerHTML = "<p>No details available.</p>";
     }
+    contentContainer.className = 'detail-view';
 }
 
 // Renders the full view with D3 chart and search
