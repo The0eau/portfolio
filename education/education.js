@@ -26,12 +26,20 @@ function renderCard(item) {
         <p>${item.description}</p>
       </div>
     `;
-    if (item.id) {
+
+    // ONLY make it clickable if it is part of formal Education
+    // (Items in education.json don't have a 'category' field, or you can check category !== 'course')
+    const isFormalEducation = educations.some(e => e.id === item.id);
+
+    if (isFormalEducation && item.id) {
         article.style.cursor = 'pointer';
         article.onclick = (e) => {
             e.preventDefault();
             updateView('detail', item.id);
         };
+    } else {
+        // Optional: ensure no pointer cursor for non-clickable items
+        article.style.cursor = 'default';
     }
     return article;
 }
@@ -94,6 +102,9 @@ function renderDetail(id) {
     if (educations.includes(item)) {
         parentView = 'education';
         parentTitle = 'Education';
+    } else if (certIds.includes(id)) {
+        parentView = 'certifications'; 
+        parentTitle = 'Certifications';
     } else {
         parentView = 'courses'; 
         parentTitle = 'Online Courses';
@@ -139,17 +150,25 @@ function updateView(viewName, param) {
     else url.searchParams.delete('id');
     window.history.pushState({}, '', url);
 
-    if (viewName === 'menu') {
+
+   if (viewName === 'menu') {
         renderMenu();
     } else if (viewName === 'education') {
         renderList(educations, "Education");
     } else if (viewName === 'certifications') {
-        renderList(courses, "Certifications");
+        // This dynamically pulls EVERYTHING marked "certification" in your JSON
+        const certs = courses.filter(item => item.category === 'certification');
+        renderList(certs, "Certifications");
     } else if (viewName === 'courses') {
-        renderList(courses, "Online Courses");
+        // This pulls everything else (Harvard, MIT, etc.)
+        const onlineOnly = courses.filter(item => item.category === 'course');
+        renderList(onlineOnly, "Online Courses");
     } else if (viewName === 'detail') {
         renderDetail(param);
     }
+    
+    // Remonte en haut de page lors du changement de vue
+    window.scrollTo(0, 0);
 }
 
 window.onpopstate = () => {
