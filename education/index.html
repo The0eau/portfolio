@@ -3,18 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Education & Learning</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="../global.js"></script>
     <script src="education.js" type="module"></script>
+    <style>
+        .page-header {
+            padding: 0.8rem 2rem;
+            margin: 1rem auto 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            color: #7B7B7B;
+        }
+        .page-header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+            color: inherit;
+        }
+        .page-header p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: inherit;
+            max-width: 50%;
+            text-align: right;
+        }
+        .page-header h1 a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .page-header h1 a:hover {
+            transform: scale(1.1);
+            color: #4ca1af;
+        }
+        @media (max-width: 768px) {
+            .page-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            .page-header p {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Education</h1>
-    <div class="educations">
-    </div>
-    <h1>Other courses</h1>
-    <div class="courses">
-    </div>
+    <header class="page-header">
+        <h1 id="page-title">Education & Learning</h1>
+        <p>A journey of continuous growth, from formal engineering degrees to specialized AI certifications and self-directed online courses.</p>
+    </header>
+    <main id="content" class="educations"></main>
 </body>
 </html>
