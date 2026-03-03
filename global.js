@@ -9,7 +9,6 @@ let pages = [
     { url: 'education/index.html', title: 'Education' },
     { url: 'pro/index.html', title: 'Professional' },
     { url: 'project/index.html', title: 'Projects' },
-    { url: 'contact/index.html', title: 'Contact' },
     { url: 'cv/index.html', title: 'Resume' },
     { url: 'https://github.com/The0eau', title: 'Github' },
     // add the rest of your pages here
