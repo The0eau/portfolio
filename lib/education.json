@@ -1,5 +1,13 @@
 [
     {
+    "id": "mva",
+    "title": "Master of Science - MVA (Machine Learning and AI)",
+    "place": "Ecole Polytechnique, ENS Paris-Saclay, Université Paris-Saclay, France",
+    "year": "2026-2027",
+    "image": "education/MVA/logo_mva.png",
+    "description": "Machine Learning, Deep Learning, Computer Vision, LLM, Time Series"
+},
+    {
         "id": "imt",
         "title": "Diplôme d'ingénieur, Master of Science",
         "place": "IMT Atlantique, France",
